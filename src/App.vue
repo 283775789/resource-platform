@@ -29,7 +29,7 @@
     </div>
     <!-- /头部(搜索) -->
 
-    <!-- 导航 -->
+    <!-- 导航(老师) -->
     <div class="pl-nav">
       <ul class="pl-nav-inner">
         <li class="pl-nav-item">
@@ -80,8 +80,77 @@
         <li class="pl-nav-item xright"><router-link to="/" class="pl-nav-link">个人中心</router-link></li>
       </ul>
     </div>
-    <!-- /导航 -->
+    <!-- /导航(老师) -->
+
+    <!-- 导航(管理员) -->
+    <div class="pl-nav">
+      <ul class="pl-nav-inner">
+        <li class="pl-nav-item">
+          <a class="pl-nav-link xsubject">初中数学<i class="pl-triangle xdown"></i></a>
+          <div class="pl-nav-menu xsubject">
+            <h4 class="pl-nav-menu-title">小学</h4>
+            <div class="pl-nav-menu-tags">
+              <a class="pl-tag">语文</a>
+              <a class="pl-tag">数学</a>
+              <a class="pl-tag">英语</a>
+              <a class="pl-tag">科学</a>
+              <a class="pl-tag">政治思想</a>
+            </div>
+            <h4 class="pl-nav-menu-title">小学</h4>
+            <div class="pl-nav-menu-tags">
+              <a class="pl-tag">语文</a>
+              <a class="pl-tag xactive">数学</a>
+              <a class="pl-tag">英语</a>
+              <a class="pl-tag">科学</a>
+              <a class="pl-tag">物理</a>
+              <a class="pl-tag">化学</a>
+              <a class="pl-tag">历史</a>
+              <a class="pl-tag">政治思想</a>
+              <a class="pl-tag">地理</a>
+              <a class="pl-tag">历史与社会</a>
+              <a class="pl-tag">社会思想</a>
+              <a class="pl-tag">生物</a>
+            </div>
+            <h4 class="pl-nav-menu-title">高中</h4>
+            <div class="pl-nav-menu-tags">
+              <a class="pl-tag">语文</a>
+              <a class="pl-tag">数学</a>
+              <a class="pl-tag">英语</a>
+              <a class="pl-tag">物理</a>
+              <a class="pl-tag">化学</a>
+              <a class="pl-tag">历史</a>
+              <a class="pl-tag">政治思想</a>
+              <a class="pl-tag">地理</a>
+              <a class="pl-tag">历史与社会</a>
+              <a class="pl-tag">信息技术</a>
+            </div>
+          </div>
+        </li>
+        <li class="pl-nav-item">
+          <router-link to="/" class="pl-nav-link">试题库<i class="pl-triangle xdown"></i></router-link>
+          <div class="pl-nav-menu">
+            <router-link class="pl-nav-menu-link xactive" to="/">试题库</router-link>
+            <router-link class="pl-nav-menu-link" to="/">初审试题</router-link>
+            <router-link class="pl-nav-menu-link" to="/">终审试题</router-link>
+            <router-link class="pl-nav-menu-link" to="/">试题排重</router-link>
+          </div>
+        </li>
+        <li class="pl-nav-item">
+          <router-link to="/" class="pl-nav-link">试卷库<i class="pl-triangle xdown"></i></router-link>
+          <div class="pl-nav-menu">
+            <router-link class="pl-nav-menu-link" to="/">试卷库</router-link>
+            <router-link class="pl-nav-menu-link" to="/">初审试卷</router-link>
+            <router-link class="pl-nav-menu-link" to="/">终审试卷</router-link>
+            <router-link class="pl-nav-menu-link" to="/">个性化试卷</router-link>
+          </div>
+        </li>
+        <li class="pl-nav-item"><router-link to="/" class="pl-nav-link">智能组卷</router-link></li>
+        <li class="pl-nav-item xright"><router-link to="/" class="pl-nav-link">个人中心</router-link></li>
+      </ul>
+    </div>
+    <!-- /管理员(管理员) -->
     <router-view/>
+    <div class="pl-footer">Copyright © 2018-2020 中南讯智科技有限公司, All Rights Reserved 京ICP备10037079号-8 版本号V001R001C01</div>
   </div>
 </template>
 

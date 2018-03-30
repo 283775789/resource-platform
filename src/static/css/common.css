@@ -136,6 +136,37 @@
   display:block;
 }
 
+.pl-nav-menu-link {
+  display: block;
+  line-height: 36px;
+  margin:0 -20px;
+  padding:0 20px;
+  white-space: nowrap;
+}
+
+.pl-nav-menu-link:hover,
+.pl-nav-menu-link.xactive {
+  color: #2dbe60;
+}
+
+.pl-nav-menu-link.xactive {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+
+/* 页脚 */
+.pl-footer {
+  position:absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  line-height: 60px;
+  font-size: 12px;
+  background-color: #434547;
+  color: #fff;
+  text-align: center;
+}
+
 /* ------------------------------ 通用样式 ------------------------------ */
 /* 图标按钮 */
 .pl-icobtn {
