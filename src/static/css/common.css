@@ -1,0 +1,212 @@
+/* ------------------------------ 图标 ------------------------------ */
+.pl-ico {
+  box-sizing: content-box;
+  display: inline-block;
+  padding: 1px;
+  vertical-align: middle;
+  background-image: url(../images/icons.png);
+  background-origin: content-box;
+}
+
+.pl-ico.xoff {
+  margin-left: 6px;
+}
+
+/* ------------------------------ 布局 ------------------------------ */
+.pl-topbar-inner,
+.pl-header-inner,
+.pl-nav-inner {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width:1199px) {
+  .pl-topbar-inner,
+  .pl-header-inner,
+  .pl-nav-inner {
+    width: 1000px;
+  }
+}
+
+.pl-topbar-inner:after,
+.pl-header-inner:after,
+.pl-nav-inner:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 顶部栏 */
+.pl-topbar {
+  height: 32px;
+  line-height: 32px;
+  background: #f0f4f6;
+}
+
+.pl-topbar-right {
+  float:right;
+}
+
+/* 头部 */
+.pl-header {
+  height:90px;
+}
+
+/* 导航 */
+.pl-nav {
+  height: 50px;
+  line-height: 50px;
+  background: #2bbb61;
+}
+
+.pl-nav-item {
+  position: relative;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+}
+
+.pl-nav-item:hover {
+  overflow: visible;
+}
+
+.pl-nav-item.xsubject {
+  width: 213px;
+  background: url(../images/nav-menu-bg.png);
+}
+
+.pl-nav-item.xright {
+  float:right;
+}
+
+.pl-nav-link {
+  position: relative;
+  display: block;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.pl-nav-item:hover .pl-nav-link,
+.pl-nav-item.active .pl-nav-link {
+  font-weight: bold;
+  background-color: #11aa4a;
+}
+
+.pl-nav-link > .pl-triangle {
+  position: relative;
+  top:2px;
+  margin-left: 5px;
+  transform-origin: center 20%;
+  transition: all .12s linear;
+}
+
+.pl-nav-item:hover .pl-triangle {
+  transform: rotate(180deg);
+}
+
+.pl-nav-menu {
+  position: absolute;
+  top: 50px;
+  left:0;
+  display: none;
+  min-width: 100%;
+  padding: 10px 20px;
+  background: #fff;
+  border:1px solid #ccd3d9;
+  box-shadow: 0 3px 7px #d2d7db;
+  transition: all .12s linear;
+  overflow: hidden;
+}
+
+.pl-nav-menu.xsubject {
+  width: 320px;
+  line-height: 1.5;
+}
+
+.pl-nav-menu-title {
+  font-weight: bold;
+}
+
+.pl-nav-menu-tags {
+  margin: 0 -8px 10px;
+}
+
+.pl-nav-item:hover > .pl-nav-menu {
+  display:block;
+}
+
+/* ------------------------------ 通用样式 ------------------------------ */
+/* 图标按钮 */
+.pl-icobtn {
+  display: inline-block;
+}
+
+.pl-icobtn > .pl-ico {
+  margin-right: 2px;
+}
+
+.pl-icobtn:hover {
+  color: #2dbe60;
+}
+
+/* 搜索框 */
+.pl-search {
+  display:inline-block;
+  width: 400px;
+  margin-left: 120px;
+}
+
+.pl-search .el-input-group__append,
+.pl-search .el-input-group__prepend {
+  border-color: #2bbb61;
+  border-radius: 0;
+}
+
+.pl-search .el-input-group__prepend {
+  background-color: #fff;
+}
+
+.pl-search .el-input-group__append {
+  font-size: 18px;
+  background-color: #2bbb61;
+  color: #fff;
+}
+
+.pl-search .el-input__inner {
+  height: 36px;
+  line-height: 36px;
+  padding: 0 10px;
+  border-color: #2bbb61;
+}
+
+.pl-search .el-input-group__prepend .el-input__inner {
+  color:#333 !important;
+}
+
+/* ------------------------------ 元件 ------------------------------ */
+/* 三角形 */
+.pl-triangle {
+  display: inline-block;
+  border: 5px solid;
+}
+
+.pl-triangle.xdown {
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+/* 标签 */
+.pl-tag {
+  display:inline-block;
+  padding: 0 3px;
+  margin:4px;
+  line-height: 20px;
+  border-radius: 3px;
+}
+
+.pl-tag.xactive {
+  background-color:#2dbe64;
+  color: #fff;
+}

@@ -1,0 +1,50 @@
+﻿a:hover > .pl-ico.xadd {
+  background-position: 0px 0px;
+  width: 16px;
+  height: 16px;
+}
+a:hover > .pl-ico.xdel {
+  background-position: -26px 0px;
+  width: 16px;
+  height: 16px;
+}
+a:hover > .pl-ico.xdownload {
+  background-position: 0px -26px;
+  width: 16px;
+  height: 16px;
+}
+a:hover > .pl-ico.xmodify {
+  background-position: -26px -26px;
+  width: 16px;
+  height: 16px;
+}
+a:hover > .pl-ico.xoff {
+  background-position: -52px 0px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xadd {
+  background-position: -52px -26px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xdel {
+  background-position: 0px -52px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xdownload {
+  background-position: -26px -52px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xmodify {
+  background-position: -52px -52px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xoff {
+  background-position: -78px 0px;
+  width: 16px;
+  height: 16px;
+}
