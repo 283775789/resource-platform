@@ -25,7 +25,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
-        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'index.html') },
+        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'teacher.html') },
+        { from: /.*/, to: path.posix.join(config.dev.assetsPublicPath, 'admin.html') },
       ],
     },
     hot: true,
@@ -34,6 +35,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     host: HOST || config.dev.host,
     port: PORT || config.dev.port,
     open: config.dev.autoOpenBrowser,
+    openPage: config.dev.openPage,
     overlay: config.dev.errorOverlay
       ? { warnings: false, errors: true }
       : false,
@@ -51,11 +53,27 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(), // HMR shows correct file names in console on update.
     new webpack.NoEmitOnErrorsPlugin(),
+    // vue-cli自带
     // https://github.com/ampedandwired/html-webpack-plugin
+    // new HtmlWebpackPlugin({
+    //   filename: 'index.html',
+    //   template: 'index.html',
+    //   inject: true
+    // }),
+    // 以下HtmlWebpackPlugin为本项目样式页演示用
+    // 老师入口html页
     new HtmlWebpackPlugin({
-      filename: 'index.html',
+      filename: 'teacher.html',
       template: 'index.html',
-      inject: true
+      inject: true,
+      chunks: ['teacher']
+    }),
+    // 管理员入口html页
+    new HtmlWebpackPlugin({
+      filename: 'admin.html',
+      template: 'index.html',
+      inject: true,
+      chunks: ['admin']
     }),
     // copy custom static assets
     new CopyWebpackPlugin([

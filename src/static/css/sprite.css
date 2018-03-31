@@ -1,10 +1,10 @@
 ﻿a:hover > .pl-ico.xadd {
-  background-position: 0px 0px;
+  background-position: -26px 0px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xdel {
-  background-position: -26px 0px;
+  background-position: -52px -52px;
   width: 16px;
   height: 16px;
 }
@@ -39,12 +39,47 @@ a:hover > .pl-ico.xoff {
   height: 16px;
 }
 .pl-ico.xmodify {
-  background-position: -52px -52px;
+  background-position: 0px 0px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xnotice {
+  background-position: -78px 0px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xoff {
-  background-position: -78px 0px;
+  background-position: -78px -26px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xperson {
+  background-position: -104px 0px;
+  width: 15px;
+  height: 16px;
+}
+.pl-ico.xpower {
+  background-position: 0px -78px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xsetting {
+  background-position: -26px -78px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xtemplate {
+  background-position: -52px -78px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xtest {
+  background-position: -78px -52px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xuser {
+  background-position: -78px -78px;
   width: 16px;
   height: 16px;
 }
