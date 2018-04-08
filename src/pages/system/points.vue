@@ -1,7 +1,7 @@
 <template>
   <div class="pl-sidelayout-right">
     <!-- 积分管理 -->
-    <div class="pl-card xp" style="min-height:460px;">
+    <div class="pl-card xp"  v-pl-to-bottom="100">
       <div class="pl-title">
         <span class="pl-title-label">积分管理</span>
       </div>

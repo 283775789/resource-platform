@@ -9,7 +9,7 @@
     "start": "npm run dev",
     "build": "node build/build.js",
     "icon": "gulp watch",
-    "git": "git add -A && git commit -m '新内容' && git push"
+    "git": "git add -A && git commit -m 'content' && git push"
   },
   "dependencies": {
     "element-ui": "^2.3.2",

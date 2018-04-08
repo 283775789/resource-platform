@@ -1,7 +1,7 @@
 <template>
   <div class="pl-sidelayout-right">
     <!-- 修改密码 -->
-    <div class="pl-card xp" style="min-height:640px;">
+    <div class="pl-card xp"  v-pl-to-bottom="100">
       <div class="pl-title">
         <span class="pl-title-label">修改密码</span>
       </div>

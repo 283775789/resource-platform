@@ -1,7 +1,7 @@
 <template>
   <div class="pl-sidelayout-right">
     <!-- 教材管理 -->
-    <div class="pl-card xp" style="min-height:460px;">
+    <div class="pl-card xp" v-pl-to-bottom="100">
       <div class="pl-title">
         <span class="pl-title-label">教材管理</span>
       </div>
@@ -83,7 +83,7 @@
           <el-form-item label="知识点:">
             <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
             <div class="pl-ctrontree">
-              <el-tree :data="dataKnowledge" :props="KnowledgeProps"></el-tree>
+              <el-tree :data="dataKnowledge" :props="KnowledgeProps" show-checkbox></el-tree>
             </div>
           </el-form-item>
           <el-form-item label="状态:">
