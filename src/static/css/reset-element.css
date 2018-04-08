@@ -45,6 +45,7 @@
 
 /* 表单 */
 .el-input__inner {
+  color: #333;
   padding: 0 8px;
   border-radius: 0;
 }
@@ -65,6 +66,7 @@
 }
 
 .el-form-item__label {
+  color: #333;
   white-space: nowrap;
 }
 
@@ -97,6 +99,22 @@
 
 .el-radio__inner:hover {
   border-color: #2dbe64;
+}
+
+/* 表单-小 */
+.el-form.xsmall .el-form-item {
+  margin-bottom: 8px;
+}
+
+
+.el-form.xsmall .el-form-item__label{
+  padding-right: 5px;
+  font-size: 12px;
+}
+
+.el-form.xsmall .el-input__inner {
+  height:30px;
+  line-height: 30px;
 }
 
 /* 表格 dadde0 */
@@ -173,4 +191,9 @@
 .el-upload__tip {
   padding: 0 15px;
   color: #666;
+}
+
+/* 树 */
+.el-tree-node:focus>.el-tree-node__content {
+  background-color: #dff5e6;
 }

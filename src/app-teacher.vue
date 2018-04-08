@@ -6,7 +6,7 @@
     <div class="pl-nav">
       <ul class="pl-nav-inner">
         <pl-subject-menu />
-        <li class="pl-nav-item"><router-link to="/" class="pl-nav-link">首页</router-link></li>
+        <li class="pl-nav-item"><router-link to="/home" class="pl-nav-link">首页</router-link></li>
         <li class="pl-nav-item"><router-link to="/exercise" class="pl-nav-link">试题库</router-link></li>
         <li class="pl-nav-item"><router-link to="/group-paper-manually" class="pl-nav-link">手动组卷</router-link></li>
         <li class="pl-nav-item"><router-link to="/group-paper-auto" class="pl-nav-link">智能组卷</router-link></li>
@@ -16,9 +16,7 @@
     <!-- /导航(老师) -->
 
     <!-- 内容视图 -->
-    <div class="pl-main">
-      <router-view />
-    </div>
+    <router-view />
     <!-- /内容视图 -->
 
     <pl-footer />

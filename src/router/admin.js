@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+// 主页
+import Home from '@/pages/admin/home'
+
 // 系统管理相关路由
 import System from '@/pages/system/system'
 import SystemRole from '@/pages/system/role'
@@ -17,6 +20,14 @@ export default new Router({
   linkActiveClass: 'xactive',
   linkExactActiveClass: 'xcurrent',
   routes: [
+    {
+      path: '/',
+      redirect: '/home'
+    },
+    {
+      path: '/home',
+      component: Home
+    },
     {
       path: '/system',
       component: System,

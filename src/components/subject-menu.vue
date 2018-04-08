@@ -1,6 +1,6 @@
 <template>
   <li class="pl-nav-item xsubject">
-    <a class="pl-nav-link">初中数学<i class="pl-triangle xdown"></i></a>
+    <a class="pl-nav-link"><i class="pl-ico xmenu"></i>初中数学<i class="pl-triangle xdown"></i></a>
     <div class="pl-nav-menu xsubject">
       <h4 class="pl-nav-menu-title">小学</h4>
       <div class="pl-nav-menu-tags">

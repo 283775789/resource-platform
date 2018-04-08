@@ -24,8 +24,8 @@
     <!-- 表格内容 -->
     <div class="pl-card xp" style="min-height: 295px;">
       <div class="pl-btnarea">
-        <el-button type="info" size="medium" @click="addDialogVisible = true">新增</el-button>
-        <el-button type="info" size="medium" @click="addDialogVisible = true">修改</el-button>
+        <el-button type="info" size="medium" @click="dialogVisible = true">新增</el-button>
+        <el-button type="info" size="medium" @click="dialogVisible = true">修改</el-button>
         <el-button size="medium" @click="handleDelete">删除</el-button>
       </div>
 
@@ -46,7 +46,7 @@
     <!-- /表格内容 -->
 
     <!-- 弹窗:新增 -->
-    <el-dialog title="模板新增/修改" :visible.sync="addDialogVisible" width="500px">
+    <el-dialog title="模板新增/修改" :visible.sync="dialogVisible" width="500px">
       <div class="pl-dialogbody">
         <!-- 表单用法详见:http://element.eleme.io/#/zh-CN/component/form -->
         <el-form label-width="80px" size="medium">
@@ -87,8 +87,8 @@
         </el-form>
       </div>
       <span slot="footer" class="dialog-footer">
-        <el-button size="medium" @click="addDialogVisible = false">取 消</el-button>
-        <el-button size="medium" type="info" @click="addDialogVisible = false">保 存</el-button>
+        <el-button size="medium" @click="dialogVisible = false">取 消</el-button>
+        <el-button size="medium" type="info" @click="dialogVisible = false">保 存</el-button>
       </span>
     </el-dialog>
     <!-- /弹窗:新增 -->
@@ -113,7 +113,7 @@
             time: ''
           }
         ],
-        addDialogVisible: false
+        dialogVisible: false
       }
     },
     methods: {

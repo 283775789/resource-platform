@@ -24,8 +24,8 @@
     <!-- 表格内容 -->
     <div class="pl-card xp" style="min-height: 295px;">
       <div class="pl-btnarea">
-        <el-button type="info" size="medium" @click="addDialogVisible = true">新增</el-button>
-        <el-button type="info" size="medium" @click="addDialogVisible = true">修改</el-button>
+        <el-button type="info" size="medium" @click="dialogVisible = true">新增</el-button>
+        <el-button type="info" size="medium" @click="dialogVisible = true">修改</el-button>
         <el-button size="medium" @click="handleDelete">删除</el-button>
       </div>
 
@@ -45,7 +45,7 @@
     <!-- /表格内容 -->
 
     <!-- 弹窗:新增 -->
-    <el-dialog title="新增/修改通知公告" :visible.sync="addDialogVisible" width="880px" height="680px" @close="handleAddDialogClose" @open="handleAddDialogOpen">
+    <el-dialog title="新增/修改通知公告" :visible.sync="dialogVisible" width="880px" height="680px" @close="handleAddDialogClose" @open="handleAddDialogOpen">
       <div class="pl-dialogbody">
         <!-- 表单用法详见:http://element.eleme.io/#/zh-CN/component/form -->
         <el-form label-width="80px" size="medium">
@@ -78,8 +78,8 @@
         </el-form>
       </div>
       <span slot="footer" class="dialog-footer">
-        <el-button size="medium" @click="addDialogVisible = false">取 消</el-button>
-        <el-button size="medium" type="info" @click="addDialogVisible = false">保 存</el-button>
+        <el-button size="medium" @click="dialogVisible = false">取 消</el-button>
+        <el-button size="medium" type="info" @click="dialogVisible = false">保 存</el-button>
       </span>
     </el-dialog>
     <!-- /弹窗:新增 -->
@@ -88,7 +88,7 @@
 
 <script>
   export default {
-    name: 'plSystemTemplate',
+    name: 'plSystemNotice',
     data() {
       return {
         filterData: {
@@ -103,7 +103,7 @@
             status: '已发布'
           }
         ],
-        addDialogVisible: false,
+        dialogVisible: false,
         editor: null
       }
     },
