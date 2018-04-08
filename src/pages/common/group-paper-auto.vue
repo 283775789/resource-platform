@@ -3,11 +3,20 @@
     <div class="pl-main-inner">
       <div class="pl-sidelayout">
         <div class="pl-sidelayout-left">
-
+          <div class="pl-card xsave" style="min-height:500px;">
+            <div class="pl-searchinput">
+              <el-input size="small" placeholder="请输入知识点"></el-input>
+              <i class="el-icon-search"></i>
+            </div>
+            <div class="pl-treebox xschool">
+              <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
+              <el-tree :data="data" :props="defaultProps" show-checkbox></el-tree>
+            </div>
+          </div>
         </div>
         <div class="pl-sidelayout-right">
           <!-- 试题信息 -->
-          <div class="pl-card xp xfixedfooter">
+          <div class="pl-card xp xfixedfooter" v-pl-to-bottom="100">
             <div class="pl-title">
               <span class="pl-title-label">智能组卷</span>
             </div>
@@ -129,32 +138,32 @@
 </template>
 
 <script>
-import QuestionSingle from '@/components/question-types/single'
-import QuestionMultiple from '@/components/question-types/multiple'
-import QuestionJudgment from '@/components/question-types/judgment'
-import QuestionFill from '@/components/question-types/fill'
-import QuestionShortAnswer from '@/components/question-types/shortanswer'
-import QuestionListening from '@/components/question-types/listening'
-import QuestionJoin from '@/components/question-types/join'
-import QuestionLine from '@/components/question-types/line'
-import QuestionVoice from '@/components/question-types/voice'
-
 export default {
-  name: "plAddExamQuestion",
-  components: {
-    'plQuestionSingle': QuestionSingle,
-    'plQuestionMultiple': QuestionMultiple,
-    'plQuestionJudgment': QuestionJudgment,
-    'plQuestionFill': QuestionFill,
-    'plQuestionShortAnswer': QuestionShortAnswer,
-    'plQuestionListening': QuestionListening,
-    'plQuestionJoin': QuestionJoin,
-    'plQuestionLine': QuestionLine,
-    'plQuestionVoice': QuestionVoice
-  },
+  name: "plGroupPaperAuto",
   data() {
     return {
-      questionType: '单选题'
+      data: [
+          {
+            name: '有理数',
+            children: [
+              {
+                name: '有理数1'
+              }
+            ]
+          },
+          {
+            name: '无理数',
+            children: [
+              {
+                name: '无理数1'
+              }
+            ]
+          }
+        ],
+        defaultProps: {
+          children: 'children',
+          label: 'name'
+        }
     }
   },
 };

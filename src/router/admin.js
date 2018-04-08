@@ -14,6 +14,10 @@ import SystemKnowledge from '@/pages/system/knowledge'
 import SystemBook from '@/pages/system/book'
 import SystemPoints from '@/pages/system/points'
 
+// 试卷相关路由
+import TestpaperStore from '@/pages/testpaper/store'
+import TestpaperFirstCheck from '@/pages/testpaper/first-check'
+
 Vue.use(Router)
 
 export default new Router({
@@ -62,6 +66,14 @@ export default new Router({
           component: SystemPoints
         }
       ]
+    },
+    {
+      path: '/testpaper-store',
+      component: TestpaperStore
+    },
+    {
+      path: '/testpaper-first-check',
+      component: TestpaperFirstCheck
     }
   ]
 })

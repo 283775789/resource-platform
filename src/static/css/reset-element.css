@@ -28,6 +28,14 @@
   color: #fff;
 }
 
+.el-button--info.is-disabled,
+.el-button--info.is-disabled:hover {
+  color: #fff;
+  background-color: #2dbe60;
+  border-color: #2dbe60;
+  opacity: .45;
+}
+
 .el-button--primary,
 .el-button--primary:focus {
   color: #fff;
@@ -41,6 +49,11 @@
   background: #eb871c;
   border-color: #eb871c;
   color: #fff;
+}
+
+.el-button--medium {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* 表单 */
@@ -74,7 +87,7 @@
 .el-checkbox__input.is-checked .el-checkbox__inner,
 .el-checkbox__input.is-indeterminate .el-checkbox__inner {
   background-color: #2dbe64;
-  border-color: #.el-select-dropdown__item.selected;
+  border-color: #2dbe64;
 }
 
 .el-checkbox__inner:hover,
