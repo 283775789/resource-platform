@@ -5,6 +5,7 @@ import './static/css/main.css'
 // 引入库及应用配置
 import Vue from 'vue'
 import ElementUI from 'element-ui'
+import '@/config/directives'
 import App from './app-teacher'
 import router from './router/teacher'
 

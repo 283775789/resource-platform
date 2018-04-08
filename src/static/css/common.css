@@ -538,6 +538,25 @@
   white-space: nowrap;
 }
 
+/* 仿表格布局:类型列表 */
+.pl-astable.xtypelist .pl-astable-col {
+  height: 40px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #e0e0e0;
+  vertical-align: top;
+}
+
+.pl-astable.xtypelist .xtypelist-label {
+  padding-right: 8px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.pl-astable.xtypelist.xnoborder .pl-astable-col {
+  border: none;
+  vertical-align: middle;
+}
+
 /* ------------------------------ 通用样式 ------------------------------ */
 /* 单选容器 */
 .pl-radiobox {
@@ -652,7 +671,11 @@
 
 /* 弹窗内容 */
 .pl-dialogbody {
-  max-height: 600px;
+  margin-top: -30px;
+  margin-right: -20px;
+  padding-top: 30px;
+  padding-right: 20px;
+  max-height: 450px;
   overflow: auto;
 }
 
@@ -878,6 +901,9 @@
   margin-left: 0;
 }
 
+/* 子标题 */
+
+
 /* ------------------------------ 元件 ------------------------------ */
 /* 三角形 */
 .pl-triangle {
@@ -926,8 +952,20 @@
   text-decoration: underline;
 }
 
-.pl-link2:hover {
+.pl-link2:hover,
+.pl-link2.xactive {
   color: #2dbe60;
+}
+
+.pl-link + .pl-link,
+.pl-link2 + .pl-link2 {
+  margin-left: 10px;
+}
+
+.pl-link2 > .pl-ico {
+  position: relative;
+  margin-right: 5px;
+  top: -1px;
 }
 
 /* 搜索框 */
@@ -979,20 +1017,18 @@
   font-size:#666;
 }
 
-
-/* ------------------------------ 试题相关 ------------------------------ */
-/* 标题2 */
-.pl-title2 {
+/* 子标题 */
+.pl-subtitle {
   position: relative;
   padding:0 20px;
 }
-.pl-title2:after {
+.pl-subtitle:after {
   content: "";
   display: table;
   clear: both;
 }
 
-.pl-title2:before {
+.pl-subtitle:before {
   content: "";
   position: absolute;
   top:50%;
@@ -1003,27 +1039,95 @@
   background: #2dbe64;
 }
 
-.pl-title2-left {
+.pl-subtitle-left {
   float: left;
 }
 
-.pl-title2-right {
+.pl-subtitle-right {
   line-height: 36px;
   float: right;
 }
 
-.pl-title2-right .pl-ico.xdel {
+.pl-subtitle-right .pl-ico.xdel {
   position: relative;
   margin-right: 5px;
   top: -1px;
 }
 
-.pl-title2-text {
+.pl-subtitle-text {
   margin-right: 5px;
   font-size: 16px;
   font-weight: bold;
 }
 
+/* 子标题-内页 */
+.pl-subtitle.xsmall {
+  padding: 0 0 0 10px;
+  margin-bottom: 10px;
+}
+
+.pl-subtitle.xsmall:before {
+  height: 18px;
+  margin-top: -9px;
+}
+
+.pl-subtitle.xsmall .pl-subtitle-text {
+  font-size: 14px;
+  color: #666;
+}
+
+.pl-subtitle.xsmall .pl-subtitle-right {
+  line-height: 1.5;
+}
+
+/* 可删除标签 */
+.pl-deltags {
+  margin: -3px -10px;
+}
+
+.pl-deltag {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  padding: 3px 30px 3px 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pl-deltag > a {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+}
+
+/* 背景盒子 */
+.pl-bgbox {
+  padding: 15px 20px;
+  background: #f5f5f5;
+}
+
+/* 小提示 */
+.pl-smallnote {
+  font-size: 12px;
+  color: #999;
+}
+
+/* tab区域 */
+.pl-tabs {
+  position: relative;
+}
+
+.pl-tabs-tools {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  line-height: 40px;
+  color: #666;
+}
+
+/* ------------------------------ 试题相关 ------------------------------ */
 /* 仿表格布局：试题 */
 .pl-astable.xquestion > .pl-astable-col  {
   padding-bottom: 20px;
@@ -1055,7 +1159,7 @@
   border: 1px solid #dcdfe6;
 }
 
-.pl-question-join .pl-title2 {
+.pl-question-join .pl-subtitle {
   margin: 0 -20px 10px;
 }
 
@@ -1282,4 +1386,162 @@
 
 .pl-fixfooter > .el-button + .el-button {
   margin-left: 15px;
+}
+
+/* 分隔条 */
+.pl-sline {
+  display: inline-block;
+  height: 20px;
+  width: 1px;
+  margin-left: 15px;
+  margin-right: 15px;
+  background: #e0e0e0;
+  vertical-align: middle;
+}
+
+/* 试卷信息 */
+.pl-paperinfo {
+  position: relative;
+  padding:20px 0 20px 110px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.pl-paperinfo-type {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 97px;
+  height: 130px ;
+  padding: 52px 10px;
+  font-size: 12px;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: center;
+}
+
+.pl-paperinfo-type.xcloud {
+  background: url(../images/cover/cloud.png);
+}
+
+.pl-paperinfo-type.xperson {
+  background: url(../images/cover/person.png);
+}
+
+.pl-paperinfo-type.xschool {
+  background: url(../images/cover/school.png);
+}
+
+.pl-paperinfo-title {
+  padding: 6px 0 4px;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.pl-paperinfo-item {
+  padding-top: 2px;
+  color: #666;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.pl-paperinfo-item .pl-ico {
+  position: relative;
+  top: -1px;
+  margin-right: 5px;
+}
+
+.pl-paperinfo-tag {
+  margin-right: 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+.pl-paperinfo-btns {
+  position: absolute;
+  right: 0;
+  bottom: 20px;
+}
+
+/* ------------------------------ 公用样式 ------------------------------ */
+.m-tiny {
+  margin: 10px !important;
+}
+
+.m-small {
+  margin: 15px !important;
+}
+
+.m-medium {
+  margin: 20px !important;
+}
+
+.m-large {
+  margin: 30px !important;
+}
+
+.ml-tiny {
+  margin-left: 10px !important;
+}
+
+.ml-small {
+  margin-left: 15px !important;
+}
+
+.ml-medium {
+  margin-left: 20px !important;
+}
+
+.ml-large {
+  margin-left: 30px !important;
+}
+
+.mb-tiny {
+  margin-bottom: 10px !important;
+}
+
+.mb-small {
+  margin-bottom: 15px !important;
+}
+
+.mb-medium {
+  margin-bottom: 20px !important;
+}
+
+.mb-large {
+  margin-bottom: 30px !important;
+}
+
+.no-py {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.p-tiny {
+  padding: 10px !important;
+}
+
+.p-small {
+  padding: 15px !important;
+}
+
+.p-medium {
+  padding: 20px !important;
+}
+
+.p-large {
+  padding: 30px !important;
+}
+
+.xdisabled {
+  opacity: .4;
+}
+
+.c-9 {
+  color: #999;
 }

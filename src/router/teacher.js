@@ -22,6 +22,7 @@ import PersonAnswerCard from '@/pages/person/answer-card'
 // 公用路由
 import Artical from '@/pages/common/artical'
 import AddExamQuestion from '@/pages/common/add-exam-question'
+import GroupPaperAuto from '@/pages/common/group-paper-auto'
 
 Vue.use(Router)
 
@@ -97,6 +98,11 @@ export default new Router({
       path: '/add-exam-question',
       name: 'addExamQuestion',
       component: AddExamQuestion
+    },
+    {
+      path: '/group-paper-auto',
+      name: 'groupPaperAuto',
+      component: GroupPaperAuto
     }
   ]
 })

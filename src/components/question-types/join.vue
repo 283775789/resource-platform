@@ -17,13 +17,13 @@
       <div class="pl-astable-col xquestion-label" style="width:4em;"></div>
       <div class="pl-astable-col">
         <div class="pl-question-join">
-          <div class="pl-title2">
-            <div class="pl-title2-left">
-              <span class="pl-title2-text">单选题</span>
+          <div class="pl-subtitle">
+            <div class="pl-subtitle-left">
+              <span class="pl-subtitle-text">单选题</span>
               <el-input style="width:60px;"></el-input>
               <span>分</span>
             </div>
-            <div class="pl-title2-right">
+            <div class="pl-subtitle-right">
               <a class="pl-link2"><i class="pl-ico xdel"></i>删除单选题</a>
             </div>
           </div>
@@ -32,13 +32,13 @@
           </div>
         </div>
         <div class="pl-question-join">
-          <div class="pl-title2">
-            <div class="pl-title2-left">
-              <span class="pl-title2-text">单选题</span>
+          <div class="pl-subtitle">
+            <div class="pl-subtitle-left">
+              <span class="pl-subtitle-text">单选题</span>
               <el-input style="width:60px;"></el-input>
               <span>分</span>
             </div>
-            <div class="pl-title2-right">
+            <div class="pl-subtitle-right">
               <a class="pl-link2"><i class="pl-ico xdel"></i>删除单选题</a>
             </div>
           </div>

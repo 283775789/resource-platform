@@ -22,7 +22,7 @@
     <!-- /内容筛选头部 -->
 
     <!-- 表格内容 -->
-    <div class="pl-card xp" style="min-height: 295px;">
+    <div class="pl-card xp"  v-pl-to-bottom="100">
       <div class="pl-btnarea">
         <el-button type="info" size="medium" @click="dialogVisible = true">新增</el-button>
         <el-button type="info" size="medium" @click="dialogVisible = true">修改</el-button>
