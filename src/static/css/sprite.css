@@ -59,12 +59,12 @@ a:hover > .pl-ico.xupload {
   height: 16px;
 }
 .pl-ico.xal {
-  background-position: -186px -122px;
+  background-position: -186px -145px;
   width: 9px;
   height: 16px;
 }
 .pl-ico.xbook {
-  background-position: -186px -51px;
+  background-position: -186px -75px;
   width: 14px;
   height: 14px;
 }
@@ -79,7 +79,7 @@ a:hover > .pl-ico.xupload {
   height: 16px;
 }
 .pl-ico.xdownload2 {
-  background-position: -145px -160px;
+  background-position: -26px -186px;
   width: 11px;
   height: 11px;
 }
@@ -89,7 +89,7 @@ a:hover > .pl-ico.xupload {
   height: 14px;
 }
 .pl-ico.xmformula {
-  background-position: -101px -160px;
+  background-position: -123px -160px;
   width: 12px;
   height: 12px;
 }
@@ -124,12 +124,12 @@ a:hover > .pl-ico.xupload {
   height: 16px;
 }
 .pl-ico.xorg {
-  background-position: -123px -160px;
+  background-position: -145px -160px;
   width: 12px;
   height: 11px;
 }
 .pl-ico.xpaper {
-  background-position: -186px -75px;
+  background-position: -186px -51px;
   width: 14px;
   height: 14px;
 }
@@ -183,8 +183,13 @@ a:hover > .pl-ico.xupload {
   width: 16px;
   height: 16px;
 }
+.pl-ico.xstatus {
+  background-position: -186px -122px;
+  width: 13px;
+  height: 13px;
+}
 .pl-ico.xteacher {
-  background-position: -186px -148px;
+  background-position: -101px -160px;
   width: 12px;
   height: 12px;
 }

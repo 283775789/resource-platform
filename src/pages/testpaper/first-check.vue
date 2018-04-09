@@ -3,14 +3,32 @@
     <div class="pl-main-inner">
       <div class="pl-sidelayout">
         <div class="pl-sidelayout-left" v-pl-sticky="192">
-          <div class="pl-card xsave" style="min-height:500px;">
-            <div class="pl-searchinput">
-              <el-input size="small" placeholder="请输入知识点"></el-input>
-              <i class="el-icon-search"></i>
+          <div class="pl-card xsave" v-pl-to-bottom.fixed="20">
+            <div class="pl-bgbox2">
+              <el-radio-group v-model="activeTab">
+                <el-radio-button label="1">章节</el-radio-button>
+                <el-radio-button label="2">知识点</el-radio-button>
+              </el-radio-group>
             </div>
-            <div class="pl-treebox xschool">
-              <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
-              <el-tree :data="data" :props="defaultProps" show-checkbox></el-tree>
+            <div v-if="activeTab==='1'">
+              <div class="pl-searchinput">
+                <el-input size="small" placeholder="请输入章节"></el-input>
+                <i class="el-icon-search"></i>
+              </div>
+              <div class="pl-treebox xschool">
+                <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
+                <el-tree :data="data" :props="defaultProps" show-checkbox></el-tree>
+              </div>
+            </div>
+            <div v-if="activeTab==='2'">
+              <div class="pl-searchinput">
+                <el-input size="small" placeholder="请输入知识点"></el-input>
+                <i class="el-icon-search"></i>
+              </div>
+              <div class="pl-treebox xschool">
+                <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
+                <el-tree :data="data" :props="defaultProps" show-checkbox></el-tree>
+              </div>
             </div>
           </div>
         </div>
@@ -175,6 +193,7 @@ export default {
   name: "plTestPaperFirstCheck",
   data() {
     return {
+      activeTab: '1',
       data: [
         {
           name: '有理数',

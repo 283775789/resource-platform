@@ -7,7 +7,7 @@
         <li>详情</li>
       </ul>
 
-      <div class="pl-card"  v-pl-to-bottom="100">
+      <div class="pl-card"  v-pl-to-bottom="60">
         <div class="pl-artical">
           <h3 class="pl-artical-title">系统通知</h3>
 

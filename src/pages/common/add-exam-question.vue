@@ -61,16 +61,44 @@
           <!-- /试题属性 -->
 
           <!-- 试题扩展属性 -->
-          <div class="pl-card xp">
+          <div class="pl-card xsp">
             <div class="pl-title">
               <span class="pl-title-label">试题扩展属性</span>
             </div>
+            <el-form class="xsmall" label-width="60px" size="medium">
+              <el-form-item label="教材版本:">
+                <el-select style="width:100%;" placeholder="请选择">
+                  <el-option label="人教版" value="1"></el-option>
+                </el-select>
+              </el-form-item>
+              <div class="pl-tagbox">
+                <div class="pl-tagbox-title"><a class="pl-link" @click="sectionDialogVisible=true">选择章节</a></div>
+                <div class="pl-tagbox-body">
+                  <span class="pl-deltag"><a><i class="pl-ico xremove"></i></a>章节1</span>
+                </div>
+              </div>
+              <div class="pl-tagbox">
+                <div class="pl-tagbox-title"><a class="pl-link" @click="knowledgeDialogVisible=true">选择知识点</a></div>
+                <div class="pl-tagbox-body">
+                  <span class="pl-deltag"><a><i class="pl-ico xremove"></i></a>知识点1</span>
+                </div>
+              </div>
+              <div class="pl-tagbox">
+                <div class="pl-tagbox-title c-6">关键字(空格分隔)</div>
+                <el-input type="textarea"></el-input>
+              </div>
+              <el-form-item label="选择专题:">
+                <el-select style="width:100%;" placeholder="请选择">
+                  <el-option label="专题1" value="1"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-form>
           </div>
           <!-- /试题扩展属性 -->
         </div>
         <div class="pl-sidelayout-right">
           <!-- 试题信息 -->
-          <div class="pl-card xp xfixedfooter">
+          <div class="pl-card xp xfixedfooter" style="min-height:1100px;">
             <div class="pl-title">
               <span class="pl-title-label">试题信息</span>
             </div>
@@ -107,7 +135,7 @@
                 <pl-question-voice v-if="questionType==='跟读题'"></pl-question-voice>
               </div>
             </div>
-            <div class="pl-fixfooter">
+            <div class="pl-fixfooter" v-pl-sticky:bottom="80">
               <el-button type="info">保存并继续</el-button>
               <el-button type="info">提交审批</el-button>
               <el-button type="info">清空</el-button>
@@ -118,6 +146,44 @@
         </div>
       </div>
     </div>
+
+    <!-- 弹窗:选择章节 -->
+    <el-dialog title="选择章节" :visible.sync="sectionDialogVisible" width="480px">
+      <div class="pl-dialogbody">
+        <div class="pl-searchinput">
+          <el-input size="medium"></el-input>
+          <i class="el-icon-search"></i>
+        </div>
+        <div class="pl-treebox xschool">
+          <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
+          <el-tree :data="data" :props="defaultProps"></el-tree>
+        </div>
+      </div>
+      <span slot="footer" class="dialog-footer">
+        <el-button size="medium" @click="sectionDialogVisible = false">取 消</el-button>
+        <el-button size="medium" type="info" @click="sectionDialogVisible = false">选 择</el-button>
+      </span>
+    </el-dialog>
+    <!-- /弹窗:选择章节 -->
+
+    <!-- 弹窗:选择知识点 -->
+    <el-dialog title="选择知识点" :visible.sync="knowledgeDialogVisible" width="480px">
+      <div class="pl-dialogbody">
+        <div class="pl-searchinput">
+          <el-input size="medium"></el-input>
+          <i class="el-icon-search"></i>
+        </div>
+        <div class="pl-treebox xschool">
+          <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
+          <el-tree :data="data" :props="defaultProps"></el-tree>
+        </div>
+      </div>
+      <span slot="footer" class="dialog-footer">
+        <el-button size="medium" @click="knowledgeDialogVisible = false">取 消</el-button>
+        <el-button size="medium" type="info" @click="knowledgeDialogVisible = false">选 择</el-button>
+      </span>
+    </el-dialog>
+    <!-- /弹窗:选择知识点 -->
   </div>
 </template>
 
@@ -147,7 +213,31 @@ export default {
   },
   data() {
     return {
-      questionType: '单选题'
+      questionType: '单选题',
+      data: [
+        {
+          name: '父选项1',
+          children: [
+            {
+              name: '子选项1'
+            }
+          ]
+        },
+        {
+          name: '父选项2',
+          children: [
+            {
+              name: '子选项2'
+            }
+          ]
+        }
+      ],
+      defaultProps: {
+        children: 'children',
+        label: 'name'
+      },
+      sectionDialogVisible: false,
+      knowledgeDialogVisible: false
     }
   },
 };

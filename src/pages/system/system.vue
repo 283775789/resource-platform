@@ -6,6 +6,7 @@
           <div class="pl-card">
             <ul class="pl-sidebar">
               <li class="pl-sidebar-title"><i class="pl-ico xpower"></i>权限管理</li>
+              <li><router-link class="pl-sidebar-link" to="/system/user">用户管理</router-link></li>
               <li><router-link class="pl-sidebar-link" to="/system/role">角色管理</router-link></li>
               <li class="pl-sidebar-title"><i class="pl-ico xtemplate"></i>模板管理</li>
               <li><router-link class="pl-sidebar-link" to="/system/template">模板管理</router-link></li>

@@ -21,7 +21,7 @@
                   <div class="pl-paperinfo-title">新目标（Go for it）版2017-2018学年七年级英语上学期期中综合能力评估试题</div>
                   <div class="pl-paperinfo-item"><i class="pl-ico xbook"></i>教材：高中数学 >> 人教版</div>
                   <div class="pl-paperinfo-item"><i class="pl-ico xsearchkey"></i>关键字：关键字1，关键字2</div>
-                  <div class="pl-paperinfo-item" style="max-width:70%;"><i class="pl-ico xpaper"></i>套卷：中南讯智学科编辑制作期末考试2017上学期</div>
+                  <div class="pl-paperinfo-item" style="max-width:70%;"><i class="pl-ico xstatus"></i>状态：<span>草稿</span></div>
                   <div class="pl-paperinfo-item" style="max-width:70%;">
                     <span class="pl-paperinfo-tag"><i class="pl-ico xorg"></i>机构名称</span>
                     <span class="pl-paperinfo-tag"><i class="pl-ico xtime"></i>2018-04-05 15:03</span>
@@ -41,7 +41,7 @@
                   <div class="pl-paperinfo-title">新目标（Go for it）版2017-2018学年七年级英语上学期期中综合能力评估试题</div>
                   <div class="pl-paperinfo-item"><i class="pl-ico xbook"></i>教材：高中数学 >> 人教版</div>
                   <div class="pl-paperinfo-item"><i class="pl-ico xsearchkey"></i>关键字：关键字1，关键字2</div>
-                  <div class="pl-paperinfo-item" style="max-width:70%;"><i class="pl-ico xpaper"></i>套卷：中南讯智学科编辑制作期末考试2017上学期</div>
+                  <div class="pl-paperinfo-item" style="max-width:70%;"><i class="pl-ico xstatus"></i>状态：<span class="c-ng">审核不通过</span></div>
                   <div class="pl-paperinfo-item" style="max-width:70%;">
                     <span class="pl-paperinfo-tag"><i class="pl-ico xorg"></i>机构名称</span>
                     <span class="pl-paperinfo-tag"><i class="pl-ico xtime"></i>2018-04-05 15:03</span>
@@ -61,7 +61,7 @@
                   <div class="pl-paperinfo-title">新目标（Go for it）版2017-2018学年七年级英语上学期期中综合能力评估试题</div>
                   <div class="pl-paperinfo-item"><i class="pl-ico xbook"></i>教材：高中数学 >> 人教版</div>
                   <div class="pl-paperinfo-item"><i class="pl-ico xsearchkey"></i>关键字：关键字1，关键字2</div>
-                  <div class="pl-paperinfo-item" style="max-width:70%;"><i class="pl-ico xpaper"></i>套卷：中南讯智学科编辑制作期末考试2017上学期</div>
+                  <div class="pl-paperinfo-item" style="max-width:70%;"><i class="pl-ico xstatus"></i>状态：<span>待审核</span></div>
                   <div class="pl-paperinfo-item" style="max-width:70%;">
                     <span class="pl-paperinfo-tag"><i class="pl-ico xorg"></i>机构名称</span>
                     <span class="pl-paperinfo-tag"><i class="pl-ico xtime"></i>2018-04-05 15:03</span>
@@ -81,7 +81,7 @@
                   <div class="pl-paperinfo-title">新目标（Go for it）版2017-2018学年七年级英语上学期期中综合能力评估试题</div>
                   <div class="pl-paperinfo-item"><i class="pl-ico xbook"></i>教材：高中数学 >> 人教版</div>
                   <div class="pl-paperinfo-item"><i class="pl-ico xsearchkey"></i>关键字：关键字1，关键字2</div>
-                  <div class="pl-paperinfo-item" style="max-width:70%;"><i class="pl-ico xpaper"></i>套卷：中南讯智学科编辑制作期末考试2017上学期</div>
+                  <div class="pl-paperinfo-item" style="max-width:70%;"><i class="pl-ico xstatus"></i>状态：<span class="c-pass">已审核</span></div>
                   <div class="pl-paperinfo-item" style="max-width:70%;">
                     <span class="pl-paperinfo-tag"><i class="pl-ico xorg"></i>机构名称</span>
                     <span class="pl-paperinfo-tag"><i class="pl-ico xtime"></i>2018-04-05 15:03</span>

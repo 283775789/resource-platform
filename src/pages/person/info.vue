@@ -41,7 +41,7 @@
         <span class="pl-title-label">任教信息</span>
       </div>
 
-      <div class="pl-formbox" style="width:360px;">
+      <div class="pl-formbox" style="width:640px;">
         <el-form label-width="5em" size="medium">
           <el-form-item class="pl-formitem" label="学校:">
             <el-input></el-input>

@@ -28,7 +28,7 @@
     <!-- /积分统计 -->
 
     <!-- 积分明细 -->
-    <div class="pl-card xp"  v-pl-to-bottom="100">
+    <div class="pl-card xp" style="min-height:408px;">
       <div class="pl-title">
         <span class="pl-title-label">积分明细</span>
       </div>

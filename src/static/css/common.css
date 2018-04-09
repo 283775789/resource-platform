@@ -275,6 +275,7 @@
 
 .pl-card.xsave {
   padding: 10px;
+  overflow: auto;
 }
 
 /* 模块 */
@@ -613,8 +614,10 @@
 /* 搜索框 */
 .pl-search {
   display:inline-block;
-  width: 400px;
+  width: 600px;
   margin-left: 120px;
+  margin-top: 27px;
+  vertical-align: top;
 }
 
 .pl-search .el-input-group__append,
@@ -1117,6 +1120,22 @@
   line-height: 1.5;
 }
 
+/* 标签容器 */
+.pl-tagbox {
+  margin-bottom: 20px;
+}
+
+.pl-tagbox-title {
+  margin-bottom: 5px;
+  text-align: right;
+}
+
+.pl-tagbox-body {
+  height: 60px;
+  border: 1px solid #dcdfe6;
+  overflow: auto;
+}
+
 /* 可删除标签 */
 .pl-deltags {
   margin: -3px -10px;
@@ -1136,6 +1155,14 @@
   position: absolute;
   top: 3px;
   right: 10px;
+}
+
+.pl-tagbox-body .pl-deltag {
+  padding: 3px 25px 3px 5px;
+}
+
+.pl-tagbox-body .pl-deltag > a {
+  right: 5px;
 }
 
 /* 背景盒子 */
@@ -1548,6 +1575,38 @@
   color: #fff;
 }
 
+/* 背景容器2 */
+.pl-bgbox2 {
+  padding: 10px 5px;
+  background: #2dbe60;
+  text-align: center;
+}
+
+.pl-card.xsave .pl-bgbox2 {
+  margin:-10px -10px 10px;
+}
+
+.pl-bgbox2 .el-radio-button__inner {
+  width: 85px;
+  padding:6px 10px;
+  font-weight: bold;
+  background: #2dbe60;
+  color: #fff;
+  border: 2px solid #fff;
+  border-left: 0;
+}
+
+.pl-bgbox2 .el-radio-button:first-child .el-radio-button__inner {
+  border-left-width: 2px;
+}
+
+.pl-bgbox2 .el-radio-button__orig-radio:checked+.el-radio-button__inner {
+  background: #fff;
+  color: #2dbe60;
+  border-color: #fff;
+  box-shadow: none;
+}
+
 /* ------------------------------ 公用样式 ------------------------------ */
 .m-tiny {
   margin: 10px !important;
@@ -1638,6 +1697,18 @@
   opacity: .4;
 }
 
+.c-6 {
+  color: #666;
+}
+
 .c-9 {
   color: #999;
+}
+
+.c-ng {
+  color:#ff6600;
+}
+
+.c-pass {
+  color:#2dbe60;
 }

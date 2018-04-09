@@ -1,7 +1,7 @@
 <template>
   <div class="pl-sidelayout-right">
     <!-- 知识点管理 -->
-    <div class="pl-card xp"  v-pl-to-bottom="100">
+    <div class="pl-card xp"  v-pl-to-bottom="60">
       <div class="pl-title">
         <span class="pl-title-label">知识点管理</span>
       </div>

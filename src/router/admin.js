@@ -6,6 +6,7 @@ import Home from '@/pages/admin/home'
 
 // 系统管理相关路由
 import System from '@/pages/system/system'
+import SystemUser from '@/pages/system/user'
 import SystemRole from '@/pages/system/role'
 import SystemTemplate from '@/pages/system/template'
 import SystemNotice from '@/pages/system/notice'
@@ -35,8 +36,12 @@ export default new Router({
     {
       path: '/system',
       component: System,
-      redirect: '/system/role',
+      redirect: '/system/user',
       children: [
+        {
+          path: 'user',
+          component: SystemUser
+        },
         {
           path: 'role',
           component: SystemRole

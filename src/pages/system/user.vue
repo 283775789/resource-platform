@@ -8,7 +8,31 @@
       <!-- 筛选区 -->
       <div class="twui-filter">
         <el-form :model="filterData" ref="filter" label-width="6em" :inline="true" >
-          <el-form-item prop="roleName" label="角色名称:">
+          <el-form-item prop="roleName" label="学校:">
+            <el-input size="medium" style="width:200px;" v-model="filterData.roleName"></el-input>
+          </el-form-item>
+          <el-form-item prop="roleName" label="角色:">
+            <el-select style="width:200px;">
+              <el-option value="1">角色1</el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item prop="roleName" label="学段:">
+            <el-input size="medium" style="width:200px;" v-model="filterData.roleName"></el-input>
+          </el-form-item>
+          <el-form-item prop="roleName" label="任教科目:">
+            <el-select style="width:200px;">
+              <el-option value="1">科目1</el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item prop="roleName" label="年级:">
+            <el-select style="width:200px;">
+              <el-option value="1">年级1</el-option>
+            </el-select>
+          </el-form-item>
+          <el-form-item prop="roleName" label="登录名:">
+            <el-input size="medium" style="width:200px;" v-model="filterData.roleName"></el-input>
+          </el-form-item>
+          <el-form-item prop="roleName" label="用户姓名:">
             <el-input size="medium" style="width:200px;" v-model="filterData.roleName"></el-input>
           </el-form-item>
           <el-form-item>
@@ -24,19 +48,17 @@
     <!-- 表格内容 -->
     <div class="pl-card xp"  v-pl-to-bottom="60">
       <div class="pl-btnarea">
-        <el-button type="info" size="medium" @click="dialogVisible = true">新增</el-button>
         <el-button type="info" size="medium" @click="dialogVisible = true">修改</el-button>
-        <el-button size="medium" @click="handleDelete">删除</el-button>
       </div>
 
       <!-- 表格用法详见:http://element.eleme.io/#/zh-CN/component/table -->
       <el-table :data="tableData" border style="width: 100%">
         <el-table-column type="selection" width="40" align="center"></el-table-column>
-        <el-table-column prop="roleId" label="角色编码" width="80"></el-table-column>
-        <el-table-column prop="roleName" label="角色名称"></el-table-column>
-        <el-table-column prop="enableUpload" label="上传权限" width="80"></el-table-column>
-        <el-table-column prop="enableDownload" label="下载权限" width="80"></el-table-column>
-        <el-table-column prop="subjectLimit" label="学科限制" width="120"></el-table-column>
+        <el-table-column prop="username" label="登录名" width="80"></el-table-column>
+        <el-table-column prop="roleName" label="角色"></el-table-column>
+        <el-table-column prop="school" label="学校" width="160"></el-table-column>
+        <el-table-column prop="learningSection" label="学段" width="120"></el-table-column>
+        <el-table-column prop="grad" label="年级" width="120"></el-table-column>
         <el-table-column prop="time" label="更新时间" width="160"></el-table-column>
       </el-table>
 
@@ -46,35 +68,17 @@
     <!-- /表格内容 -->
 
     <!-- 弹窗:新增 -->
-    <el-dialog title="角色新增/修改" :visible.sync="dialogVisible" width="500px">
+    <el-dialog title="用户角色修改" :visible.sync="dialogVisible" width="500px">
       <div class="pl-dialogbody">
         <!-- 表单用法详见:http://element.eleme.io/#/zh-CN/component/form -->
-        <el-form label-width="80px" size="medium">
-          <el-form-item label="角色编码:">
-            <el-input></el-input>
+        <el-form label-width="60px" size="medium">
+          <el-form-item label="用户名:">
+            <el-input readonly=""></el-input>
           </el-form-item>
-          <el-form-item label="角色名称:">
-            <el-input></el-input>
-          </el-form-item>
-          <el-form-item label="菜单权限:">
-            <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
-            <div class="pl-ctrontree">
-              <el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick" show-checkbox></el-tree>
-            </div>
-          </el-form-item>
-          <el-form-item label="上传权限:">
-            <!-- 单选框请加上v-model属性:http://element.eleme.io/#/zh-CN/component/radio -->
-            <el-radio v-model="radioDemo" label="允许上传"></el-radio>
-            <el-radio label="不允许上传"></el-radio>
-          </el-form-item>
-          <el-form-item label="下载权限:">
-            <el-radio label="允许下载"></el-radio>
-            <el-radio label="不允许下载"></el-radio>
-          </el-form-item>
-          <el-form-item label="学科限制:">
-            <el-radio label="本学科"></el-radio>
-            <el-radio label="全学科"></el-radio>
-            <el-radio label="全学科"></el-radio>
+          <el-form-item prop="roleName" label="角色:">
+            <el-select style="width:100%;">
+              <el-option value="1">角色1</el-option>
+            </el-select>
           </el-form-item>
         </el-form>
       </div>
@@ -97,11 +101,11 @@
         },
         tableData: [
           {
-            roleId: '001',
+            username: '001',
             roleName: '老师',
-            enableUpload: '有',
-            enableDownload: '有',
-            subjectLimit: '本学科',
+            school: '学校1',
+            learningSection: '高中',
+            grad: '年级1',
             time: ''
           }
         ],

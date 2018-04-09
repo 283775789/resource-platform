@@ -3,20 +3,38 @@
     <div class="pl-main-inner">
       <div class="pl-sidelayout">
         <div class="pl-sidelayout-left">
-          <div class="pl-card xsave" style="min-height:500px;">
-            <div class="pl-searchinput">
-              <el-input size="small" placeholder="请输入知识点"></el-input>
-              <i class="el-icon-search"></i>
+          <div class="pl-card xsave" v-pl-to-bottom.fixed="20">
+            <div class="pl-bgbox2">
+              <el-radio-group v-model="activeTab">
+                <el-radio-button label="1">章节</el-radio-button>
+                <el-radio-button label="2">知识点</el-radio-button>
+              </el-radio-group>
             </div>
-            <div class="pl-treebox xschool">
-              <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
-              <el-tree :data="data" :props="defaultProps" show-checkbox></el-tree>
+            <div v-if="activeTab==='1'">
+              <div class="pl-searchinput">
+                <el-input size="small" placeholder="请输入章节"></el-input>
+                <i class="el-icon-search"></i>
+              </div>
+              <div class="pl-treebox xschool">
+                <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
+                <el-tree :data="data" :props="defaultProps" show-checkbox></el-tree>
+              </div>
+            </div>
+            <div v-if="activeTab==='2'">
+              <div class="pl-searchinput">
+                <el-input size="small" placeholder="请输入知识点"></el-input>
+                <i class="el-icon-search"></i>
+              </div>
+              <div class="pl-treebox xschool">
+                <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
+                <el-tree :data="data" :props="defaultProps" show-checkbox></el-tree>
+              </div>
             </div>
           </div>
         </div>
         <div class="pl-sidelayout-right">
           <!-- 试题信息 -->
-          <div class="pl-card xp xfixedfooter" v-pl-to-bottom="100">
+          <div class="pl-card xp xfixedfooter" v-pl-to-bottom="60">
             <div class="pl-title">
               <span class="pl-title-label">智能组卷</span>
             </div>
@@ -143,27 +161,28 @@ export default {
   data() {
     return {
       data: [
-          {
-            name: '有理数',
-            children: [
-              {
-                name: '有理数1'
-              }
-            ]
-          },
-          {
-            name: '无理数',
-            children: [
-              {
-                name: '无理数1'
-              }
-            ]
-          }
-        ],
-        defaultProps: {
-          children: 'children',
-          label: 'name'
+        {
+          name: '有理数',
+          children: [
+            {
+              name: '有理数1'
+            }
+          ]
+        },
+        {
+          name: '无理数',
+          children: [
+            {
+              name: '无理数1'
+            }
+          ]
         }
+      ],
+      defaultProps: {
+        children: 'children',
+        label: 'name'
+      },
+      activeTab: '1'
     }
   },
 };

@@ -31,6 +31,10 @@ export default new Router({
   linkExactActiveClass: 'xcurrent',
   routes: [
     {
+      path: '/',
+      redirect: '/home'
+    },
+    {
       path: '/home',
       component: Home
     },
