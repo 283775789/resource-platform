@@ -5,8 +5,8 @@
         <div class="pl-sidelayout-left">
           <!-- 试题属性 -->
           <div class="pl-card xsp">
-            <div class="pl-title">
-              <span class="pl-title-label">试题属性</span>
+            <div class="pl-subtitle xsmall">
+              <span class="pl-subtitle-text">试题属性</span>
             </div>
 
             <!-- 表单用法详见:http://element.eleme.io/#/zh-CN/component/form -->
@@ -62,8 +62,8 @@
 
           <!-- 试题扩展属性 -->
           <div class="pl-card xsp">
-            <div class="pl-title">
-              <span class="pl-title-label">试题扩展属性</span>
+            <div class="pl-subtitle xsmall">
+              <span class="pl-subtitle-text">试题扩展属性</span>
             </div>
             <el-form class="xsmall" label-width="60px" size="medium">
               <el-form-item label="教材版本:">

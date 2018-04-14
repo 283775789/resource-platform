@@ -15,6 +15,10 @@ import SystemKnowledge from '@/pages/system/knowledge'
 import SystemBook from '@/pages/system/book'
 import SystemPoints from '@/pages/system/points'
 
+// 试题相关路由
+import ExerciseStore from '@/pages/exercise/store'
+import ExerciseFirstCheck from '@/pages/exercise/first-check'
+
 // 试卷相关路由
 import TestpaperStore from '@/pages/testpaper/store'
 import TestpaperFirstCheck from '@/pages/testpaper/first-check'
@@ -71,6 +75,14 @@ export default new Router({
           component: SystemPoints
         }
       ]
+    },
+    {
+      path: '/exercise-store',
+      component: ExerciseStore
+    },
+    {
+      path: '/exercise-first-check',
+      component: ExerciseFirstCheck
     },
     {
       path: '/testpaper-store',

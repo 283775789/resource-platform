@@ -1,160 +1,190 @@
 ﻿a:hover > .pl-ico.xadd {
-  background-position: -134px -78px;
+  background-position: -228px -26px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xdel {
-  background-position: -130px -134px;
+  background-position: -182px -200px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xdownload {
-  background-position: -104px -134px;
+  background-position: -228px -52px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xmodify {
-  background-position: -160px -26px;
+  background-position: 0px -226px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xnext {
-  background-position: -160px -52px;
+  background-position: -26px -226px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xoff {
-  background-position: -108px -26px;
+  background-position: -160px -108px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xprev {
-  background-position: -108px -52px;
+  background-position: -114px -154px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xremove {
-  background-position: -108px -78px;
+  background-position: -140px -154px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xupload {
-  background-position: 0px -108px;
+  background-position: -166px -154px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xac {
-  background-position: -26px -108px;
+  background-position: -192px -154px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xadd {
-  background-position: -52px -108px;
+  background-position: -156px -200px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xadd2 {
-  background-position: -78px -108px;
+  background-position: -228px 0px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xal {
-  background-position: -186px -145px;
+  background-position: -254px -145px;
   width: 9px;
   height: 16px;
 }
 .pl-ico.xbook {
-  background-position: -186px -75px;
+  background-position: -254px -75px;
   width: 14px;
   height: 14px;
 }
 .pl-ico.xdel {
-  background-position: -134px -26px;
+  background-position: -228px -104px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xdownload {
-  background-position: -134px -52px;
+  background-position: -228px -182px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xdownload2 {
-  background-position: -26px -186px;
+  background-position: -231px -226px;
   width: 11px;
   height: 11px;
 }
+.pl-ico.xepub {
+  background-position: -108px 0px;
+  width: 30px;
+  height: 36px;
+}
+.pl-ico.xexce {
+  background-position: -108px -46px;
+  width: 30px;
+  height: 36px;
+}
+.pl-ico.xflash {
+  background-position: -148px 0px;
+  width: 30px;
+  height: 36px;
+}
+.pl-ico.ximg {
+  background-position: -148px -46px;
+  width: 30px;
+  height: 36px;
+}
 .pl-ico.xmenu {
-  background-position: 0px -186px;
+  background-position: 0px -252px;
   width: 16px;
   height: 14px;
 }
 .pl-ico.xmformula {
-  background-position: -123px -160px;
+  background-position: -254px -171px;
   width: 12px;
   height: 12px;
 }
 .pl-ico.xmimg {
-  background-position: -53px -160px;
+  background-position: -183px -226px;
   width: 16px;
   height: 12px;
 }
 .pl-ico.xmodify {
-  background-position: -52px -134px;
+  background-position: -26px -200px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xnext {
-  background-position: -78px -134px;
+  background-position: -52px -200px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xno {
-  background-position: -186px 0px;
+  background-position: -254px 0px;
   width: 15px;
   height: 15px;
 }
 .pl-ico.xnotice {
-  background-position: -108px 0px;
+  background-position: -104px -200px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xoff {
-  background-position: -160px 0px;
+  background-position: -130px -200px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xorg {
-  background-position: -145px -160px;
+  background-position: -209px -226px;
   width: 12px;
   height: 11px;
 }
 .pl-ico.xpaper {
-  background-position: -186px -51px;
+  background-position: -254px -51px;
   width: 14px;
   height: 14px;
 }
+.pl-ico.xpdf {
+  background-position: -120px -108px;
+  width: 30px;
+  height: 36px;
+}
 .pl-ico.xpeper {
-  background-position: -186px -25px;
+  background-position: -254px -25px;
   width: 14px;
   height: 16px;
 }
 .pl-ico.xperson {
-  background-position: 0px -160px;
+  background-position: -130px -226px;
   width: 15px;
   height: 16px;
 }
 .pl-ico.xpower {
-  background-position: -160px -130px;
+  background-position: -228px -78px;
   width: 16px;
   height: 16px;
 }
+.pl-ico.xppt {
+  background-position: -188px -92px;
+  width: 30px;
+  height: 36px;
+}
 .pl-ico.xprev {
-  background-position: -160px -104px;
+  background-position: -228px -130px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xremove {
-  background-position: -160px -78px;
+  background-position: -228px -156px;
   width: 16px;
   height: 16px;
 }
@@ -174,62 +204,102 @@ a:hover > .pl-ico.xupload {
   height: 44px;
 }
 .pl-ico.xsearchkey {
-  background-position: -186px -99px;
+  background-position: -254px -99px;
   width: 14px;
   height: 13px;
 }
 .pl-ico.xsetting {
-  background-position: -26px -134px;
+  background-position: -78px -226px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xstatus {
-  background-position: -186px -122px;
+  background-position: -254px -122px;
   width: 13px;
   height: 13px;
 }
 .pl-ico.xteacher {
-  background-position: -101px -160px;
+  background-position: -254px -215px;
   width: 12px;
   height: 12px;
 }
 .pl-ico.xtemplate {
-  background-position: 0px -134px;
+  background-position: -104px -226px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xtest {
-  background-position: -134px -104px;
+  background-position: -52px -226px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xtime {
-  background-position: -79px -160px;
+  background-position: -254px -193px;
   width: 12px;
   height: 12px;
 }
 .pl-ico.xtip {
-  background-position: -54px -54px;
+  background-position: -80px -154px;
   width: 24px;
   height: 24px;
 }
+.pl-ico.xtxt {
+  background-position: -188px 0px;
+  width: 30px;
+  height: 36px;
+}
+.pl-ico.xunknow {
+  background-position: -80px -108px;
+  width: 30px;
+  height: 36px;
+}
 .pl-ico.xupload {
-  background-position: -134px 0px;
+  background-position: -78px -200px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xuser {
-  background-position: -104px -108px;
+  background-position: 0px -200px;
   width: 16px;
   height: 16px;
 }
+.pl-ico.xvideo {
+  background-position: -40px -154px;
+  width: 30px;
+  height: 36px;
+}
 .pl-ico.xview {
-  background-position: -54px -88px;
+  background-position: -160px -134px;
   width: 12px;
   height: 10px;
 }
+.pl-ico.xvoice {
+  background-position: 0px -108px;
+  width: 30px;
+  height: 36px;
+}
+.pl-ico.xweb {
+  background-position: -54px -54px;
+  width: 30px;
+  height: 36px;
+}
+.pl-ico.xword {
+  background-position: 0px -154px;
+  width: 30px;
+  height: 36px;
+}
+.pl-ico.xxml {
+  background-position: -40px -108px;
+  width: 30px;
+  height: 36px;
+}
 .pl-ico.xyes {
-  background-position: -25px -160px;
+  background-position: -155px -226px;
   width: 18px;
   height: 13px;
+}
+.pl-ico.xzip {
+  background-position: -188px -46px;
+  width: 30px;
+  height: 36px;
 }

@@ -27,46 +27,6 @@
   margin-left: 5px;
 }
 
-/* ---------------------------- 等分栅格 -------------------------------- */
-.pl-grid { margin: -10px; }
-.pl-grid:before,
-.pl-grid:after { content: " "; display: table; }
-.pl-grid:after { clear: both; }
-.pl-grid-col { float: left; width: 100%; min-height: 1px; padding: 10px; }
-.pl-grid.xpc-x1 > .pl-grid-col { width: 100%; }
-.pl-grid.xpc-x2 > .pl-grid-col { width: 50%; }
-.pl-grid.xpc-x3 > .pl-grid-col { width: 33.33333%; }
-.pl-grid.xpc-x4 > .pl-grid-col { width: 25%; }
-.pl-grid.xpc-x5 > .pl-grid-col { width: 20%; }
-.pl-grid.xpc-x6 > .pl-grid-col { width: 16.66667%; }
-.pl-grid.xpc-x7 > .pl-grid-col { width: 14.28571%; }
-.pl-grid.xpc-x8 > .pl-grid-col { width: 12.5%; }
-.pl-grid.xpc-x9 > .pl-grid-col { width: 11.11111%; }
-.pl-grid.xpc-x10 > .pl-grid-col { width: 10%; }
-.pl-grid.xpc-x11 > .pl-grid-col { width: 9.09091%; }
-.pl-grid.xpc-x12 > .pl-grid-col { width: 8.33333%; }
-
-@media (max-width: 1199px) {
-  .pl-grid.xlpad-x1 > .pl-grid-col { width: 100%; }
-  .pl-grid.xlpad-x2 > .pl-grid-col { width: 50%; }
-  .pl-grid.xlpad-x3 > .pl-grid-col { width: 33.33333%; }
-  .pl-grid.xlpad-x4 > .pl-grid-col { width: 25%; }
-  .pl-grid.xlpad-x5 > .pl-grid-col { width: 20%; }
-  .pl-grid.xlpad-x6 > .pl-grid-col { width: 16.66667%; }
-  .pl-grid.xlpad-x7 > .pl-grid-col { width: 14.28571%; }
-  .pl-grid.xlpad-x8 > .pl-grid-col { width: 12.5%; }
-  .pl-grid.xlpad-x9 > .pl-grid-col { width: 11.11111%; }
-  .pl-grid.xlpad-x10 > .pl-grid-col { width: 10%; }
-  .pl-grid.xlpad-x11 > .pl-grid-col { width: 9.09091%; }
-  .pl-grid.xlpad-x12 > .pl-grid-col { width: 8.33333%; }
-}
-
-.pl-grid.xsummary {
-  padding: 30px 0;
-  font-size: 16px;
-  text-align: center;
-}
-
 /* ------------------------------ 布局 ------------------------------ */
 .pl-topbar-inner,
 .pl-header-inner,
@@ -1100,6 +1060,10 @@
   font-weight: bold;
 }
 
+.pl-card.xsp .pl-subtitle {
+  margin-left: -15px;
+}
+
 /* 子标题-内页 */
 .pl-subtitle.xsmall {
   padding: 0 0 0 10px;
@@ -1419,23 +1383,6 @@
   display: block;
 }
 
-/* 附件 */
-.pl-attachment {
-  position: relative;
-  padding: 10px;
-  line-height: 36px;
-  font-size: 14px;
-  background: #f2f2f2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.pl-attachment-img {
-  display: inline-block;
-  margin-right: 6px;
-  vertical-align: middle;
-}
-
 /* 按钮区域 */
 .pl-fixfooter {
   position: absolute;
@@ -1606,6 +1553,194 @@
   border-color: #fff;
   box-shadow: none;
 }
+
+/* ------------------------------ 试题详情 ------------------------------ */
+.pl-questionlist {
+  margin-top: -21px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.pl-questiondetail {
+  margin-bottom: 20px;
+}
+
+.pl-questiondetail-tools {
+  text-align: right;
+}
+
+.pl-questiondetail-tools > .pl-link {
+  margin-right: 10px;
+}
+
+/* 试题详情 */
+.pl-astable.xqd .xqd-no {
+  width: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.pl-astable.xqd .xqd-title {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.pl-astable.xqd .xqd-score {
+  margin-right: 5px;
+}
+
+.pl-astable.xqd .pl-astable-col {
+  vertical-align: top;
+}
+
+.pl-pdanswer {
+  margin-left: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: #dff5e6;
+}
+
+.pl-pdanswer-body {
+  line-height: 1.75;
+}
+
+.pl-pdanswer .pl-grid.xattachments {
+  margin: 0 -5px;
+}
+
+.pl-pdanswer .pl-attachment {
+  background: #fff;
+}
+
+.pl-pdanswer .pl-linebox {
+  margin-top: -20px;
+}
+
+.pl-astable.xqd img {
+  max-width: 600px;
+  max-height: 300px;
+  vertical-align: middle;
+}
+
+.pl-astable.xqd .pl-linebox {
+  margin: -20px -20px 0;
+}
+
+.pl-astable.xqd .pl-astable.xline {
+  border-spacing: 20px 25px;
+}
+
+.pl-astable.xqd .pl-qeditor-body {
+  min-height: 16px;
+}
+
+/* 选项详情 */
+.pl-astable.xod {
+   margin-bottom: 20px;
+}
+
+.pl-astable.xod .xod-no {
+  width: 20px;
+  padding-right: 5px;
+  font-weight: bold;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.pl-astable.xod .pl-astable-col {
+  padding-bottom: 5px;
+  vertical-align: middle;
+}
+
+/* 附件 */
+.pl-grid.xattachments {
+  margin-bottom: 10px;
+}
+
+.pl-attachment {
+  position: relative;
+  padding: 10px 10px 10px 50px;
+  height: 60px;
+  font-size: 14px;
+  background: #f2f2f2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 5px;
+}
+
+.pl-attachment-img {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 30px;
+  height: 36px;
+}
+
+.pl-attachment-body {
+  height: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.pl-attachment-body:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.pl-attachment-name {
+  display: inline-block;
+  line-height: 20px;
+  white-space: normal;
+  vertical-align: middle;
+}
+
+/* 试题属性 */
+.pl-questionprops {
+  position: relative;
+  padding: 8px 50px 8px 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  background: #f2f2f2;
+  border-top: 1px solid #e3e3e3;
+}
+
+.pl-questionprops-body {
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pl-questionprops-body > span + span {
+  margin-left: 5px;
+  padding-left: 10px;
+  border-left: 1px solid #d1d1d1;
+}
+
+.pl-questionprops-right {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.pl-questionprops-right .el-checkbox__inner {
+  width: 18px;
+  height: 18px;
+}
+
+.pl-questionprops-right .el-checkbox__inner:after {
+  left: 6px;
+  top: 3px;
+}
+
+.pl-questiondetail.xjoin .pl-questiondetail {
+  padding-top: 15px;
+  border-top: 1px solid #e3e3e3;
+}
+
 
 /* ------------------------------ 公用样式 ------------------------------ */
 .m-tiny {
