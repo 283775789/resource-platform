@@ -33,9 +33,9 @@
           </div>
         </div>
         <div class="pl-sidelayout-right">
-          <div class="pl-card xp">
+          <div class="pl-card xp" style="padding-bottom:30px;">
             <div class="pl-title">
-              <span class="pl-title-label">初审试</span>
+              <span class="pl-title-label">初审试题</span>
             </div>
             <div class="pl-astable xfilter">
               <div class="pl-astable-row">
@@ -87,7 +87,7 @@
                 <a class="pl-link2 xactive">最新</a>
                 <i class="pl-sline"></i>
                 <el-checkbox label="选中本页试题"></el-checkbox>
-                <el-button type="info" class="ml-tiny" @click.native="dialogVisible=true">批量初审</el-button>
+                <el-button size="medium" type="info" class="ml-tiny" @click.native="dialogVisible=true">批量初审</el-button>
               </div>
             </div>
 
@@ -105,8 +105,8 @@
               </div>
               <pl-question-detail-select>
                 <template slot="tools">
-                  <el-button type="primary">收藏</el-button>
-                  <el-button type="info" @click.native="dialogVisible=true">初审</el-button>
+                  <el-button size="medium" type="primary">收藏</el-button>
+                  <el-button size="medium" type="info" @click.native="dialogVisible=true">初审</el-button>
                 </template>
               </pl-question-detail-select>
               <!-- 题型:选择题 -->
@@ -123,8 +123,8 @@
               </div>
               <pl-question-detail-fill>
                 <template slot="tools">
-                  <el-button type="primary">收藏</el-button>
-                  <el-button type="info" @click.native="dialogVisible=true">初审</el-button>
+                  <el-button size="medium" type="primary">收藏</el-button>
+                  <el-button size="medium" type="info" @click.native="dialogVisible=true">初审</el-button>
                 </template>
               </pl-question-detail-fill>
               <!-- /题型:填空题 -->
@@ -141,8 +141,8 @@
               </div>
               <pl-question-detail-judgment>
                 <template slot="tools">
-                  <el-button type="primary">收藏</el-button>
-                  <el-button type="info" @click.native="dialogVisible=true">初审</el-button>
+                  <el-button size="medium" type="primary">收藏</el-button>
+                  <el-button size="medium" type="info" @click.native="dialogVisible=true">初审</el-button>
                 </template>
               </pl-question-detail-judgment>
               <!-- /题型:判断题 -->
@@ -159,8 +159,8 @@
               </div>
               <pl-question-detail-shortanswer>
                 <template slot="tools">
-                  <el-button type="primary">收藏</el-button>
-                  <el-button type="info" @click.native="dialogVisible=true">初审</el-button>
+                  <el-button size="medium" type="primary">收藏</el-button>
+                  <el-button size="medium" type="info" @click.native="dialogVisible=true">初审</el-button>
                 </template>
               </pl-question-detail-shortanswer>
               <!-- /题型:简答题 -->
@@ -177,8 +177,8 @@
               </div>
               <pl-question-detail-select>
                 <template slot="tools">
-                  <el-button type="primary">收藏</el-button>
-                  <el-button type="info" @click.native="dialogVisible=true">初审</el-button>
+                  <el-button size="medium" type="primary">收藏</el-button>
+                  <el-button size="medium" type="info" @click.native="dialogVisible=true">初审</el-button>
                 </template>
               </pl-question-detail-select>
               <!-- /题型:听力题 -->
@@ -195,8 +195,8 @@
               </div>
               <pl-question-detail-voice>
                 <template slot="tools">
-                  <el-button type="primary">收藏</el-button>
-                  <el-button type="info" @click.native="dialogVisible=true">初审</el-button>
+                  <el-button size="medium" type="primary">收藏</el-button>
+                  <el-button size="medium" type="info" @click.native="dialogVisible=true">初审</el-button>
                 </template>
               </pl-question-detail-voice>
               <!-- /题型:跟读题 -->
@@ -213,8 +213,8 @@
               </div>
               <pl-question-detail-line>
                 <template slot="tools">
-                  <el-button type="primary">收藏</el-button>
-                  <el-button type="info" @click.native="dialogVisible=true">初审</el-button>
+                  <el-button size="medium" type="primary">收藏</el-button>
+                  <el-button size="medium" type="info" @click.native="dialogVisible=true">初审</el-button>
                 </template>
               </pl-question-detail-line>
               <!-- /题型:连线题  -->
@@ -231,8 +231,8 @@
               </div>
               <pl-question-detail-join>
                 <template slot="tools">
-                  <el-button type="primary">收藏</el-button>
-                  <el-button type="info" @click.native="dialogVisible=true">初审</el-button>
+                  <el-button size="medium" type="primary">收藏</el-button>
+                  <el-button size="medium" type="info" @click.native="dialogVisible=true">初审</el-button>
                 </template>
               </pl-question-detail-join>
               <!-- /题型:综合题  -->
@@ -271,7 +271,7 @@
 
 <script>
 export default {
-  name: "plAddExamQuestionDetail",
+  name: "plExerciseFirstCheck",
   data() {
     return {
       activeTab: '1',

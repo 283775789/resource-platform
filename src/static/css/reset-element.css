@@ -114,6 +114,14 @@
   border-color: #2dbe64;
 }
 
+.pl-inputreadonly .el-textarea__inner {
+  background: #f5f5f5;
+}
+
+.el-textarea__inner:focus {
+  border-color: #2dbe64;
+}
+
 /* 表单-小 */
 .el-form.xsmall .el-form-item {
   margin-bottom: 8px;

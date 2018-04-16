@@ -543,6 +543,39 @@
   font-weight: bold;
 }
 
+.pl-astable.xfilter.xnoborder {
+  margin-top: 0;
+}
+
+.pl-astable.xfilter.xnoborder .pl-astable-col {
+  border-bottom: none;
+}
+
+/* 仿表格-两栏布局 */
+.pl-twocolbox {
+  position: relative;
+  padding-bottom: 30px;
+  top: -20px;
+  margin: 0 -20px;
+}
+
+.pl-twocolbox .pl-fixfooter {
+  left: 20px;
+  right: 20px;
+  width: auto;
+}
+
+.pl-astable.xtwocol {
+  border-collapse: separate;
+  border-spacing: 20px;
+}
+
+.pl-astable.xtwocol > .pl-astable-col {
+  padding: 10px 20px 20px;
+  background: #fff;
+  box-shadow:0 3px 8px #e3e3e3;
+}
+
 /* ------------------------------ 通用样式 ------------------------------ */
 /* 单选容器 */
 .pl-radiobox {
@@ -654,6 +687,11 @@
   right: 0;
   top: 0;
   line-height: 38px;
+}
+
+.pl-title .el-button {
+  position: relative;
+  top: -5px;
 }
 
 /* 按钮区 */
@@ -819,6 +857,8 @@
 
 /* 面包屑 */
 .pl-crm {
+  position: relative;
+  z-index: 1;
   margin: -10px 0 10px;
   font-size: 14px;
   color: #666;
@@ -865,9 +905,8 @@
   position: absolute;
   left: 0;
   top: 0px;
+  bottom: 0;
   width: 30px;
-  height: 170px;
-  padding-top: 60px;
   background: rgba(45, 190, 96, .6);
   color: #fff;
   font-size: 16px;
@@ -875,9 +914,18 @@
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
-.pl-sidefloat-left > a {
+.pl-sidefloat-left:after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.pl-sidefloat-left:before {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -886,11 +934,28 @@
   opacity: .65;
 }
 
+.pl-sidefloat-left > span {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+}
+
+.pl-sidefloat-left > i {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  font-family: '宋体';
+  font-style: normal;
+  text-align: center;
+}
+
 .pl-sidefloat-left > a:hover {
   opacity: 1;
 }
 
 .pl-sidefloat-body {
+  position: relative;
   height: 170px;
   padding-top: 15px;
   background-color: rgba(255,255,255,.85);
@@ -901,8 +966,48 @@
   margin-left: 0;
 }
 
-/* 子标题 */
+.pl-sidefloat.xcart {
+  width: 280px;
+  right: -250px;
+}
 
+.pl-sidefloat.xcart .pl-sidefloat-body {
+  min-height: 200px;
+  padding-top: 0;
+}
+
+.pl-sidefloat.xcart.xactive {
+  right: 0;
+}
+
+.pl-sidefloat.xcart .xcart-header {
+  line-height: 30px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.pl-sidefloat.xcart .pl-sidefloat-body {
+  padding-bottom: 56px;
+  height: auto;
+}
+
+.pl-sidefloat.xcart .xcart-body {
+  white-space: nowrap;
+}
+
+.pl-sidefloat.xcart .xcart-body .pl-astable-row:first-child .xcart-prev {
+  visibility: hidden;
+}
+
+.pl-sidefloat.xcart .xcart-body .pl-astable-row:last-child .xcart-next {
+  visibility: hidden;
+}
+
+.pl-sidefloat.xcart .xcart-footer {
+  position: absolute;
+  left: 0;
+  bottom: 10px;
+  width: 100%;
+}
 
 /* ------------------------------ 元件 ------------------------------ */
 /* 三角形 */
@@ -1594,7 +1699,7 @@
 }
 
 .pl-pdanswer {
-  margin-left: 40px;
+  margin-left: 20px;
   margin-bottom: 20px;
   padding: 10px;
   background: #dff5e6;
@@ -1741,6 +1846,129 @@
   border-top: 1px solid #e3e3e3;
 }
 
+.pl-num {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+/* 试卷属性 */
+.pl-paperparams {
+  white-space: nowrap;
+  font-size:0;
+}
+
+.pl-paperparams .el-checkbox {
+  margin-left: 0 !important;
+}
+
+.pl-paperparams label + label {
+  margin-left: 12px !important;
+}
+
+.pl-paperparams .el-checkbox__label,
+.pl-paperparams .el-radio__label {
+  padding-left: 5px;
+  font-size: 12px;
+  color: #333;
+}
+
+.pl-paperparams-header {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dcdfe6;
+}
+
+.pl-paperparams-body:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pl-paperparams-body label {
+  float: left;
+  margin: 2px 0;
+  width: 50%;
+}
+
+/* 试卷详情 */
+.pl-paperdetail {
+  padding-left: 60px;
+}
+
+.pl-paperdetail-param {
+  text-align: center;
+}
+
+.pl-paperdetail-param .el-input__inner {
+  text-align: center;
+}
+
+.pl-paperdetail-param.xtitle {
+  line-height: 40px ;
+  font-size:22px;
+}
+
+.pl-paperdetail-param.xsubtitle,
+.pl-paperdetail-param.xgroup {
+  line-height: 40px ;
+  font-size:18px;
+}
+
+.pl-paperdetail-param.xinfo {
+  line-height: 30px ;
+  font-size:12px;
+}
+
+.pl-paperdetail-param.xstudentinfo {
+  font-size: 14px;
+}
+
+.pl-astable.xscore {
+  width: auto;
+  margin: 0 auto;
+}
+
+.pl-astable.xscore .pl-astable-col {
+  width:50px;
+  padding: 0 3px;
+  height: 28px;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  border: 1px solid #797979;
+  text-align: center;
+}
+
+.pl-astable.xscore.xtotal {
+  margin: 10px auto;
+}
+
+.pl-paperdetail-xnote {
+  font-size: 12px;
+  color: #666;
+  text-align: left;
+}
+
+.pl-astable.xquestiontype .pl-astable-col {
+  vertical-align: middle;
+}
+
+.pl-astable.xquestiontype .xquestiotype-title {
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.pl-paperdetail-param .el-input__inner,
+.pl-paperdetail-note .el-input__inner {
+  border-color: transparent;
+}
+
+.pl-paperdetail-param .el-input__inner:hover,
+.pl-paperdetail-note .el-input__inner:hover,
+.pl-astable.xquestiontype .xquestiotype-title .el-input__inner:hover {
+  background: #dff5e6;
+  border-color: #2bbb61;
+}
 
 /* ------------------------------ 公用样式 ------------------------------ */
 .m-tiny {

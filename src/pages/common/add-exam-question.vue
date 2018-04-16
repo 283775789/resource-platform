@@ -188,29 +188,8 @@
 </template>
 
 <script>
-import QuestionSingle from '@/components/question-types/single'
-import QuestionMultiple from '@/components/question-types/multiple'
-import QuestionJudgment from '@/components/question-types/judgment'
-import QuestionFill from '@/components/question-types/fill'
-import QuestionShortAnswer from '@/components/question-types/shortanswer'
-import QuestionListening from '@/components/question-types/listening'
-import QuestionJoin from '@/components/question-types/join'
-import QuestionLine from '@/components/question-types/line'
-import QuestionVoice from '@/components/question-types/voice'
-
 export default {
   name: "plAddExamQuestion",
-  components: {
-    'plQuestionSingle': QuestionSingle,
-    'plQuestionMultiple': QuestionMultiple,
-    'plQuestionJudgment': QuestionJudgment,
-    'plQuestionFill': QuestionFill,
-    'plQuestionShortAnswer': QuestionShortAnswer,
-    'plQuestionListening': QuestionListening,
-    'plQuestionJoin': QuestionJoin,
-    'plQuestionLine': QuestionLine,
-    'plQuestionVoice': QuestionVoice
-  },
   data() {
     return {
       questionType: '单选题',

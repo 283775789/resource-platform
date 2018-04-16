@@ -39,7 +39,7 @@
   import QuestionEditor from '@/components/question-editor'
 
   export default {
-    name: 'plSingleChoice',
+    name: 'plQuestionFill',
     components: {
     'plQuestionEditor': QuestionEditor
     }

@@ -18,6 +18,9 @@ import SystemPoints from '@/pages/system/points'
 // 试题相关路由
 import ExerciseStore from '@/pages/exercise/store'
 import ExerciseFirstCheck from '@/pages/exercise/first-check'
+import ExerciseFinalCheck from '@/pages/exercise/final-check'
+import ExerciseRemoveDuplication from '@/pages/exercise/remove-duplication'
+import ExerciseRemoveDuplicationDetail from '@/pages/exercise/remove-duplication-detail'
 
 // 试卷相关路由
 import TestpaperStore from '@/pages/testpaper/store'
@@ -77,12 +80,28 @@ export default new Router({
       ]
     },
     {
+      path: '/exercise',
+      redirect: '/exercise-store'
+    },
+    {
       path: '/exercise-store',
       component: ExerciseStore
     },
     {
       path: '/exercise-first-check',
       component: ExerciseFirstCheck
+    },
+    {
+      path: '/exercise-final-check',
+      component: ExerciseFinalCheck
+    },
+    {
+      path: '/exercise-remove-duplication',
+      component: ExerciseRemoveDuplication
+    },
+    {
+      path: '/exercise-remove-duplication-detail',
+      component: ExerciseRemoveDuplicationDetail
     },
     {
       path: '/testpaper-store',

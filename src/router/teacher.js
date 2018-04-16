@@ -23,6 +23,7 @@ import PersonAnswerCard from '@/pages/person/answer-card'
 import Artical from '@/pages/common/artical'
 import AddExamQuestion from '@/pages/common/add-exam-question'
 import GroupPaperAuto from '@/pages/common/group-paper-auto'
+import PaperDetail from '@/pages/common/paper-detail'
 
 Vue.use(Router)
 
@@ -107,6 +108,11 @@ export default new Router({
       path: '/group-paper-auto',
       name: 'groupPaperAuto',
       component: GroupPaperAuto
+    },
+    {
+      path: '/paper-detail',
+      name: 'paperDetail',
+      component: PaperDetail
     }
   ]
 })

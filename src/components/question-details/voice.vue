@@ -18,7 +18,7 @@
     <pl-attachment></pl-attachment>
   </ul>
   <div class="pl-questiondetail-tools">
-    <a class="pl-link" @click="answerVisible=!answerVisible">{{answerVisible?'收起':'展开'}}解析</a>
+    <a class="pl-link" v-if="hasAnswer" @click="answerVisible=!answerVisible">{{answerVisible?'收起':'展开'}}解析</a>
     <slot name="tools"></slot>
   </div>
 </div>
