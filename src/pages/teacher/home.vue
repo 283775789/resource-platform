@@ -321,6 +321,11 @@
           </div>
           <!-- /最新试题 -->
         </div>
+
+        <!-- 无数据演示 -->
+        <div v-if="false">33</div>
+        <pl-no-data v-else>暂无数据演示</pl-no-data>
+        <!-- 无数据演示 -->
       </div>
     </div>
 

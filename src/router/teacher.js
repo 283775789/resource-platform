@@ -20,10 +20,12 @@ import PersonDelete from '@/pages/person/delete'
 import PersonAnswerCard from '@/pages/person/answer-card'
 
 // 公用路由
+import Template from '@/pages/common/template'
 import Artical from '@/pages/common/artical'
 import AddExamQuestion from '@/pages/common/add-exam-question'
 import GroupPaperAuto from '@/pages/common/group-paper-auto'
 import PaperDetail from '@/pages/common/paper-detail'
+import Page404 from '@/pages/common/404'
 
 Vue.use(Router)
 
@@ -38,6 +40,10 @@ export default new Router({
     {
       path: '/home',
       component: Home
+    },
+    {
+      path: '/template',
+      component: Template
     },
     {
       path: '/person',
@@ -113,6 +119,10 @@ export default new Router({
       path: '/paper-detail',
       name: 'paperDetail',
       component: PaperDetail
+    },
+    {
+      path:'*',
+      component: Page404
     }
   ]
 })

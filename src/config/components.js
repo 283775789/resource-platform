@@ -3,6 +3,7 @@ import Vue from 'vue'
 import SideFloat from '@/components/side-float'
 import Attachment from '@/components/attachment'
 import ExerciseCart from '@/components/exercise-cart'
+import NoData from '@/components/no-data'
 
 // 试题
 import QuestionSingle from '@/components/question-types/single'
@@ -28,6 +29,7 @@ const components = [
   SideFloat,
   Attachment,
   ExerciseCart,
+  NoData,
   QuestionSingle,
   QuestionMultiple,
   QuestionJudgment,
