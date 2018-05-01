@@ -25,6 +25,10 @@ import ExerciseRemoveDuplicationDetail from '@/pages/exercise/remove-duplication
 // 试卷相关路由
 import TestpaperStore from '@/pages/testpaper/store'
 import TestpaperFirstCheck from '@/pages/testpaper/first-check'
+import TestpaperFinalCheck from '@/pages/testpaper/final-check'
+import TestpaperCustom from '@/pages/testpaper/custom'
+
+import Page404 from '@/pages/common/404'
 
 Vue.use(Router)
 
@@ -110,6 +114,23 @@ export default new Router({
     {
       path: '/testpaper-first-check',
       component: TestpaperFirstCheck
+    },
+    {
+      path: '/testpaper-final-check',
+      component: TestpaperFinalCheck
+    },
+    {
+      path: '/testpaper-custom',
+      component: TestpaperCustom
+    },
+    {
+      path: '/group-paper-auto',
+      name: 'groupPaperAuto',
+      component: GroupPaperAuto
+    },
+    {
+      path:'*',
+      component: Page404
     }
   ]
 })

@@ -338,7 +338,9 @@
           label: 'name'
         },
         dateRange: '',
-        dialogVisible: false
+        dialogVisible: false,
+        sectionDialogVisible: false,
+        knowledgeDialogVisible: false
       }
     }
   }

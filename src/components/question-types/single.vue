@@ -17,9 +17,9 @@
       <div class="pl-astable-col xquestion-label" style="width:4em;">类型：</div>
       <div class="pl-astable-col">
         <div class="pl-radiobox">
-          <el-radio label="字母"></el-radio>
-          <el-radio label="数字"></el-radio>
-          <el-radio label="罗马数字"></el-radio>
+          <el-radio v-model="optionType" label="字母"></el-radio>
+          <el-radio v-model="optionType" label="数字"></el-radio>
+          <el-radio v-model="optionType" label="罗马数字"></el-radio>
         </div>
       </div>
     </div>
@@ -27,48 +27,15 @@
       <div class="pl-astable-col xquestion-label" style="width:4em;">选项：</div>
       <div class="pl-astable-col">
         <div class="pl-astable xoption">
-          <div class="pl-astable-row">
-            <div class="pl-astable-col xoption-label"><el-radio label="A"></el-radio></div>
+          <div class="pl-astable-row" v-for="(opt, n) in options" :key="n">
+            <div class="pl-astable-col xoption-label"><el-radio :label="n+optionType|numToLetter"></el-radio></div>
             <div class="pl-astable-col">
-              <pl-question-editor></pl-question-editor>
+              <pl-question-editor v-model="opt.text"></pl-question-editor>
             </div>
             <div class="pl-astable-col xoption-tools">
-              <a><i class="pl-ico xprev" style="visibility:hidden;"></i></a>
-              <a><i class="pl-ico xnext"></i></a>
-              <a><i class="pl-ico xdel"></i></a>
-            </div>
-          </div>
-          <div class="pl-astable-row">
-            <div class="pl-astable-col xoption-label"><el-radio label="B"></el-radio></div>
-            <div class="pl-astable-col">
-              <pl-question-editor></pl-question-editor>
-            </div>
-            <div class="pl-astable-col xoption-tools">
-              <a><i class="pl-ico xprev"></i></a>
-              <a><i class="pl-ico xnext"></i></a>
-              <a><i class="pl-ico xdel"></i></a>
-            </div>
-          </div>
-          <div class="pl-astable-row">
-            <div class="pl-astable-col xoption-label"><el-radio label="C"></el-radio></div>
-            <div class="pl-astable-col">
-              <pl-question-editor></pl-question-editor>
-            </div>
-            <div class="pl-astable-col xoption-tools">
-              <a><i class="pl-ico xprev"></i></a>
-              <a><i class="pl-ico xnext"></i></a>
-              <a><i class="pl-ico xdel"></i></a>
-            </div>
-          </div>
-          <div class="pl-astable-row">
-            <div class="pl-astable-col xoption-label"><el-radio label="D"></el-radio></div>
-            <div class="pl-astable-col">
-              <pl-question-editor></pl-question-editor>
-            </div>
-            <div class="pl-astable-col xoption-tools">
-              <a><i class="pl-ico xprev"></i></a>
-              <a><i class="pl-ico xnext" style="visibility:hidden;"></i></a>
-              <a><i class="pl-ico xdel"></i></a>
+              <a @click="becomePrev(n)"><i class="pl-ico xprev" :style="{visibility:n===0?'hidden':''}"></i></a>
+              <a @click="becomeNext(n)"><i class="pl-ico xnext" :style="{visibility:n===options.length-1?'hidden':''}"></i></a>
+              <a @click="deleteOption"><i class="pl-ico xdel"></i></a>
             </div>
           </div>
           <div class="pl-astable-row xbtnarea">
@@ -104,6 +71,54 @@
     name: 'plQuestionSingle',
     components: {
     'plQuestionEditor': QuestionEditor
+    },
+    data() {
+      return {
+        optionType: '字母',
+        options: [
+          {
+            text: '1'
+          },
+          {
+            text: '2'
+          },
+          {
+            text: '3'
+          },
+          {
+            text: '4'
+          }
+        ]
+      }
+    },
+    filters: {
+      numToLetter (value) {
+        let result
+        const m = /^(\d*)(.*)$/g.exec(value)
+        value = parseInt(m[1])
+
+        m[2] === '字母' && (result=String.fromCharCode(65+value))
+        m[2] === '数字' && (result=value+1)
+        m[2] === '罗马数字' && (result=["I","II","III","IV","V","VI","VII","VIII","IX"][value])
+
+        return result
+      }
+    },
+    methods: {
+      // 向前移动
+      becomePrev (n) {
+        const currentOption = this.options.splice(n, 1)
+        this.options.splice(n-1, 0, currentOption[0])
+      },
+      // 向后移动
+      becomeNext (n) {
+        const currentOption = this.options.splice(n, 1)
+        this.options.splice(n+1, 0, currentOption[0])
+      },
+      // 删除选项
+      deleteOption (n) {
+        this.options.splice(n, 1)
+      }
     }
   }
 </script>

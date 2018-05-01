@@ -4,6 +4,10 @@ import Router from 'vue-router'
 // 主页
 import Home from '@/pages/teacher/home'
 
+// 试卷相关路由
+import TestpaperStore from '@/pages/testpaper/store'
+import GroupPaperManually from '@/pages/testpaper/group-paper-manually'
+
 // 个人中心相关路由
 import Person from '@/pages/person/person'
 import PersonInfo from '@/pages/person/info'
@@ -40,6 +44,14 @@ export default new Router({
     {
       path: '/home',
       component: Home
+    },
+    {
+      path: '/testpaper-store',
+      component: TestpaperStore
+    },
+    {
+      path: '/group-paper-manually',
+      component: GroupPaperManually
     },
     {
       path: '/template',

@@ -1374,12 +1374,18 @@
 .xline-leftcircle,
 .xline-rightcircle {
   position: absolute;
+  z-index: 1000;
   top: 50%;
   width: 16px;
   height: 16px;
   margin-top: -8px;
   border: 1px solid #dcdfe6;
   border-radius: 50%;
+}
+
+.pl-questionbox .xline-leftcircle,
+.pl-questionbox .xline-rightcircle {
+  top: 60%;
 }
 
 .pl-astable.xline .xline-leftcircle {
@@ -1425,6 +1431,10 @@
 
 .pl-astable.xline .pl-astable-col:last-child .xline-rightcircle {
   display: none;
+}
+
+.pl-questiondetail .pl-astable.xline > .pl-astable-row > .pl-astable-col {
+  padding: 8px 0;
 }
 
 /* 添加选项按钮 */
@@ -1499,9 +1509,37 @@
 
 .pl-qeditor-body {
   margin-top: -1px;
-  padding: 7px 10px;
   background: #fff;
   border: 1px solid #dcdfe6;
+}
+
+.pl-qeditor-body .edui-container,
+.pl-qeditor-body .edui-editor-body .edui-body-container,
+.pl-qeditor-body .edui-container .edui-toolbar {
+  box-sizing: border-box;
+  width: auto !important;
+  border: none;
+  box-shadow: none;
+}
+
+.pl-qeditor-body .edui-container .edui-toolbar {
+  border-bottom: 1px solid #dcdfe6;
+}
+
+.pl-linebox .edui-container {
+  margin: 0 -30px !important;
+}
+
+.pl-astable.xline .pl-astable-col:first-child .pl-qeditor-body .edui-container {
+  margin-left: -8px !important;
+}
+
+.pl-astable.xline .pl-astable-col:last-child .pl-qeditor-body .edui-container {
+  margin-right: -8px !important;
+}
+
+.pl-astable.xline .edui-editor-body .edui-body-container {
+  padding: 0 30px;
 }
 
 .pl-qeditor-body:focus {
@@ -1520,6 +1558,7 @@
 /* 按钮区域 */
 .pl-fixfooter {
   position: absolute;
+  z-index: 1000;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -1532,6 +1571,8 @@
 .pl-fixfooter > .el-button + .el-button {
   margin-left: 15px;
 }
+
+.pl-linebox
 
 /* 分隔条 */
 .pl-sline {
@@ -1586,6 +1627,11 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.pl-paperinfo-title:hover {
+  color: #2bbb61;
 }
 
 .pl-paperinfo-item {
@@ -1695,7 +1741,7 @@
 }
 
 .pl-questiondetail {
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .pl-questiondetail-tools {
@@ -1707,6 +1753,23 @@
 }
 
 /* 试题详情 */
+.pl-astable.xqd {
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all .2s;
+}
+
+.pl-astable.xqd:hover {
+  border-color: #ccc;
+  box-shadow: 0 3px 6px #ccc;
+}
+
+.pl-questiondetail .pl-questiondetail .pl-astable.xqd:hover {
+  border-color: transparent;
+  box-shadow: none;
+}
+
 .pl-astable.xqd .xqd-no {
   width: 20px;
   font-weight: bold;

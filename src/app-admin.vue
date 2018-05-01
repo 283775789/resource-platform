@@ -9,7 +9,7 @@
         <pl-subject-menu />
         <li class="pl-nav-item"><router-link to="/home" class="pl-nav-link">首页</router-link></li>
         <li class="pl-nav-item">
-          <router-link to="/exercise" class="pl-nav-link">试题库<i class="pl-triangle xdown"></i></router-link>
+          <router-link to="/exercise" class="pl-nav-link" :class="{xactive:$route.path.indexOf('exercise')!==-1}">试题库<i class="pl-triangle xdown"></i></router-link>
           <div class="pl-nav-menu">
             <router-link class="pl-nav-menu-link" to="/exercise-store">试题库</router-link>
             <router-link class="pl-nav-menu-link" to="/exercise-first-check">初审试题</router-link>
@@ -18,7 +18,7 @@
           </div>
         </li>
         <li class="pl-nav-item">
-          <router-link to="/testpaper" class="pl-nav-link">试卷库<i class="pl-triangle xdown"></i></router-link>
+          <router-link to="/testpaper-store" class="pl-nav-link" :class="{xactive:$route.path.indexOf('testpaper')!==-1}">试卷库<i class="pl-triangle xdown"></i></router-link>
           <div class="pl-nav-menu">
             <router-link class="pl-nav-menu-link" to="/testpaper-store">试卷库</router-link>
             <router-link class="pl-nav-menu-link" to="/testpaper-first-check">初审试卷</router-link>

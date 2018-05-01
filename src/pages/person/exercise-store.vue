@@ -62,6 +62,7 @@
           </div>
         <pl-question-detail-select>
           <template slot="tools">
+
             <el-button type="primary" size="medium">收藏</el-button>
             <el-button size="medium" type="info">选题</el-button>
           </template>
@@ -79,6 +80,7 @@
         </div>
         <pl-question-detail-fill>
           <template slot="tools">
+
             <el-button type="primary" size="medium">收藏</el-button>
             <el-button size="medium" type="info">选题</el-button>
           </template>
@@ -96,6 +98,7 @@
         </div>
         <pl-question-detail-judgment>
           <template slot="tools">
+
             <el-button type="primary" size="medium">收藏</el-button>
             <el-button size="medium" type="info">选题</el-button>
           </template>
@@ -113,6 +116,7 @@
         </div>
         <pl-question-detail-shortanswer>
           <template slot="tools">
+
             <el-button size="medium">取消收藏</el-button>
             <el-button size="medium" type="info">选题</el-button>
           </template>
@@ -130,6 +134,7 @@
         </div>
         <pl-question-detail-select>
           <template slot="tools">
+
             <el-button size="medium">取消收藏</el-button>
             <el-button size="medium" type="info">选题</el-button>
           </template>
@@ -147,6 +152,7 @@
         </div>
         <pl-question-detail-voice>
           <template slot="tools">
+
             <el-button type="primary" size="medium">收藏</el-button>
             <el-button size="medium" type="info">选题</el-button>
           </template>
@@ -164,6 +170,7 @@
         </div>
         <pl-question-detail-line>
           <template slot="tools">
+
             <el-button type="primary" size="medium">收藏</el-button>
             <el-button size="medium" type="info">选题</el-button>
           </template>
@@ -181,6 +188,7 @@
         </div>
         <pl-question-detail-join>
           <template slot="tools">
+
             <el-button type="primary" size="medium">收藏</el-button>
             <el-button size="medium" type="info">选题</el-button>
           </template>
