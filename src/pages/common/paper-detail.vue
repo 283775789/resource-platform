@@ -124,8 +124,8 @@
           <!-- /试题扩展属性 -->
         </div>
         <div class="pl-sidelayout-right">
-          <!-- 试卷信息 -->
-          <div class="pl-card xp xfixedfooter pl-paperdetail" style="min-height:1175px;">
+          <!-- 试卷信息: 去掉以下class中的xgutter将去掉装订线效果 -->
+          <div class="pl-card xp xfixedfooter pl-paperdetail xgutter" style="min-height:1175px;">
             <!-- 请删除以下的value值，用v-model替代 -->
             <el-input class="pl-paperdetail-param xtitle" readonly value="2018年03月24日189****0518的初中数学组卷"></el-input>
             <el-input class="pl-paperdetail-param xsubtitle" readonly value="试卷副标题"></el-input>
@@ -172,7 +172,7 @@
                   <span>分</span>
                   <a class="pl-link ml-small"><i class="pl-ico xprev"></i></a>
                   <a class="pl-link"><i class="pl-ico xnext"></i></a>
-                  <a class="pl-link"><i class="pl-ico xmodify"></i></a>
+                  <a class="pl-link" @click="questionDialogVisible=true"><i class="pl-ico xmodify"></i></a>
                   <a class="pl-link"><i class="pl-ico xdel"></i></a>
                 </template>
               </pl-question-detail-select>
@@ -185,7 +185,7 @@
                   <span>分</span>
                   <a class="pl-link ml-small"><i class="pl-ico xprev"></i></a>
                   <a class="pl-link"><i class="pl-ico xnext"></i></a>
-                  <a class="pl-link"><i class="pl-ico xmodify"></i></a>
+                  <a class="pl-link" @click="questionDialogVisible=true"><i class="pl-ico xmodify"></i></a>
                   <a class="pl-link"><i class="pl-ico xdel"></i></a>
                 </template>
               </pl-question-detail-select>
@@ -219,7 +219,7 @@
                   <span>分</span>
                   <a class="pl-link ml-small"><i class="pl-ico xprev"></i></a>
                   <a class="pl-link"><i class="pl-ico xnext"></i></a>
-                  <a class="pl-link"><i class="pl-ico xmodify"></i></a>
+                  <a class="pl-link" @click="questionDialogVisible=true"><i class="pl-ico xmodify"></i></a>
                   <a class="pl-link"><i class="pl-ico xdel"></i></a>
                 </template>
               </pl-question-detail-fill>
@@ -232,7 +232,7 @@
                   <span>分</span>
                   <a class="pl-link ml-small"><i class="pl-ico xprev"></i></a>
                   <a class="pl-link"><i class="pl-ico xnext"></i></a>
-                  <a class="pl-link"><i class="pl-ico xmodify"></i></a>
+                  <a class="pl-link" @click="questionDialogVisible=true"><i class="pl-ico xmodify"></i></a>
                   <a class="pl-link"><i class="pl-ico xdel"></i></a>
                 </template>
               </pl-question-detail-fill>
@@ -244,6 +244,14 @@
               <el-button type="info">提交审批</el-button>
               <el-button>删除</el-button>
               <el-button>清空</el-button>
+              <el-date-picker
+                style="width:300px;"
+                v-model="dateDemo"
+                type="datetime"
+                size="medium"
+                format="yyyy-MM-dd A HH:mm"
+                placeholder="选择日期时间">
+              </el-date-picker>
             </div>
           </div>
           <!-- 试卷信息 -->
@@ -288,6 +296,20 @@
       </span>
     </el-dialog>
     <!-- /弹窗:选择知识点 -->
+
+    <!-- 弹窗:编辑试题 -->
+    <el-dialog title="编辑试题" :visible.sync="questionDialogVisible" width="960px">
+      <div class="pl-dialogbody">
+        <!-- 单选题示例 -->
+        <pl-question-single></pl-question-single>
+        <!-- /单选题示例 -->
+      </div>
+      <span slot="footer" class="dialog-footer">
+        <el-button size="medium" @click="questionDialogVisible = false">取 消</el-button>
+        <el-button size="medium" type="info" @click="questionDialogVisible = false">选 择</el-button>
+      </span>
+    </el-dialog>
+    <!-- /弹窗:编辑试题 -->
   </div>
 </template>
 
@@ -320,7 +342,9 @@ export default {
         label: 'name'
       },
       sectionDialogVisible: false,
-      knowledgeDialogVisible: false
+      knowledgeDialogVisible: false,
+      questionDialogVisible: false,
+      dateDemo:''
     }
   }
 }

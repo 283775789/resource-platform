@@ -7,7 +7,7 @@
       <ul class="pl-nav-inner">
         <pl-subject-menu />
         <li class="pl-nav-item"><router-link to="/home" class="pl-nav-link">首页</router-link></li>
-        <li class="pl-nav-item"><router-link to="/exercise" class="pl-nav-link">试题库</router-link></li>
+        <li class="pl-nav-item"><router-link to="/testpaper-store" class="pl-nav-link">试卷库</router-link></li>
         <li class="pl-nav-item"><router-link to="/group-paper-manually" class="pl-nav-link">手动组卷</router-link></li>
         <li class="pl-nav-item"><router-link to="/group-paper-auto" class="pl-nav-link">智能组卷</router-link></li>
         <li class="pl-nav-item xright"><router-link to="/person" class="pl-nav-link"><i class="pl-ico xperson"></i>个人中心</router-link></li>

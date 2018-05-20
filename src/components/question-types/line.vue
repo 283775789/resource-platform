@@ -30,51 +30,51 @@
           <div class="pl-astable xline">
             <div class="pl-astable-row">
               <div class="pl-astable-col">
-                <pl-question-editor></pl-question-editor>
+                <pl-question-editor minHeight="50px"></pl-question-editor>
                 <i class="xline-leftcircle"></i>
                 <i class="xline-rightcircle"></i>
               </div>
               <div class="pl-astable-col">
-                <pl-question-editor></pl-question-editor>
+                <pl-question-editor minHeight="50px"></pl-question-editor>
                 <i class="xline-leftcircle"></i>
                 <i class="xline-rightcircle"></i>
               </div>
               <div class="pl-astable-col">
-                <pl-question-editor></pl-question-editor>
-                <i class="xline-leftcircle"></i>
-                <i class="xline-rightcircle"></i>
-              </div>
-            </div>
-            <div class="pl-astable-row">
-              <div class="pl-astable-col">
-                <pl-question-editor></pl-question-editor>
-                <i class="xline-leftcircle"></i>
-                <i class="xline-rightcircle"></i>
-              </div>
-              <div class="pl-astable-col">
-                <pl-question-editor></pl-question-editor>
-                <i class="xline-leftcircle"></i>
-                <i class="xline-rightcircle"></i>
-              </div>
-              <div class="pl-astable-col">
-                <pl-question-editor></pl-question-editor>
+                <pl-question-editor minHeight="50px"></pl-question-editor>
                 <i class="xline-leftcircle"></i>
                 <i class="xline-rightcircle"></i>
               </div>
             </div>
             <div class="pl-astable-row">
               <div class="pl-astable-col">
-                <pl-question-editor></pl-question-editor>
+                <pl-question-editor minHeight="50px"></pl-question-editor>
                 <i class="xline-leftcircle"></i>
                 <i class="xline-rightcircle"></i>
               </div>
               <div class="pl-astable-col">
-                <pl-question-editor></pl-question-editor>
+                <pl-question-editor minHeight="50px"></pl-question-editor>
                 <i class="xline-leftcircle"></i>
                 <i class="xline-rightcircle"></i>
               </div>
               <div class="pl-astable-col">
-                <pl-question-editor></pl-question-editor>
+                <pl-question-editor minHeight="50px"></pl-question-editor>
+                <i class="xline-leftcircle"></i>
+                <i class="xline-rightcircle"></i>
+              </div>
+            </div>
+            <div class="pl-astable-row">
+              <div class="pl-astable-col">
+                <pl-question-editor minHeight="50px"></pl-question-editor>
+                <i class="xline-leftcircle"></i>
+                <i class="xline-rightcircle"></i>
+              </div>
+              <div class="pl-astable-col">
+                <pl-question-editor minHeight="50px"></pl-question-editor>
+                <i class="xline-leftcircle"></i>
+                <i class="xline-rightcircle"></i>
+              </div>
+              <div class="pl-astable-col">
+                <pl-question-editor minHeight="50px"></pl-question-editor>
                 <i class="xline-leftcircle"></i>
                 <i class="xline-rightcircle"></i>
               </div>
