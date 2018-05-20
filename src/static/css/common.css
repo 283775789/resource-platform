@@ -1371,6 +1371,10 @@
   border: 1px solid #ccc;
 }
 
+.pl-pdanswer .pl-astable.xline > .pl-astable-row > .pl-astable-col {
+  background: #fff;
+}
+
 .xline-leftcircle,
 .xline-rightcircle {
   position: absolute;

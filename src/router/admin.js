@@ -28,8 +28,9 @@ import TestpaperFirstCheck from '@/pages/testpaper/first-check'
 import TestpaperFinalCheck from '@/pages/testpaper/final-check'
 import TestpaperCustom from '@/pages/testpaper/custom'
 
+// 公用路由
+import GroupPaperAuto from '@/pages/common/group-paper-auto'
 import Page404 from '@/pages/common/404'
-
 Vue.use(Router)
 
 export default new Router({

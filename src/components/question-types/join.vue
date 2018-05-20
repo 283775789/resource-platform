@@ -16,34 +16,26 @@
     <div class="pl-astable xquestion">
       <div class="pl-astable-col xquestion-label" style="width:4em;"></div>
       <div class="pl-astable-col">
-        <div class="pl-question-join">
+        <div class="pl-question-join" v-for="(question,index) in questions" :key="index">
           <div class="pl-subtitle">
             <div class="pl-subtitle-left">
-              <span class="pl-subtitle-text">单选题</span>
+              <span class="pl-subtitle-text">{{question.type}}</span>
               <el-input style="width:60px;"></el-input>
               <span>分</span>
             </div>
             <div class="pl-subtitle-right">
-              <a class="pl-link2"><i class="pl-ico xdel"></i>删除单选题</a>
+              <a class="pl-link2" title="删除"><i class="pl-ico xdel"></i></a>
             </div>
           </div>
           <div class="pl-question-join-body">
-            <pl-question-single></pl-question-single>
-          </div>
-        </div>
-        <div class="pl-question-join">
-          <div class="pl-subtitle">
-            <div class="pl-subtitle-left">
-              <span class="pl-subtitle-text">单选题</span>
-              <el-input style="width:60px;"></el-input>
-              <span>分</span>
-            </div>
-            <div class="pl-subtitle-right">
-              <a class="pl-link2"><i class="pl-ico xdel"></i>删除单选题</a>
-            </div>
-          </div>
-          <div class="pl-question-join-body">
-            <pl-question-single></pl-question-single>
+            <pl-question-single v-if="question.type==='单选题'"></pl-question-single>
+            <pl-question-multiple v-if="question.type==='多选题'"></pl-question-multiple>
+            <pl-question-judgment v-if="question.type==='判断题'"></pl-question-judgment>
+            <pl-question-fill v-if="question.type==='填空题'"></pl-question-fill>
+            <pl-question-short-answer v-if="question.type==='简答题'"></pl-question-short-answer>
+            <pl-question-listening v-if="question.type==='听力题'"></pl-question-listening>
+            <pl-question-line v-if="question.type==='连线题'"></pl-question-line>
+            <pl-question-voice v-if="question.type==='跟读题'"></pl-question-voice>
           </div>
         </div>
       </div>
@@ -51,13 +43,19 @@
     <div class="pl-astable xquestion">
       <div class="pl-astable-col xquestion-label" style="width:4em;"></div>
       <div class="pl-astable-col" style="width:220px;">
-        <el-select>
-          <el-option>单选题</el-option>
-          <el-option>填空题</el-option>
+        <el-select v-model="questionType">
+          <el-option value="单选题">单选题</el-option>
+          <el-option value="多选题">多选题</el-option>
+          <el-option value="判断题">判断题</el-option>
+          <el-option value="填空题">填空题</el-option>
+          <el-option value="简答题">简答题</el-option>
+          <el-option value="听力题">听力题</el-option>
+          <el-option value="连线题">连线题</el-option>
+          <el-option value="跟读题">跟读题</el-option>
         </el-select>
       </div>
       <div class="pl-astable-col">
-        <a class="pl-addoptionbtn" style="margin-top:0;"><i class="pl-ico xadd2"></i>添加新试题</a>
+        <a class="pl-addoptionbtn" style="margin-top:0;" @click="addQuestion"><i class="pl-ico xadd2"></i>添加新试题</a>
       </div>
     </div>
     <div class="pl-astable xquestion">
@@ -78,27 +76,21 @@
 
 <script>
   import QuestionEditor from '@/components/question-editor'
-  import QuestionSingle from '@/components/question-types/single'
-  import QuestionMultiple from '@/components/question-types/multiple'
-  import QuestionJudgment from '@/components/question-types/judgment'
-  import QuestionFill from '@/components/question-types/fill'
-  import QuestionShortAnswer from '@/components/question-types/shortanswer'
-  import QuestionListening from '@/components/question-types/listening'
-  import QuestionLine from '@/components/question-types/line'
-  import QuestionVoice from '@/components/question-types/voice'
 
   export default {
     name: 'plQuestionJoin',
-    components: {
-    'plQuestionEditor': QuestionEditor,
-    'plQuestionSingle': QuestionSingle,
-    'plQuestionMultiple': QuestionMultiple,
-    'plQuestionJudgment': QuestionJudgment,
-    'plQuestionFill': QuestionFill,
-    'plQuestionShortAnswer': QuestionShortAnswer,
-    'plQuestionListening': QuestionListening,
-    'plQuestionLine': QuestionLine,
-    'plQuestionVoice': QuestionVoice
+    data() {
+      return {
+        questionType: '单选题',
+        questions: []
+      }
+    },
+    methods: {
+      addQuestion () {
+        this.questions.push({
+          type:this.questionType
+        })
+      }
     }
   }
 </script>

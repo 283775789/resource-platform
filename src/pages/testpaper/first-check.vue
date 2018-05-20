@@ -90,7 +90,7 @@
                 <a class="pl-link2 xactive">最新</a>
                 <i class="pl-sline"></i>
                 <el-checkbox label="选中本页试卷"></el-checkbox>
-                <el-button type="info" disabled="" class="ml-tiny">批量初审</el-button>
+                <el-button type="info" disabled="" class="ml-tiny" @click.native="dialogVisible=true">批量初审</el-button>
               </div>
             </div>
 
@@ -111,7 +111,7 @@
                   </div>
                 </div>
                 <div class="pl-paperinfo-btns">
-                  <el-button type="info" size="medium">初审</el-button>
+                  <el-button type="info" size="medium" @click.native="dialogVisible=true">初审</el-button>
                 </div>
                 <el-checkbox></el-checkbox>
               </li>
@@ -131,7 +131,7 @@
                   </div>
                 </div>
                 <div class="pl-paperinfo-btns">
-                  <el-button type="info" size="medium">初审</el-button>
+                  <el-button type="info" size="medium" @click.native="dialogVisible=true">初审</el-button>
                 </div>
                 <el-checkbox></el-checkbox>
               </li>
@@ -151,7 +151,7 @@
                   </div>
                 </div>
                 <div class="pl-paperinfo-btns">
-                  <el-button type="info" size="medium">初审</el-button>
+                  <el-button type="info" size="medium" @click.native="dialogVisible=true">初审</el-button>
                 </div>
                 <el-checkbox></el-checkbox>
               </li>
@@ -185,6 +185,26 @@
       </div>
     </div>
     <pl-side-float />
+
+    <!-- 弹窗:试卷初审 -->
+    <el-dialog title="试卷初审" :visible.sync="dialogVisible" width="500px">
+      <div class="pl-dialogbody">
+        <!-- 表单用法详见:http://element.eleme.io/#/zh-CN/component/form -->
+        <el-form label-width="80px" size="medium">
+          <el-form-item label="初审人:">试卷初审</el-form-item>
+          <el-form-item label="初审意见:">
+            <el-input type="textarea"></el-input>
+          </el-form-item>
+          <el-form-item label="初审时间:">2018-04-04 00:00</el-form-item>
+        </el-form>
+      </div>
+      <span slot="footer" class="dialog-footer">
+        <el-button size="medium" @click="dialogVisible = false">取 消</el-button>
+        <el-button size="medium" @click="dialogVisible = false">不通过</el-button>
+        <el-button size="medium" type="info" @click="dialogVisible = false">通 过</el-button>
+      </span>
+    </el-dialog>
+    <!-- /弹窗:试卷初审 -->
   </div>
 </template>
 
@@ -216,7 +236,8 @@ export default {
         children: 'children',
         label: 'name'
       },
-      dateRange: ''
+      dateRange: '',
+      dialogVisible: false
     }
   }
 }

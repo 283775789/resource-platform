@@ -111,7 +111,7 @@
                   </div>
                 </div>
                 <div class="pl-paperinfo-btns">
-                  <el-button type="info" size="medium">终审</el-button>
+                  <el-button type="info" size="medium" @click.native="dialogVisible=true">终审</el-button>
                 </div>
                 <el-checkbox></el-checkbox>
               </li>
@@ -131,7 +131,7 @@
                   </div>
                 </div>
                 <div class="pl-paperinfo-btns">
-                  <el-button type="info" size="medium">终审</el-button>
+                  <el-button type="info" size="medium" @click.native="dialogVisible=true">终审</el-button>
                 </div>
                 <el-checkbox></el-checkbox>
               </li>
@@ -151,7 +151,7 @@
                   </div>
                 </div>
                 <div class="pl-paperinfo-btns">
-                  <el-button type="info" size="medium">终审</el-button>
+                  <el-button type="info" size="medium" @click.native="dialogVisible=true">终审</el-button>
                 </div>
                 <el-checkbox></el-checkbox>
               </li>
@@ -171,7 +171,7 @@
                   </div>
                 </div>
                 <div class="pl-paperinfo-btns">
-                  <el-button type="info" size="medium">终审</el-button>
+                  <el-button type="info" size="medium" @click.native="dialogVisible=true">终审</el-button>
                 </div>
                 <el-checkbox></el-checkbox>
               </li>
@@ -185,6 +185,35 @@
       </div>
     </div>
     <pl-side-float />
+
+    <!-- 弹窗:试卷终审 -->
+    <el-dialog title="试卷终审" :visible.sync="dialogVisible" width="500px">
+      <div class="pl-dialogbody" style="padding-top:10px;">
+        <!-- 表单用法详见:http://element.eleme.io/#/zh-CN/component/form -->
+        <el-form label-width="80px" size="medium">
+          <el-form-item label="初审人:">学科编辑</el-form-item>
+          <el-form-item label="初审意见:">
+            <el-input class="pl-inputreadonly" type="textarea" value="初审意见内容初审意见内容初审意见内容初审意见内容" readonly></el-input>
+          </el-form-item>
+          <el-form-item label="初审时间:">2018-04-04 00:00</el-form-item>
+          <div style="margin-bottom:20px; border-top:1px solid #dcdfe6;"></div>
+          <el-form-item label="终审人:">学科编辑</el-form-item>
+          <el-form-item label="终审意见:">
+            <el-input type="textarea"></el-input>
+          </el-form-item>
+          <el-form-item label="终审时间:">2018-04-04 00:00</el-form-item>
+          <el-form-item label="相似ID:">
+            <el-input></el-input>
+          </el-form-item>
+        </el-form>
+      </div>
+      <span slot="footer" class="dialog-footer">
+        <el-button size="medium" @click="dialogVisible = false">取 消</el-button>
+        <el-button size="medium" @click="dialogVisible = false">不通过</el-button>
+        <el-button size="medium" type="info" @click="dialogVisible = false">通 过</el-button>
+      </span>
+    </el-dialog>
+    <!-- /弹窗:试卷终审 -->
   </div>
 </template>
 
@@ -216,7 +245,8 @@ export default {
         children: 'children',
         label: 'name'
       },
-      dateRange: ''
+      dateRange: '',
+      dialogVisible:false
     }
   }
 }
