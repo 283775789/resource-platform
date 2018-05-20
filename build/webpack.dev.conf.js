@@ -75,6 +75,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       inject: true,
       chunks: ['admin']
     }),
+    // 学科编辑入口html页
+    new HtmlWebpackPlugin({
+      filename: 'subject-editor.html',
+      template: 'index.html',
+      inject: true,
+      chunks: ['subject-editor']
+    }),
     // copy custom static assets
     new CopyWebpackPlugin([
       {

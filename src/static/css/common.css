@@ -1627,6 +1627,11 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.pl-paperinfo-title:hover {
+  color: #2bbb61;
 }
 
 .pl-paperinfo-item {
