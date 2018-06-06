@@ -30,6 +30,7 @@ import AddExamQuestion from '@/pages/common/add-exam-question'
 import GroupPaperAuto from '@/pages/common/group-paper-auto'
 import PaperDetail from '@/pages/common/paper-detail'
 import Page404 from '@/pages/common/404'
+import AnswerCard from '@/pages/common/answer-card'
 
 Vue.use(Router)
 
@@ -131,6 +132,10 @@ export default new Router({
       path: '/paper-detail',
       name: 'paperDetail',
       component: PaperDetail
+    },
+    {
+      path: '/answer-card',
+      component: AnswerCard
     },
     {
       path:'*',

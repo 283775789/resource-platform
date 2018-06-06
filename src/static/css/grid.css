@@ -46,3 +46,9 @@
 .pl-grid.xsmall .pl-grid-col {
   padding: 7px;
 }
+
+/* 答题卡 */
+.pl-grid.xac {
+  text-align: center;
+  color: #666;
+}

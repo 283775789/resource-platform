@@ -27,6 +27,12 @@
   margin-left: 5px;
 }
 
+.pl-ico.xcol1.xselected,
+.pl-ico.xcol2.xselected,
+.pl-ico.xcol3.xselected {
+  border: 1px solid #2dbe60;
+}
+
 /* ------------------------------ 布局 ------------------------------ */
 .pl-topbar-inner,
 .pl-header-inner,
@@ -196,6 +202,11 @@
   background-color: #434547;
   color: #b2b2b3;
   text-align: center;
+}
+
+.pl-footer.xcard {
+  position: fixed;
+  z-index: -1;
 }
 
 /* 主内容区 */
@@ -1200,6 +1211,17 @@
   line-height: 1.5;
 }
 
+/* 子标题-带边框 */
+.pl-subtitle.xborder {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dcdfe6;
+}
+
+.pl-subtitle.xborder.xsmall:before {
+  margin-top: -14px;
+}
+
 /* 标签容器 */
 .pl-tagbox {
   margin-bottom: 20px;
@@ -2109,6 +2131,595 @@
   margin-top: 15px;
   font-size: 16px;
   color: #666;
+}
+
+/* 答题卡样式 */
+.pl-acpage {
+  background: #f2f2f2;
+  text-align: center;
+}
+
+.pl-answercard {
+  position: relative;
+  display: inline-block;
+  padding-left: 220px;
+  margin: 10px;
+  text-align: left;
+}
+
+.pl-ac {
+  position: relative;
+  min-width: 210mm;
+  height: 297mm;
+  padding: 15mm;
+  background: #fff;
+  overflow: hidden;
+}
+
+.pl-ac-body {
+  position: relative;
+  height: 100%;
+}
+
+.pl-ac.xcol2,
+.pl-ac.xcol3 {
+  min-width: 420mm;
+  height: 297mm;
+}
+
+.pl-ac-content {
+  position: relative;
+  writing-mode: vertical-lr;
+  min-width: 180mm;
+  height: 267mm;
+  font-family: "\5b8b\4f53","Microsoft YaHei";
+  color: #000;
+  font-size: 0;
+}
+
+.pl-ac.xcol2 .pl-ac-content,
+.pl-ac.xcol3 .pl-ac-content {
+  min-width: 390mm;
+}
+
+.pl-ac-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pl-ac-content-item {
+  writing-mode: horizontal-tb;
+  display: inline-block;
+  width: 180mm;
+  font-size: 14px;
+  padding: 0 4mm;
+}
+
+.pl-ac.xcol2 .pl-ac-content-item {
+  width: 195mm;
+}
+
+.pl-ac.xcol3 .pl-ac-content-item {
+  width: 130mm;
+}
+
+.pl-ac-name {
+  height: 15mm;
+  line-height: 7.5mm;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid #bfbfbf;
+  resize: none;
+}
+
+.pl-ac-paperinfo {
+  margin-bottom: 3mm;
+}
+
+.pl-ac-paperinfo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pl-ac-paperinfo-left {
+  float: left;
+  width: 100mm;
+}
+
+.pl-ac.xcol3 .pl-ac-paperinfo-left {
+  width: 60mm;
+}
+
+.pl-ac-paperinfo-right {
+  float: right;
+}
+
+.pl-ac-editable {
+  min-height: 20px;
+  border: 1px solid transparent;
+}
+
+.pl-ac-editable:focus {
+  outline: none;
+}
+
+.pl-ac-editable:hover {
+  border-color: #2bbb61;
+  background: #dff5e6;
+}
+
+.pl-ac-paperinfo-student {
+  padding: 5px;
+  line-height: 2.5;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.pl-ac.xcol3 .pl-ac-paperinfo-student {
+  line-height: 1.75;
+}
+
+.pl-ac-paperinfo-student:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pl-ac-paperinfo-student > label {
+  float: left;
+}
+
+.pl-ac-paperinfo-student > span {
+  float: left;
+  text-decoration: underline;
+}
+
+.pl-ac.xcol3 .pl-ac-paperinfo-student > label {
+  word-spacing: 2.6em;
+  clear: both;
+}
+
+.pl-ac-paperinfo-attention {
+  padding: 5px;
+  margin-bottom: 3mm;
+  border: 1px solid #000;
+  font-size: 12px;
+}
+
+.pl-ac.xcol3 .pl-ac-paperinfo-attention {
+  line-height: 1.2;
+}
+
+.pl-ac-paperinfo-attention > h4 {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pl-ac-paperinfo-note {
+  padding: 1mm;
+  font-weight: bold;
+  font-size: 12px;
+  border: 1px solid #000;
+}
+
+.pl-ac-paperinfo-note > i {
+  display: inline-block;
+  height: 3.5mm;
+  width: 7mm;
+  vertical-align: middle;
+  border: 1px solid #000;
+}
+
+.pl-ac-paperinfo-note > i.xyes {
+  margin-right: 30mm;
+  background: #000;
+}
+
+.pl-ac.xcol3 .pl-ac-paperinfo-note > i.xyes {
+  margin-right: 10mm;
+}
+
+/* 准考证号 */
+.pl-ac-studentid {
+  margin-top: 5mm;
+  width: 60mm;
+  line-height: 5mm;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.pl-ac-studentid th { height: 5mm;}
+
+.pl-ac-studentid th,
+.pl-ac-studentid td {
+  font-weight: normal;
+  border: 1px solid #000;
+}
+
+/* 条形码区 */
+.pl-ac-barcode  {
+  position: relative;
+  width: 60mm;
+  margin-top: 5mm;
+  padding: 40mm 3mm 3mm;
+  font-size: 12px;
+  text-align: center;
+  border: 1px dashed #000;
+}
+
+.pl-ac-barcode > h4 {
+  position: absolute;
+  top: 20mm;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* 答题区域 */
+.pl-ac-asarea {
+  position: relative;
+  padding: 1px;
+  margin-bottom: 3mm;
+  background: #fff;
+}
+
+.pl-ac-asarea:hover {
+  z-index: 1;
+}
+
+.pl-ac-asarea-title {
+  min-height: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid transparent;
+}
+
+.pl-ac-asarea-title:hover {
+  border-color: #2bbb61;
+  background: #dff5e6;
+}
+
+.pl-ac-asarea-body {
+  position: relative;
+  min-height: 15mm;
+  border: 1px solid #000;
+}
+
+.pl-ac-asarea-body + .pl-ac-asarea-body {
+  margin-top: -1px;
+}
+
+.pl-ac-asarea-body:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pl-ac-asarea-tools {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: -40px;
+  background: #fff;
+}
+
+.pl-ac-asarea-body:hover .pl-ac-asarea-tools {
+  display: block;
+}
+
+.pl-ac-asarea-tools > a {
+  display: block;
+  padding: 10px;
+  margin-left: 0 !important;
+  border:1px solid #2bbb61;
+}
+
+.pl-ac-asarea-tools .pl-link2 > .pl-ico {
+  margin-right: 0;
+}
+
+.pl-ac-asarea-body .pl-link2.xresize {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+  cursor: n-resize;
+}
+
+.pl-ac-asarea-body:hover .pl-link2.xresize {
+  display: block;
+}
+
+/* 答题卡:选择题 */
+.pl-ac-options {
+  float: left;
+  line-height: 5mm;
+  padding: 2.5mm 0;
+}
+
+.pl-ac.xcol2 .pl-ac-options {
+  padding: 2.5mm 1.5mm;
+}
+
+.pl-ac.xcol3 .pl-ac-options {
+  padding: 2.5mm;
+}
+
+.pl-ac-options span {
+  display: inline-block;
+  width: 7mm;
+}
+
+.pl-ac-options i,
+.pl-ac-options b {
+  font-weight: normal;
+  font-style: normal;
+}
+
+.pl-ac-options i {
+  display: inline-block;
+  width: 5mm;
+  margin-right: .5mm;
+  text-align: right;
+}
+
+/* 答题卡:填空题 */
+.pl-ac-asarea-body.xfill {
+  padding-bottom: 5mm;
+}
+
+.pl-ac-fill {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 10mm;
+  padding-left: 8mm;
+  padding-right: 10px;
+}
+
+.pl-ac-asarea-body.x2 .pl-ac-fill {
+  width: 50%;
+}
+
+.pl-ac-asarea-body.x3 .pl-ac-fill {
+  width: 33.33333%;
+}
+
+.pl-ac-asarea-body.x4 .pl-ac-fill {
+  width: 25%;
+}
+
+.pl-ac-asarea-body.x5 .pl-ac-fill {
+  width: 20%;
+}
+
+.pl-ac-fill i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 8mm;
+  margin-right: .5mm;
+  text-align: right;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.pl-fill-body {
+  height: 10mm;
+  line-height: 14mm;
+  border-bottom: 1px solid #000;
+}
+
+.pl-ac-fill .pl-link2 {
+  position: absolute;
+  display: none;
+  right: .2mm;
+  bottom: 0;
+}
+
+.pl-ac-fill:hover .pl-link2 {
+  display: block;
+}
+
+/* 答题卡:简答题 */
+.pl-ac-content-item.xsa + .pl-ac-content-item.xsa {
+  margin-top: -3.6mm;
+}
+
+.pl-ac-content-item.xsa .pl-ac-asarea-body {
+  height: 30mm;
+  padding: 2mm;
+}
+
+/* 答题卡:英语作文 */
+.pl-ac-asarea-ea {
+  height: 280px;
+  margin: 0 4mm;
+  background:url(../images/ea.png) repeat top center;
+}
+
+/* 答题卡:语文作文 */
+.pl-ac-asarea.xca {
+  margin-bottom: 0;
+}
+
+.pl-ac-asarea.xca .pl-ac-asarea-body {
+  min-height: 0;
+  border: none;
+}
+
+.pl-ac-asarea-ca {
+  display: inline-block;
+}
+
+.pl-ac-asarea-ca > i {
+  float: left;
+  width: 7.7mm;
+  height: 8mm;
+  margin: 0 0 0 -1px;
+  border: 1px solid #000;
+}
+
+.pl-ac.xcol3 .pl-ac-asarea-ca > i {
+  position: relative;
+  width: 7.8mm;
+}
+
+.pl-ac-asarea-ca-num {
+  position: absolute;
+  top: 6.5mm;
+  font-size: 12px;
+  transform: scale(.75);
+}
+
+/* 定位标识 */
+.pl-ac-position {
+  position: absolute;
+  width: 5mm;
+  height: 5mm;
+  background: #000;
+}
+
+.pl-ac-position.ly1,
+.pl-ac-position.ly2,
+.pl-ac-position.ly3,
+.pl-ac-position.ly4,
+.pl-ac-position.ly5,
+.pl-ac-position.ly6 {
+  left: -10mm;
+}
+
+.pl-ac-position.ly2,
+.pl-ac-position.ly3,
+.pl-ac-position.ly4,
+.pl-ac-position.ly5 {
+  width: 2.5mm;
+  margin-top: -2.5mm;
+}
+
+.pl-ac-position.ly1 {top:-10mm;}
+.pl-ac-position.ly2 {top:20%;}
+.pl-ac-position.ly3{top:40%;}
+.pl-ac-position.ly4 {top:60%;}
+.pl-ac-position.ly5 {top:80%;}
+.pl-ac-position.ly6 {bottom:-10mm;}
+
+.pl-ac-position.tx2,
+.pl-ac-position.tx3,
+.pl-ac-position.bx2,
+.pl-ac-position.bx3 {
+  height: 2.5mm;
+  margin-left: -2.5mm;
+}
+
+.pl-ac-position.tx2,
+.pl-ac-position.tx3 {
+  top: -10mm;
+}
+
+.pl-ac-position.bx2,
+.pl-ac-position.bx3 {
+  bottom: -10mm;
+}
+
+.pl-ac-position.tx2,
+.pl-ac-position.bx2 {
+  left: 50%;
+}
+
+.pl-ac-position.tx3,
+.pl-ac-position.bx3 {
+  right: 0;
+}
+
+/* 页面标识 */
+.pl-ac-pagebox {
+  position: absolute;
+  left: 0;
+  top: -15mm;
+  bottom: -15mm;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pl-ac-page {
+  position: absolute;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  height: 100%;
+}
+
+.pl-ac-page:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  border-left: 1px dashed #ccc;
+  left: 0;
+  top: 0;
+}
+
+/* 答题卡样式-左侧内容 */
+.pl-answercard-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  font-size: 12px;
+}
+
+.pl-answercard-left .el-radio__label {
+  font-size: 12px;
+}
+
+.pl-bgbox2 {
+  padding: 10px 15px;
+  margin: 10px 0;
+  font-size: 12px;
+  background: #fff7d8;
+  border-bottom: 1px solid #dcdfe6;
+  text-align: left;
+}
+
+.pl-answercard-linebox {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  border-bottom: 1px solid #dcdfe6;
+}
+
+.pl-answercard-questiontype:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pl-answercard-questiontype > a {
+  float: left;
+  padding: 5px 0;
+  margin-left: 0 !important;
+  width: 45%;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.pl-answercard-questionlist {
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dcdfe6;
+}
+
+.pl-answercard-questionlist > li > label {
+  display: inline-block;
+  line-height: 2;
+  width: 60px;
+  white-space: nowrap;
 }
 
 /* ------------------------------ 公用样式 ------------------------------ */
