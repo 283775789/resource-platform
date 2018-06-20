@@ -260,3 +260,19 @@
 .el-tabs--card>.el-tabs__header .el-tabs__item.is-active:first-child {
   border-left-color: #e0e0e0;
 }
+
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected,
+.el-tabs__item:hover,
+.el-date-table td.available:hover,
+.el-date-table td.today span,
+.el-loading-text {
+  color: #00bb6e !important;
+}
+
+.el-range-editor.is-active, .el-range-editor.is-active:hover {
+  border-color: #00bb6e !important;
+}
+
+.el-date-table td.end-date span, .el-date-table td.start-date span {
+  background-color: #00bb6e !important;
+}

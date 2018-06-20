@@ -31,6 +31,8 @@ import GroupPaperAuto from '@/pages/common/group-paper-auto'
 import PaperDetail from '@/pages/common/paper-detail'
 import Page404 from '@/pages/common/404'
 import AnswerCard from '@/pages/common/answer-card'
+import ImportPaper from '@/pages/common/import-paper'
+import ImportQuestions from '@/pages/common/import-questions'
 
 Vue.use(Router)
 
@@ -136,6 +138,14 @@ export default new Router({
     {
       path: '/answer-card',
       component: AnswerCard
+    },
+    {
+      path: '/import-paper',
+      component: ImportPaper
+    },
+    {
+      path: '/import-questions',
+      component: ImportQuestions
     },
     {
       path:'*',

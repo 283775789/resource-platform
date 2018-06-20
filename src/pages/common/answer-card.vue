@@ -8,7 +8,7 @@
           </div>
 
           <div class="pl-grid xpc-x3 xac">
-            <div class="pl-grid-col" @click="(cols=1)&&(articalCells=23)"><i class="pl-ico xcol1" :class="{xselected: cols===1}"></i><div>一栏</div></div>
+            <div class="pl-grid-col" @click="(cols=1)&&(articalCells=25)"><i class="pl-ico xcol1" :class="{xselected: cols===1}"></i><div>一栏</div></div>
             <div class="pl-grid-col" @click="(cols=2)&&(articalCells=25)"><i class="pl-ico xcol2" :class="{xselected: cols===2}"></i><div>两栏</div></div>
             <div class="pl-grid-col" @click="(cols=3)&&(articalCells=16)"><i class="pl-ico xcol3" :class="{xselected: cols===3}"></i><div>三栏</div></div>
           </div>
@@ -76,11 +76,23 @@
       </div>
 
       <div class="pl-answercard-right">
-        <!-- 答题卡: 开发需每增加一项，都要判断是否超出一页，如果超出，需要新增一张答题卡，然后将新增的内容及之后的内容放入新增的答题卡中，依此类推 -->
+        <!-- 第1页: 开发需每增加一项，都要判断是否超出一页，如果超出，需要新增一张答题卡，然后将新增的内容及之后的内容放入新增的答题卡中，依此类推 -->
         <div class="pl-ac" :class="['xcol'+cols]">
           <div class="pl-ac-body">
             <div class="pl-ac-pagebox">
-                <i class="pl-ac-page" :style="{left:(n-1) * pageWidth * cols +'mm'}" v-for="n in 10" :key="n">第{{n}}页</i>
+                <div class="pl-ac-page" :style="{left:0}">
+                  <span>第1页</span>
+                  <i class="pl-ac-position ly1"></i>
+                  <i class="pl-ac-position ly2"></i>
+                  <i class="pl-ac-position ly3"></i>
+                  <i class="pl-ac-position ly4"></i>
+                  <i class="pl-ac-position ly5"></i>
+                  <i class="pl-ac-position ly6"></i>
+                  <i class="pl-ac-position tx2"></i>
+                  <i class="pl-ac-position tx3"></i>
+                  <i class="pl-ac-position bx2"></i>
+                  <i class="pl-ac-position bx3"></i>
+                </div>
             </div>
 
             <ul ref="content" class="pl-ac-content">
@@ -252,7 +264,7 @@
                 <div class="pl-ac-asarea">
                   <h4 class="pl-ac-asarea-title" contenteditable>解答题</h4>
                   <div class="pl-ac-asarea-body">
-                    <div class="pl-ac-editable" contenteditable>32.</div>
+                    <pl-question-editor v-model="questionNo"></pl-question-editor>
                     <!-- 工具区 -->
                     <div class="pl-ac-asarea-tools">
                       <a class="pl-link2"><i class="pl-ico xadd"></i></a>
@@ -269,7 +281,7 @@
               <li class="pl-ac-content-item xsa">
                 <div class="pl-ac-asarea">
                   <div class="pl-ac-asarea-body">
-                    <div class="pl-ac-editable" contenteditable>33.</div>
+                    <pl-question-editor v-model="questionNo"></pl-question-editor>
                     <!-- 工具区 -->
                     <div class="pl-ac-asarea-tools">
                       <a class="pl-link2"><i class="pl-ico xadd"></i></a>
@@ -318,47 +330,415 @@
                   </div>
                 </div>
               </li>
-              <li class="pl-ac-content-item" v-for="n in Math.ceil(articalNum / articalCells) " :key="'cao'+n">
+              <!-- +6表示达到字数后再增加6行格子 -->
+              <li class="pl-ac-content-item" v-for="n in (Math.ceil(articalNum / articalCells)+6)" :key="'cao'+n">
                 <div class="pl-ac-asarea xca">
                   <div class="pl-ac-asarea-body">
                     <div class="pl-ac-asarea-ca">
                       <i v-for="i in articalCells" :key="'cai'+i">
-                        <span v-if="((n-1)*articalCells+i)>=articalNum" class="pl-ac-asarea-ca-num">{{(n-1)*articalCells+i}}</span>
+                        <span v-if="((n-1)*articalCells+i)===articalNum" class="pl-ac-asarea-ca-num">{{(n-1)*articalCells+i}}</span>
                       </i>
                     </div>
                   </div>
                 </div>
               </li>
-              <!-- 作文指定的长度结束后再多增6行 -->
-              <li class="pl-ac-content-item" v-for="n in 6" :key="n">
+              <!-- /语文作文 -->
+
+              <!-- 填空 -->
+              <li class="pl-ac-content-item">
+                <div class="pl-ac-asarea">
+                  <h4 class="pl-ac-asarea-title" contenteditable>40.填空题</h4>
+                  <!-- 以下div的class：x2~x5分别代表一行显示几个填空题 -->
+                  <div class="pl-ac-asarea-body xfill x3">
+                    <div class="pl-ac-fill"><i>30.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>31.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>32.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>33.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>34.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xsplit"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /填空 -->
+
+              <!-- 解答题 -->
+              <li class="pl-ac-content-item xsa">
+                <div class="pl-ac-asarea">
+                  <h4 class="pl-ac-asarea-title" contenteditable>解答题</h4>
+                  <div class="pl-ac-asarea-body">
+                    <pl-question-editor v-model="questionNo"></pl-question-editor>
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /解答题 -->
+
+              <!-- 解答题 -->
+              <li class="pl-ac-content-item xsa">
+                <div class="pl-ac-asarea">
+                  <div class="pl-ac-asarea-body">
+                    <pl-question-editor v-model="questionNo"></pl-question-editor>
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /解答题 -->
+            </ul>
+          </div>
+        </div>
+        <!-- /第1页 -->
+
+        <!-- 第2页: 结构与第1页一样 -->
+        <div class="pl-ac" :class="['xcol'+cols]">
+          <div class="pl-ac-body">
+            <div class="pl-ac-pagebox">
+                <div class="pl-ac-page" :style="{left:0}">
+                  <span>第2页</span>
+                  <i class="pl-ac-position ly1"></i>
+                  <i class="pl-ac-position ly2"></i>
+                  <i class="pl-ac-position ly3"></i>
+                  <i class="pl-ac-position ly4"></i>
+                  <i class="pl-ac-position ly5"></i>
+                  <i class="pl-ac-position ly6"></i>
+                  <i class="pl-ac-position tx2"></i>
+                  <i class="pl-ac-position tx3"></i>
+                  <i class="pl-ac-position bx2"></i>
+                  <i class="pl-ac-position bx3"></i>
+                </div>
+            </div>
+
+            <ul ref="content" class="pl-ac-content">
+              <li class="pl-ac-content-item">
+                <textarea class="pl-ac-name" placeholder="请输入试卷名称"></textarea>
+              </li>
+
+              <li class="pl-ac-content-item">
+                <div class="pl-ac-paperinfo">
+                  <div class="pl-ac-paperinfo-left">
+                    <div class="pl-ac-paperinfo-student pl-ac-editable" contenteditable>
+                      <label>姓&nbsp;名：</label>
+                      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                      <label>班&nbsp;级：</label>
+                      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                      <label>考场/座位号：</label>
+                      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </div>
+
+                    <div class="pl-ac-paperinfo-attention pl-ac-editable" contenteditable>
+                      <h4>注意事项</h4>
+                      <p>1．答题前请将姓名、班级、考场、准考证号清楚。</p>
+                      <p>2．客观题答题，必须使用2B铅笔填涂，修改时用橡皮擦干净。 </p>
+                      <p>3．主观题答题，必须使用黑色签字笔书写。</p>
+                      <p>4．必须在题号对应的答题区域内作答，超出答题区域书写无效。 </p>
+                      <p>5．保持答卷清洁、完整。 </p>
+                    </div>
+
+                    <div class="pl-ac-paperinfo-note">
+                      <label>正确填涂</label>
+                      <i class="xyes"></i>
+                      <label>缺考标记</label>
+                      <i></i>
+                    </div>
+                  </div>
+
+                  <div class="pl-ac-paperinfo-right">
+                    <div v-if="examineeIdType==='barCode'" class="pl-ac-barcode">
+                      <h4>贴条形码区</h4>
+                      <span>（正面朝上，切勿贴出虚线方框）</span>
+                    </div>
+                    <table v-else class="pl-ac-studentid">
+                      <thead>
+                        <tr>
+                          <th colspan="8">准考证号</th>
+                        </tr>
+                        <tr>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td v-for="n in 8" :key="n">
+                            <div v-for="i in 10" :key="i">[<span>{{i-1}}</span>]</div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </li>
+              <!-- 单选多选 -->
+              <li class="pl-ac-content-item">
+                <div class="pl-ac-asarea">
+                  <h4 class="pl-ac-asarea-title" contenteditable>选择题</h4>
+                  <div class="pl-ac-asarea-body">
+                    <ul class="pl-ac-options">
+                      <li><i>1</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>2</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>3</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>4</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>5</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                    </ul>
+                    <ul class="pl-ac-options">
+                      <li><i>6</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>7</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>8</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>9</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>10</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                    </ul>
+                    <ul class="pl-ac-options">
+                      <li><i>11</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>12</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>13</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>14</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>15</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                    </ul>
+                    <ul class="pl-ac-options">
+                      <li><i>16</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>17</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>18</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>19</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>20</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                    </ul>
+                    <ul class="pl-ac-options">
+                      <li><i>1</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>2</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>3</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>4</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>5</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                    </ul>
+                    <ul class="pl-ac-options">
+                      <li><i>6</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>7</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>8</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>9</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>10</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                    </ul>
+                    <ul class="pl-ac-options">
+                      <li><i>11</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>12</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>13</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>14</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>15</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                    </ul>
+                    <ul class="pl-ac-options">
+                      <li><i>136</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>137</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>138</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>139</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                      <li><i>230</i><span>[<b>A</b>]</span><span>[<b>B</b>]</span><span>[<b>C</b>]</span><span>[<b>D</b>]</span></li>
+                    </ul>
+
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /单选多选 -->
+
+              <!-- 填空 -->
+              <li class="pl-ac-content-item">
+                <div class="pl-ac-asarea">
+                  <h4 class="pl-ac-asarea-title" contenteditable>填空题</h4>
+                  <!-- 以下div的class：x2~x5分别代表一行显示几个填空题 -->
+                  <div class="pl-ac-asarea-body xfill x3">
+                    <div class="pl-ac-fill"><i>30.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>31.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>32.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>33.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>34.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xsplit"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /填空 -->
+
+              <!-- 解答题 -->
+              <li class="pl-ac-content-item xsa">
+                <div class="pl-ac-asarea">
+                  <h4 class="pl-ac-asarea-title" contenteditable>解答题</h4>
+                  <div class="pl-ac-asarea-body">
+                    <pl-question-editor v-model="questionNo"></pl-question-editor>
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /解答题 -->
+
+              <!-- 解答题 -->
+              <li class="pl-ac-content-item xsa">
+                <div class="pl-ac-asarea">
+                  <div class="pl-ac-asarea-body">
+                    <pl-question-editor v-model="questionNo"></pl-question-editor>
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /解答题 -->
+
+              <!-- 英语作文 -->
+              <li class="pl-ac-content-item">
+                <div class="pl-ac-asarea">
+                  <h4 class="pl-ac-asarea-title" contenteditable>英语作文</h4>
+                  <div class="pl-ac-asarea-body">
+                    <div class="pl-ac-editable" contenteditable>35.</div>
+                    <div class="pl-ac-asarea-ea">
+                      <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
+                    </div>
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /英语作文 -->
+
+              <!-- 语文作文 -->
+              <li class="pl-ac-content-item">
+                <div class="pl-ac-asarea xca">
+                  <h4 class="pl-ac-asarea-title" contenteditable>语文作文</h4>
+                  <div class="pl-ac-asarea-body">
+                    <div class="pl-ac-editable" contenteditable style="text-align:left; margin-bottom:10px;">32.作文说明作文说明</div>
+                    <div class="pl-ac-asarea-ca">
+                      <i v-for="n in articalCells" :key="n"></i>
+                    </div>
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- +6表示达到字数后再增加6行格子 -->
+              <li class="pl-ac-content-item" v-for="n in (Math.ceil(articalNum / articalCells)+6)" :key="'cao'+n">
                 <div class="pl-ac-asarea xca">
                   <div class="pl-ac-asarea-body">
                     <div class="pl-ac-asarea-ca">
-                      <i v-for="n in articalCells" :key="n"></i>
+                      <i v-for="i in articalCells" :key="'cai'+i">
+                        <span v-if="((n-1)*articalCells+i)===articalNum" class="pl-ac-asarea-ca-num">{{(n-1)*articalCells+i}}</span>
+                      </i>
                     </div>
                   </div>
                 </div>
               </li>
               <!-- /语文作文 -->
-            </ul>
 
-            <!-- 定位标志 -->
-            <div class="pl-ac-positionbox">
-              <i class="pl-ac-position ly1"></i>
-              <i class="pl-ac-position ly2"></i>
-              <i class="pl-ac-position ly3"></i>
-              <i class="pl-ac-position ly4"></i>
-              <i class="pl-ac-position ly5"></i>
-              <i class="pl-ac-position ly6"></i>
-              <i class="pl-ac-position tx2"></i>
-              <i class="pl-ac-position tx3"></i>
-              <i class="pl-ac-position bx2"></i>
-              <i class="pl-ac-position bx3"></i>
-            </div>
-            <!-- /定位标志 -->
+              <!-- 填空 -->
+              <li class="pl-ac-content-item">
+                <div class="pl-ac-asarea">
+                  <h4 class="pl-ac-asarea-title" contenteditable>40.填空题</h4>
+                  <!-- 以下div的class：x2~x5分别代表一行显示几个填空题 -->
+                  <div class="pl-ac-asarea-body xfill x3">
+                    <div class="pl-ac-fill"><i>30.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>31.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>32.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>33.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+                    <div class="pl-ac-fill"><i>34.</i><div class="pl-fill-body"></div><a class="pl-link2"><i class="pl-ico xdel"></i></a></div>
+
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xsplit"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /填空 -->
+
+              <!-- 解答题 -->
+              <li class="pl-ac-content-item xsa">
+                <div class="pl-ac-asarea">
+                  <h4 class="pl-ac-asarea-title" contenteditable>解答题</h4>
+                  <div class="pl-ac-asarea-body">
+                    <pl-question-editor v-model="questionNo"></pl-question-editor>
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /解答题 -->
+
+              <!-- 解答题 -->
+              <li class="pl-ac-content-item xsa">
+                <div class="pl-ac-asarea">
+                  <div class="pl-ac-asarea-body">
+                    <pl-question-editor v-model="questionNo"></pl-question-editor>
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /解答题 -->
+            </ul>
           </div>
         </div>
-        <!-- /答题卡 -->
+        <!-- /第2页 -->
       </div>
     </div>
 
@@ -473,19 +853,23 @@
     </el-dialog>
     <!-- /弹窗:英语作文题 -->
   </div>
-
 </template>
 
 <script>
+  import QuestionEditor from '@/components/question-editor'
+
   export default {
     name: 'plAnswerCard',
+    components: {
+    'plQuestionEditor': QuestionEditor
+    },
     data() {
       return {
         demoVal: '',
         examineeIdType: 'barCode',
         cols: 2,
         articalCells: 25,
-        articalNum: 800,
+        articalNum: 80,
         resizeStartY: 0,
         originalHeight: 0,
         currentResizeEl: null,
@@ -494,16 +878,17 @@
         shortAnswerDialogVisible: false,
         chineseArticalDialogVisible: false,
         englishArticalDialogVisible: false,
+        questionNo: '32.'
       }
     },
     computed: {
       pageWidth () {
         if(this.cols===1) {
-          return 180
+          return 210
         } else if (this.cols===2) {
-          return 195
+          return 210
         } else {
-          return 130
+          return 140
         }
       }
     },

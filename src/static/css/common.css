@@ -64,6 +64,7 @@
   height: 32px;
   line-height: 32px;
   background: #f0f4f6;
+  color: #666;
 }
 
 .pl-topbar-right {
@@ -79,7 +80,7 @@
 /* 导航 */
 .pl-nav {
   position: relative;
-  z-index: 10;
+  z-index: 3000;
   height: 50px;
   line-height: 50px;
   margin-bottom: 20px;
@@ -211,7 +212,7 @@
 
 /* 主内容区 */
 .pl-main {
-  min-height: 420px;
+  min-height: 800px;
   margin-bottom: 20px;
 }
 
@@ -1379,12 +1380,21 @@
 
 /* 仿表格布局:连线 */
 .pl-linebox {
-  margin: -40px -30px 0;
+  margin: -40px -20px 0;
+}
+
+.pl-pdanswer .pl-linebox {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .pl-astable.xline {
   border-collapse: separate;
-  border-spacing: 30px 40px;
+  border-spacing: 10px 20px;
+}
+
+.pl-astable.xline img {
+  max-width: 100%;
 }
 
 .pl-astable.xline > .pl-astable-row > .pl-astable-col {
@@ -1395,6 +1405,13 @@
 
 .pl-pdanswer .pl-astable.xline > .pl-astable-row > .pl-astable-col {
   background: #fff;
+}
+
+.pl-astable.xline .xline-label {
+  width: 1em;
+  border: none !important;
+  background: transparent !important;
+  vertical-align: middle;
 }
 
 .xline-leftcircle,
@@ -1562,10 +1579,6 @@
 
 .pl-astable.xline .pl-astable-col:last-child .pl-qeditor-body .edui-container {
   margin-right: -8px !important;
-}
-
-.pl-astable.xline .edui-editor-body .edui-body-container {
-  padding: 0 30px;
 }
 
 .pl-qeditor-body:focus {
@@ -1763,6 +1776,7 @@
 /* ------------------------------ 试题详情 ------------------------------ */
 .pl-questionlist {
   margin-top: -21px;
+  font-size: 14px;
   border-bottom: 1px solid #e3e3e3;
 }
 
@@ -2149,11 +2163,15 @@
 
 .pl-ac {
   position: relative;
-  min-width: 210mm;
+  width: 210mm;
   height: 297mm;
-  padding: 15mm;
+  padding: 15mm 0;
   background: #fff;
   overflow: hidden;
+}
+
+.pl-ac + .pl-ac {
+  margin-top: 20px;
 }
 
 .pl-ac-body {
@@ -2163,7 +2181,7 @@
 
 .pl-ac.xcol2,
 .pl-ac.xcol3 {
-  min-width: 420mm;
+  width: 420mm;
   height: 297mm;
 }
 
@@ -2191,17 +2209,13 @@
 .pl-ac-content-item {
   writing-mode: horizontal-tb;
   display: inline-block;
-  width: 180mm;
+  width: 210mm;
+  padding:0 10mm;
   font-size: 14px;
-  padding: 0 4mm;
-}
-
-.pl-ac.xcol2 .pl-ac-content-item {
-  width: 195mm;
 }
 
 .pl-ac.xcol3 .pl-ac-content-item {
-  width: 130mm;
+  width: 140mm;
 }
 
 .pl-ac-name {
@@ -2326,7 +2340,7 @@
 /* 准考证号 */
 .pl-ac-studentid {
   margin-top: 5mm;
-  width: 60mm;
+  width: 55mm;
   line-height: 5mm;
   font-size: 12px;
   text-align: center;
@@ -2344,7 +2358,7 @@
 /* 条形码区 */
 .pl-ac-barcode  {
   position: relative;
-  width: 60mm;
+  width: 55mm;
   margin-top: 5mm;
   padding: 40mm 3mm 3mm;
   font-size: 12px;
@@ -2425,6 +2439,7 @@
 
 .pl-ac-asarea-body .pl-link2.xresize {
   position: absolute;
+  z-index: 3000;
   bottom: 0;
   right: 0;
   display: none;
@@ -2533,7 +2548,32 @@
 
 .pl-ac-content-item.xsa .pl-ac-asarea-body {
   height: 30mm;
-  padding: 2mm;
+}
+
+.pl-ac-content-item .pl-qeditor-body {
+  border-top-color: #000;
+  border-bottom: none;
+}
+
+.pl-ac-content-item.xsa .pl-qeditor,
+.pl-ac-content-item.xsa .pl-qeditor-body,
+.pl-ac-content-item.xsa .pl-editorbox,
+.pl-ac-content-item.xsa .edui-container,
+.pl-ac-content-item.xsa .edui-container .edui-editor-body .edui-body-container {
+  height: 100% !important;
+}
+
+.pl-ac-content-item.xsa .edui-container .edui-editor-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 33px;
+  bottom: 0;
+}
+
+.pl-ac-content-item .edui-editor-body .edui-body-container {
+  font-family: "\5B8B\4F53","Microsoft YaHei" !important;
+  font-size: 14px !important;
 }
 
 /* 答题卡:英语作文 */
@@ -2567,7 +2607,7 @@
 
 .pl-ac.xcol3 .pl-ac-asarea-ca > i {
   position: relative;
-  width: 7.8mm;
+  width: 7.7mm;
 }
 
 .pl-ac-asarea-ca-num {
@@ -2591,51 +2631,61 @@
 .pl-ac-position.ly4,
 .pl-ac-position.ly5,
 .pl-ac-position.ly6 {
-  left: -10mm;
+  left: -2.5mm;
 }
 
 .pl-ac-position.ly2,
 .pl-ac-position.ly3,
 .pl-ac-position.ly4,
 .pl-ac-position.ly5 {
-  width: 2.5mm;
   margin-top: -2.5mm;
 }
 
-.pl-ac-position.ly1 {top:-10mm;}
+.pl-ac-position.ly1 {top:5mm;}
 .pl-ac-position.ly2 {top:20%;}
 .pl-ac-position.ly3{top:40%;}
 .pl-ac-position.ly4 {top:60%;}
 .pl-ac-position.ly5 {top:80%;}
-.pl-ac-position.ly6 {bottom:-10mm;}
+.pl-ac-position.ly6 {bottom:5mm;}
 
 .pl-ac-position.tx2,
 .pl-ac-position.tx3,
 .pl-ac-position.bx2,
 .pl-ac-position.bx3 {
-  height: 2.5mm;
+  left: -140mm;
+  height: 5mm;
   margin-left: -2.5mm;
+}
+
+.pl-ac-position.tx3,
+.pl-ac-position.bx3 {
+  left: -70mm;
+}
+
+.pl-ac.xcol2 .pl-ac-position.tx2,
+.pl-ac.xcol2 .pl-ac-position.bx2,
+.pl-ac.xcol3 .pl-ac-position.tx2,
+.pl-ac.xcol3 .pl-ac-position.bx2 {
+  left: -140mm;
+}
+
+.pl-ac.xcol2 .pl-ac-position.tx3,
+.pl-ac.xcol2 .pl-ac-position.bx3,
+.pl-ac.xcol3 .pl-ac-position.tx3,
+.pl-ac.xcol3 .pl-ac-position.bx3 {
+  left: -280mm;
 }
 
 .pl-ac-position.tx2,
 .pl-ac-position.tx3 {
-  top: -10mm;
+  top: 5mm;
 }
 
 .pl-ac-position.bx2,
 .pl-ac-position.bx3 {
-  bottom: -10mm;
+  bottom: 5mm;
 }
 
-.pl-ac-position.tx2,
-.pl-ac-position.bx2 {
-  left: 50%;
-}
-
-.pl-ac-position.tx3,
-.pl-ac-position.bx3 {
-  right: 0;
-}
 
 /* 页面标识 */
 .pl-ac-pagebox {
@@ -2720,6 +2770,15 @@
   line-height: 2;
   width: 60px;
   white-space: nowrap;
+}
+
+/* 导入内容 */
+.pl-importbox {
+  padding: 15px 0;
+}
+
+.pl-importbox img {
+  max-width: 100%;
 }
 
 /* ------------------------------ 公用样式 ------------------------------ */

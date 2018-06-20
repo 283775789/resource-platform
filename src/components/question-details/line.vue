@@ -13,72 +13,45 @@
       <div class="pl-linebox">
         <div class="pl-astable xline">
           <div class="pl-astable-row">
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
-            </div>
-            <div class="pl-astable-col">
-              <div class="pl-qeditor">
-                <div class="pl-qeditor-body">选项内容</div>
-              </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
           </div>
           <div class="pl-astable-row">
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
-            </div>
-            <div class="pl-astable-col">
-              <div class="pl-qeditor">
-                <div class="pl-qeditor-body">选项内容</div>
-              </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
           </div>
           <div class="pl-astable-row">
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
-            </div>
-            <div class="pl-astable-col">
-              <div class="pl-qeditor">
-                <div class="pl-qeditor-body">选项内容</div>
-              </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
           </div>
         </div>
@@ -92,72 +65,45 @@
       <div class="pl-linebox">
         <div class="pl-astable xline">
           <div class="pl-astable-row">
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
-            </div>
-            <div class="pl-astable-col">
-              <div class="pl-qeditor">
-                <div class="pl-qeditor-body">选项内容</div>
-              </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
           </div>
           <div class="pl-astable-row">
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
-            </div>
-            <div class="pl-astable-col">
-              <div class="pl-qeditor">
-                <div class="pl-qeditor-body">选项内容</div>
-              </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
           </div>
           <div class="pl-astable-row">
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
+            <div class="pl-astable-col xline-label">A.</div>
             <div class="pl-astable-col">
               <div class="pl-qeditor">
                 <div class="pl-qeditor-body">选项内容</div>
               </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
-            </div>
-            <div class="pl-astable-col">
-              <div class="pl-qeditor">
-                <div class="pl-qeditor-body">选项内容</div>
-              </div>
-              <i class="xline-leftcircle"></i>
-              <i class="xline-rightcircle"></i>
             </div>
           </div>
         </div>
