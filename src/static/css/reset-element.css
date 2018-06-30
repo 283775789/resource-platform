@@ -6,7 +6,12 @@
   color: #666;
   background: #fff;
 }
-
+.el-date-editor .el-range-separator {
+  padding: 0 5px;
+  line-height: 32px;
+  width: 10%;
+  color: #303133;
+}
 .el-button:hover {
   color: #2dbe60;
   border-color: #2dbe60;
@@ -124,9 +129,13 @@
 
 /* 表单-小 */
 .el-form.xsmall .el-form-item {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
+.el-form.xsmall .el-form-item__content {
+  font-size: 12px;
+  line-height: 36px;
+}
 
 .el-form.xsmall .el-form-item__label{
   padding-right: 5px;
@@ -269,10 +278,20 @@
   color: #00bb6e !important;
 }
 
+
 .el-range-editor.is-active, .el-range-editor.is-active:hover {
   border-color: #00bb6e !important;
 }
 
 .el-date-table td.end-date span, .el-date-table td.start-date span {
   background-color: #00bb6e !important;
+}
+
+
+
+
+
+
+.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+  background-color: #45e47d;
 }

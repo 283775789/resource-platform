@@ -27,6 +27,7 @@ import PersonAnswerCard from '@/pages/person/answer-card'
 import Template from '@/pages/common/template'
 import Artical from '@/pages/common/artical'
 import AddExamQuestion from '@/pages/common/add-exam-question'
+import AddExamQuestionReadOnly from '@/pages/common/add-exam-question-readonly'
 import GroupPaperAuto from '@/pages/common/group-paper-auto'
 import PaperDetail from '@/pages/common/paper-detail'
 import Page404 from '@/pages/common/404'
@@ -124,6 +125,10 @@ export default new Router({
       path: '/add-exam-question',
       name: 'addExamQuestion',
       component: AddExamQuestion
+    },
+    {
+      path: '/add-exam-question-readonly',
+      component: AddExamQuestionReadOnly
     },
     {
       path: '/group-paper-auto',

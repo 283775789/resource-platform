@@ -9,6 +9,7 @@
         <a class="pl-tag">英语</a>
         <a class="pl-tag">科学</a>
         <a class="pl-tag">政治思想</a>
+        <a class="pl-nav-menu-more">+展开</a>
       </div>
       <h4 class="pl-nav-menu-title">小学</h4>
       <div class="pl-nav-menu-tags">
@@ -24,6 +25,7 @@
         <a class="pl-tag">历史与社会</a>
         <a class="pl-tag">社会思想</a>
         <a class="pl-tag">生物</a>
+        <a class="pl-nav-menu-more">-收起</a>
       </div>
       <h4 class="pl-nav-menu-title">高中</h4>
       <div class="pl-nav-menu-tags">

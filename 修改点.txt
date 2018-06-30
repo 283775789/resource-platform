@@ -1,0 +1,3 @@
+1.增加了一个编码的图标，需要更新src/static文件夹.
+2.修改了样式，需要更新src/static文件夹.
+3.增加了一个试题只读页面:add-exam-question-readonly.vue

@@ -90,7 +90,7 @@
               <span class="pl-title-label xbold" style="line-height:40px;">共1.3万试题</span>
               <div class="pl-title-right">
                 <label class="c-9">排序:</label>
-                <a class="pl-link2 xactive">最新</a>
+                <a class="pl-link2 xactive">最新<i class="pl-ico xsort"></i></a>
                 <a class="pl-link2">组卷次数</a>
                 <a class="pl-link2">真题次数</a>
               </div>

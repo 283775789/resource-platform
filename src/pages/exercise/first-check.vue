@@ -41,16 +41,20 @@
               <div class="pl-astable-row">
                 <div class="pl-astable-col xfilter-label" style="width:5em;">试题类型:</div>
                 <div class="pl-astable-col">
-                  <a class="pl-tag xactive">全部</a>
-                  <a class="pl-tag">单选</a>
-                  <a class="pl-tag">多选</a>
-                  <a class="pl-tag">判断题</a>
-                  <a class="pl-tag">填空题</a>
-                  <a class="pl-tag">简答题</a>
-                  <a class="pl-tag">听力题</a>
-                  <a class="pl-tag">连线题</a>
-                  <a class="pl-tag">跟读题</a>
-                  <a class="pl-tag">综合题</a>
+                  <!-- 以下div加xall显示全部 -->
+                  <div class="xfilter-tagsbox xall">
+                    <a class="pl-tag xactive">全部</a>
+                    <a class="pl-tag">单选</a>
+                    <a class="pl-tag">多选</a>
+                    <a class="pl-tag">判断题</a>
+                    <a class="pl-tag">填空题</a>
+                    <a class="pl-tag">简答题</a>
+                    <a class="pl-tag">听力题</a>
+                    <a class="pl-tag">连线题</a>
+                    <a class="pl-tag">跟读题</a>
+                    <a class="pl-tag">综合题</a>
+                  </div>
+                  <a class="pl-nav-menu-more">+展开</a>
                 </div>
               </div>
               <div class="pl-astable-row">

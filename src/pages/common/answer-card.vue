@@ -88,6 +88,12 @@
                   <i class="pl-ac-position ly4"></i>
                   <i class="pl-ac-position ly5"></i>
                   <i class="pl-ac-position ly6"></i>
+                  <i class="pl-ac-position ry1"></i>
+                  <i class="pl-ac-position ry2"></i>
+                  <i class="pl-ac-position ry3"></i>
+                  <i class="pl-ac-position ry4"></i>
+                  <i class="pl-ac-position ry5"></i>
+                  <i class="pl-ac-position ry6"></i>
                   <i class="pl-ac-position tx2"></i>
                   <i class="pl-ac-position tx3"></i>
                   <i class="pl-ac-position bx2"></i>
@@ -420,6 +426,12 @@
                   <i class="pl-ac-position ly4"></i>
                   <i class="pl-ac-position ly5"></i>
                   <i class="pl-ac-position ly6"></i>
+                  <i class="pl-ac-position ry1"></i>
+                  <i class="pl-ac-position ry2"></i>
+                  <i class="pl-ac-position ry3"></i>
+                  <i class="pl-ac-position ry4"></i>
+                  <i class="pl-ac-position ry5"></i>
+                  <i class="pl-ac-position ry6"></i>
                   <i class="pl-ac-position tx2"></i>
                   <i class="pl-ac-position tx3"></i>
                   <i class="pl-ac-position bx2"></i>

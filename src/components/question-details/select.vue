@@ -32,12 +32,12 @@
       </div>
     </div>
   </div>
-  <ul class="pl-pdanswer" v-if="hasAnswer && answerVisible">
+  <ul class="pl-pdanswer" v-if="alwaysShowAnswer || (hasAnswer && answerVisible)">
     <li class="pl-pdanswer-result">正确答案: C</li>
     <li class="pl-pdanswer-body">答案解析:答案解析内容答案解析内容。</li>
     <pl-attachment></pl-attachment>
   </ul>
-  <div class="pl-questiondetail-tools">
+  <div class="pl-questiondetail-tools" v-if="!alwaysShowAnswer">
     <a class="pl-link" v-if="hasAnswer" @click="answerVisible=!answerVisible">{{answerVisible?'收起':'展开'}}解析</a>
     <slot name="tools"></slot>
   </div>
@@ -48,6 +48,10 @@
 export default {
   name: 'plQuestionDetailSelect',
   props: {
+    alwaysShowAnswer: {
+      type: Boolean,
+      default: false
+    },
     hasAnswer: {
       type: Boolean,
       default: true
