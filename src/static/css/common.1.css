@@ -951,7 +951,7 @@
 /* 侧边浮动 */
 .pl-sidefloat {
   position:fixed;
-  z-index: 2001;
+  z-index: 1001;
   bottom:20%;
   right: -130px;
   width: 160px;
@@ -1036,10 +1036,8 @@
 }
 
 .pl-sidefloat.xcart {
-  top: 180px;
-  bottom: auto;
-  width: 320px;
-  right: -290px;
+  width: 280px;
+  right: -250px;
 }
 
 .pl-sidefloat.xcart .pl-sidefloat-body {
@@ -1544,10 +1542,6 @@
 
 .pl-questiondetail .pl-astable.xline > .pl-astable-row > .pl-astable-col {
   padding: 8px 0;
-}
-
-.pl-questiondetail.xselecting {
-  background: #f5f5f5;
 }
 
 /* 添加选项按钮 */
@@ -3089,67 +3083,4 @@
 .pl-nav-menu-tags {
   position: relative;
   margin: 0 0 10px -8px;
-}
-
-/* 试题统计 */
-.pl-sidefloat.xcart .xcart-scrollbox {
-  max-height: 420px;
-  overflow: auto;
-}
-
-.pl-sidefloat.xcount {
-  top: 180px;
-  bottom: auto;
-}
-
-.pl-sidefloat.xcount .pl-sidefloat-body {
-  padding-bottom: 0;
-}
-
-.pl-sidefloat.xcount .xcount-body {
-  max-height: 420px;
-  overflow: auto;
-}
-
-.pl-sidefloat.xcount .xcount-type {
-  padding: 10px;
-  text-align: left;
-}
-
-.pl-sidefloat.xcount .xcount-type-title {
-  margin-bottom: 5px;
-}
-
-.pl-sidefloat.xcount .xcount-type-title:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.pl-sidefloat.xcount .xcount-type-title > label {
-  float: left;
-  font-weight: bold;
-}
-
-.pl-sidefloat.xcount .xcount-type-title > div {
-  float: right;
-}
-
-.pl-qno {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  line-height: 20px;
-  margin: 3px 2px;
-  font-size: 12px;
-  font-style: normal;
-  text-align: center;
-  border: 1px solid #dcdcdc;
-  cursor: pointer;
-}
-
-.pl-qno:hover {
-  background: #2bbb61;
-  color: #fff;
-  border-color: #2bbb61;
 }

@@ -38,6 +38,7 @@
     <pl-attachment></pl-attachment>
   </ul>
   <div class="pl-questiondetail-tools" v-if="!alwaysShowAnswer">
+    <slot name="tools-front"></slot>
     <a class="pl-link" v-if="hasAnswer" @click="answerVisible=!answerVisible">{{answerVisible?'收起':'展开'}}解析</a>
     <slot name="tools"></slot>
   </div>

@@ -122,6 +122,49 @@
             </el-form>
           </div>
           <!-- /试题扩展属性 -->
+
+           <!-- 附件区 -->
+          <div class="pl-card xsp">
+            <div class="pl-subtitle xsmall">
+              <span class="pl-subtitle-text">附件区</span>
+              <div class="pl-subtitle-right">
+                <el-upload action="https://jsonplaceholder.typicode.com/posts/">
+                  <a class="pl-link">上传附件</a>
+                </el-upload>
+              </div>
+            </div>
+
+            <div class="pl-detailattachments">
+              <div class="pl-attachment">
+                <div class="pl-attachment-img">
+                  <i class="pl-ico xword"></i>
+                </div>
+                <div class="pl-attachment-body">
+                  <div class="pl-attachment-name">小学四年级语文下册期末试卷.doc</div>
+                </div>
+                <a class="pl-link"><i class="pl-ico xdel"></i></a>
+              </div>
+              <div class="pl-attachment">
+                <div class="pl-attachment-img">
+                  <i class="pl-ico ximg"></i>
+                </div>
+                <div class="pl-attachment-body">
+                  <div class="pl-attachment-name">小学四年级语文下册期末试卷.doc</div>
+                </div>
+                <a class="pl-link"><i class="pl-ico xdel"></i></a>
+              </div>
+              <div class="pl-attachment">
+                <div class="pl-attachment-img">
+                  <i class="pl-ico ximg"></i>
+                </div>
+                <div class="pl-attachment-body">
+                  <div class="pl-attachment-name">小学四年级语文下册期末试卷.doc</div>
+                </div>
+                <a class="pl-link"><i class="pl-ico xdel"></i></a>
+              </div>
+            </div>
+          </div>
+           <!-- /附件区 -->
         </div>
         <div class="pl-sidelayout-right">
           <!-- 试卷信息: 去掉以下class中的xgutter将去掉装订线效果 -->
@@ -166,7 +209,8 @@
             </div>
             <pl-questionlist>
               <!-- 题型:选择题 -->
-              <pl-question-detail-select>
+              <pl-question-detail-select class="xselecting">
+                <el-rate slot="tools-front"></el-rate>
                 <template slot="tools">
                   <el-input size="small" style="width:40px;"></el-input>
                   <span>分</span>
@@ -180,8 +224,8 @@
 
               <!-- 题型:选择题 -->
               <pl-question-detail-select>
+                <el-rate slot="tools-front"></el-rate>
                 <template slot="tools">
-                  <el-input size="small" style="width:40px;"></el-input>
                   <span>分</span>
                   <a class="pl-link ml-small"><i class="pl-ico xprev"></i></a>
                   <a class="pl-link"><i class="pl-ico xnext"></i></a>
@@ -190,6 +234,36 @@
                 </template>
               </pl-question-detail-select>
               <!-- 题型:选择题 -->
+            </pl-questionlist>
+
+            <pl-questionlist>
+              <!-- 题型:图片试题演示 -->
+              <div class="pl-question-image">
+                <img src="../../static/images/question-image.png" />
+                <div class="pl-question-image-tools">
+                  <a class="pl-link ml-small"><i class="pl-ico xprev"></i></a>
+                  <a class="pl-link"><i class="pl-ico xnext"></i></a>
+                  <el-upload class="pl-uploadicon" action="https://jsonplaceholder.typicode.com/posts/">
+                    <a class="pl-link"><i class="pl-ico xupload"></i></a>
+                  </el-upload>
+                  <a class="pl-link"><i class="pl-ico xdel"></i></a>
+                </div>
+              </div>
+              <!-- 题型:图片试题演示 -->
+
+              <!-- 题型:图片试题演示 -->
+              <div class="pl-question-image">
+                <img src="../../static/images/question-image.png" />
+                <div class="pl-question-image-tools">
+                  <a class="pl-link ml-small"><i class="pl-ico xprev"></i></a>
+                  <a class="pl-link"><i class="pl-ico xnext"></i></a>
+                  <el-upload class="pl-uploadicon" action="https://jsonplaceholder.typicode.com/posts/">
+                    <a class="pl-link"><i class="pl-ico xupload"></i></a>
+                  </el-upload>
+                  <a class="pl-link"><i class="pl-ico xdel"></i></a>
+                </div>
+              </div>
+              <!-- 题型:图片试题演示 -->
             </pl-questionlist>
 
             <el-input class="pl-paperdetail-param xgroup" readonly value="第II卷（选择题）"></el-input>
@@ -214,6 +288,7 @@
             <pl-questionlist>
               <!-- 题型:填空题 -->
               <pl-question-detail-fill>
+                <el-rate slot="tools-front"></el-rate>
                 <template slot="tools">
                   <el-input size="small" style="width:40px;"></el-input>
                   <span>分</span>
@@ -227,6 +302,7 @@
 
               <!-- 题型:填空题 -->
               <pl-question-detail-fill>
+                <el-rate slot="tools-front"></el-rate>
                 <template slot="tools">
                   <el-input size="small" style="width:40px;"></el-input>
                   <span>分</span>
@@ -310,6 +386,104 @@
       </span>
     </el-dialog>
     <!-- /弹窗:编辑试题 -->
+
+    <!-- 试题统计 -->
+    <div class="pl-sidefloat xcount xcart" :class="{xactive:floatVisible}">
+      <div class="pl-sidefloat-left" @click="floatVisible=!floatVisible">
+        <span>试题统计</span>
+        <i>></i>
+      </div>
+      <div class="pl-sidefloat-body">
+        <div class="xcart-header">分数:<b class="pl-num">150</b>&nbsp;&nbsp;&nbsp;题数:<b class="pl-num">40</b>&nbsp;&nbsp;&nbsp;难度:<b class="pl-num">普通</b>&nbsp;&nbsp;&nbsp;</div>
+        <div class="xcount-body">
+          <div class="xcount-type">
+            <div class="xcount-type-title">
+              <label>一、选择题</label>
+              <div>
+                <a class="xcart-prev"><i class="pl-ico xprev"></i></a>
+                <a class="xcart-next"><i class="pl-ico xnext"></i></a>
+                <a class="xcart-del"><i class="pl-ico xdel"></i></a>
+              </div>
+            </div>
+            <div class="xount-type-body">
+              <i class="pl-qno">1</i>
+              <i class="pl-qno">2</i>
+              <i class="pl-qno">4</i>
+              <i class="pl-qno">5</i>
+              <i class="pl-qno">6</i>
+              <i class="pl-qno">7</i>
+              <i class="pl-qno">8</i>
+              <i class="pl-qno">9</i>
+              <i class="pl-qno">10</i>
+            </div>
+          </div>
+          <div class="xcount-type">
+            <div class="xcount-type-title">
+              <label>二、填空题</label>
+              <div>
+                <a class="xcart-prev"><i class="pl-ico xprev"></i></a>
+                <a class="xcart-next"><i class="pl-ico xnext"></i></a>
+                <a class="xcart-del"><i class="pl-ico xdel"></i></a>
+              </div>
+            </div>
+            <div class="xount-type-body">
+              <i class="pl-qno">1</i>
+              <i class="pl-qno">2</i>
+              <i class="pl-qno">4</i>
+              <i class="pl-qno">5</i>
+              <i class="pl-qno">6</i>
+              <i class="pl-qno">7</i>
+              <i class="pl-qno">8</i>
+              <i class="pl-qno">9</i>
+              <i class="pl-qno">10</i>
+            </div>
+          </div>
+          <div class="xcount-type">
+            <div class="xcount-type-title">
+              <label>三、简答题</label>
+              <div>
+                <a class="xcart-prev"><i class="pl-ico xprev"></i></a>
+                <a class="xcart-next"><i class="pl-ico xnext"></i></a>
+                <a class="xcart-del"><i class="pl-ico xdel"></i></a>
+              </div>
+            </div>
+            <div class="xount-type-body">
+              <i class="pl-qno">1</i>
+              <i class="pl-qno">2</i>
+              <i class="pl-qno">4</i>
+              <i class="pl-qno">5</i>
+              <i class="pl-qno">6</i>
+              <i class="pl-qno">7</i>
+              <i class="pl-qno">8</i>
+              <i class="pl-qno">9</i>
+              <i class="pl-qno">10</i>
+            </div>
+          </div>
+          <div class="xcount-type">
+            <div class="xcount-type-title">
+              <label>四、综合题</label>
+              <div>
+                <a class="xcart-prev"><i class="pl-ico xprev"></i></a>
+                <a class="xcart-next"><i class="pl-ico xnext"></i></a>
+                <a class="xcart-del"><i class="pl-ico xdel"></i></a>
+              </div>
+            </div>
+            <div class="xount-type-body">
+              <i class="pl-qno">1</i>
+              <i class="pl-qno">2</i>
+              <i class="pl-qno">4</i>
+              <i class="pl-qno">5</i>
+              <i class="pl-qno">6</i>
+              <i class="pl-qno">7</i>
+              <i class="pl-qno">8</i>
+              <i class="pl-qno">9</i>
+              <i class="pl-qno">10</i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /试题统计 -->
   </div>
 </template>
 
@@ -318,6 +492,7 @@ export default {
   name: "plAddExamQuestion",
   data() {
     return {
+      floatVisible: false,
       questionType: '单选题',
       data: [
         {

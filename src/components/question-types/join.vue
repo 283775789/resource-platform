@@ -37,6 +37,17 @@
             <pl-question-line v-if="question.type==='连线题'"></pl-question-line>
             <pl-question-voice v-if="question.type==='跟读题'"></pl-question-voice>
           </div>
+          <div class="pl-astable xquestion">
+            <div class="pl-astable-col xquestion-label" style="width: 4em;">知识点：</div>
+            <div class="pl-astable-col">
+              <div class="pl-tagbox">
+                <div class="pl-tagbox-title"><a class="pl-link" @click="knowledgeDialogVisible=true">选择知识点</a></div>
+                <div class="pl-tagbox-body">
+                  <span class="pl-deltag"><a><i class="pl-ico xremove"></i></a>知识点1</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -71,6 +82,25 @@
         </el-upload>
       </div>
     </div>
+
+    <!-- 弹窗:选择知识点 -->
+    <el-dialog title="选择知识点" :visible.sync="knowledgeDialogVisible" width="480px">
+      <div class="pl-dialogbody">
+        <div class="pl-searchinput">
+          <el-input size="medium"></el-input>
+          <i class="el-icon-search"></i>
+        </div>
+        <div class="pl-treebox xschool">
+          <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
+          <el-tree :data="data" :props="defaultProps"></el-tree>
+        </div>
+      </div>
+      <span slot="footer" class="dialog-footer">
+        <el-button size="medium" @click="knowledgeDialogVisible = false">取 消</el-button>
+        <el-button size="medium" type="info" @click="knowledgeDialogVisible = false">选 择</el-button>
+      </span>
+    </el-dialog>
+    <!-- /弹窗:选择知识点 -->
   </div>
 </template>
 
@@ -82,7 +112,8 @@
     data() {
       return {
         questionType: '单选题',
-        questions: []
+        questions: [],
+        knowledgeDialogVisible: false
       }
     },
     methods: {

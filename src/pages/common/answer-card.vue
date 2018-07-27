@@ -8,9 +8,9 @@
           </div>
 
           <div class="pl-grid xpc-x3 xac">
-            <div class="pl-grid-col" @click="(cols=1)&&(articalCells=25)"><i class="pl-ico xcol1" :class="{xselected: cols===1}"></i><div>一栏</div></div>
-            <div class="pl-grid-col" @click="(cols=2)&&(articalCells=25)"><i class="pl-ico xcol2" :class="{xselected: cols===2}"></i><div>两栏</div></div>
-            <div class="pl-grid-col" @click="(cols=3)&&(articalCells=16)"><i class="pl-ico xcol3" :class="{xselected: cols===3}"></i><div>三栏</div></div>
+            <div class="pl-grid-col" @click="(cols=1)&&(articalCells=22)"><i class="pl-ico xcol1" :class="{xselected: cols===1}"></i><div>一栏</div></div>
+            <div class="pl-grid-col" @click="(cols=2)&&(articalCells=23)"><i class="pl-ico xcol2" :class="{xselected: cols===2}"></i><div>两栏</div></div>
+            <div class="pl-grid-col" @click="(cols=3)&&(articalCells=15)"><i class="pl-ico xcol3" :class="{xselected: cols===3}"></i><div>三栏</div></div>
           </div>
 
           <div class="pl-bgbox2">一栏建议A4，<br>两、三栏建议A3，8k纸张</div>
@@ -89,10 +89,6 @@
                   <i class="pl-ac-position ly5"></i>
                   <i class="pl-ac-position ly6"></i>
                   <i class="pl-ac-position ry1"></i>
-                  <i class="pl-ac-position ry2"></i>
-                  <i class="pl-ac-position ry3"></i>
-                  <i class="pl-ac-position ry4"></i>
-                  <i class="pl-ac-position ry5"></i>
                   <i class="pl-ac-position ry6"></i>
                   <i class="pl-ac-position tx2"></i>
                   <i class="pl-ac-position tx3"></i>
@@ -240,6 +236,60 @@
               </li>
               <!-- /单选多选 -->
 
+              <!-- 选做题 -->
+              <li class="pl-ac-content-item">
+                <div class="pl-ac-asarea">
+                  <h4 class="pl-ac-asarea-title" contenteditable>选做题</h4>
+                  <div class="pl-ac-asarea-body">
+                    <ul class="pl-ac-free">
+                      <li>
+                        <i>11</i>
+                        <span></span>
+                      </li>
+                      <li>
+                        <i>12</i>
+                        <span></span>
+                      </li>
+                      <li>
+                        <i>13</i>
+                        <span></span>
+                      </li>
+                      <li>
+                        <i>14</i>
+                        <span></span>
+                      </li>
+                      <li>
+                        <i>15</i>
+                        <span></span>
+                      </li>
+                      <li>
+                        <i>16</i>
+                        <span></span>
+                      </li>
+                      <li>
+                        <i>17</i>
+                        <span></span>
+                      </li>
+                      <li>
+                        <i>18</i>
+                        <span></span>
+                      </li>
+                      <li>
+                        <i>19</i>
+                        <span></span>
+                      </li>
+                    </ul>
+                    <!-- 工具区 -->
+                    <div class="pl-ac-asarea-tools">
+                      <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xdel"></i></a>
+                    </div>
+                    <!-- /工具区 -->
+                  </div>
+                </div>
+              </li>
+              <!-- /选做题 -->
+
               <!-- 填空 -->
               <li class="pl-ac-content-item">
                 <div class="pl-ac-asarea">
@@ -270,10 +320,14 @@
                 <div class="pl-ac-asarea">
                   <h4 class="pl-ac-asarea-title" contenteditable>解答题</h4>
                   <div class="pl-ac-asarea-body">
-                    <pl-question-editor v-model="questionNo"></pl-question-editor>
                     <!-- 工具区 -->
                     <div class="pl-ac-asarea-tools">
                       <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xgformula"></i></a>
+                      <!-- 上传控件用法详见:http://element.eleme.io/#/zh-CN/component/form -->
+                      <el-upload action="https://jsonplaceholder.typicode.com/posts/">
+                        <a class="pl-link2"><i class="pl-ico xaimg"></i></a>
+                      </el-upload>
                       <a class="pl-link2"><i class="pl-ico xdel"></i></a>
                     </div>
                     <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
@@ -287,10 +341,14 @@
               <li class="pl-ac-content-item xsa">
                 <div class="pl-ac-asarea">
                   <div class="pl-ac-asarea-body">
-                    <pl-question-editor v-model="questionNo"></pl-question-editor>
                     <!-- 工具区 -->
                     <div class="pl-ac-asarea-tools">
                       <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xgformula"></i></a>
+                      <!-- 上传控件用法详见:http://element.eleme.io/#/zh-CN/component/form -->
+                      <el-upload action="https://jsonplaceholder.typicode.com/posts/">
+                        <a class="pl-link2"><i class="pl-ico xaimg"></i></a>
+                      </el-upload>
                       <a class="pl-link2"><i class="pl-ico xdel"></i></a>
                     </div>
                     <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
@@ -299,7 +357,8 @@
                 </div>
               </li>
               <!-- /解答题 -->
-
+            </ul>
+            <ul class="pl-ac-content">
               <!-- 英语作文 -->
               <li class="pl-ac-content-item">
                 <div class="pl-ac-asarea">
@@ -384,6 +443,11 @@
                     <!-- 工具区 -->
                     <div class="pl-ac-asarea-tools">
                       <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xgformula"></i></a>
+                      <!-- 上传控件用法详见:http://element.eleme.io/#/zh-CN/component/form -->
+                      <el-upload action="https://jsonplaceholder.typicode.com/posts/">
+                        <a class="pl-link2"><i class="pl-ico xaimg"></i></a>
+                      </el-upload>
                       <a class="pl-link2"><i class="pl-ico xdel"></i></a>
                     </div>
                     <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
@@ -401,6 +465,11 @@
                     <!-- 工具区 -->
                     <div class="pl-ac-asarea-tools">
                       <a class="pl-link2"><i class="pl-ico xadd"></i></a>
+                      <a class="pl-link2"><i class="pl-ico xgformula"></i></a>
+                      <!-- 上传控件用法详见:http://element.eleme.io/#/zh-CN/component/form -->
+                      <el-upload action="https://jsonplaceholder.typicode.com/posts/">
+                        <a class="pl-link2"><i class="pl-ico xaimg"></i></a>
+                      </el-upload>
                       <a class="pl-link2"><i class="pl-ico xdel"></i></a>
                     </div>
                     <a class="pl-link2 xresize" @mousedown="resizeStart"><i class="pl-ico xresize"></i></a>
@@ -880,7 +949,7 @@
         demoVal: '',
         examineeIdType: 'barCode',
         cols: 2,
-        articalCells: 25,
+        articalCells: 23,
         articalNum: 80,
         resizeStartY: 0,
         originalHeight: 0,
@@ -928,9 +997,6 @@
         const width = this.$refs.content.offsetWidth
         this.$refs.content.style.display=''
       }
-    },
-    created () {
-      debugger
     }
   }
 </script>

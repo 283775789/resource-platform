@@ -3,6 +3,28 @@
     <div class="pl-main-inner">
       <div class="pl-sidelayout">
         <div class="pl-sidelayout-left" v-pl-sticky="192">
+          <!-- 试题属性 -->
+          <div class="pl-card xsp">
+            <div class="pl-subtitle xsmall">
+              <span class="pl-subtitle-text">教材/年级</span>
+            </div>
+
+            <!-- 表单用法详见:http://element.eleme.io/#/zh-CN/component/form -->
+            <el-form class="xsmall" label-width="35px" size="medium">
+              <el-form-item label="教材:">
+                <el-select style="width:100%;" placeholder="请选择">
+                  <el-option label="人教版" value="1"></el-option>
+                </el-select>
+              </el-form-item>
+              <el-form-item label="年级:">
+                <el-select style="width:100%;" placeholder="请选择">
+                  <el-option label="一年级上册" value="1"></el-option>
+                </el-select>
+              </el-form-item>
+            </el-form>
+          </div>
+          <!-- /试题属性 -->
+
           <div class="pl-card xsave" v-pl-to-bottom.fixed="20">
             <div class="pl-bgbox2">
               <el-radio-group v-model="activeTab">
@@ -15,7 +37,7 @@
                 <el-input size="small" placeholder="请输入章节"></el-input>
                 <i class="el-icon-search"></i>
               </div>
-              <div class="pl-treebox xschool">
+              <div class="pl-treebox xschool" v-pl-to-bottom.fixed="20">
                 <!-- 目录树用法详见:http://element.eleme.io/#/zh-CN/component/tree -->
                 <el-tree :data="data" :props="defaultProps" show-checkbox></el-tree>
               </div>
@@ -242,8 +264,19 @@
                 </div>
               </div>
               <pl-question-detail-join>
+                <template slot="body">
+                  <div class="pl-questionprops">
+                    <div class="pl-questionprops-body">
+                      <span>题型:综合题</span>
+                      <span>专题:中考真题</span>
+                      <span>难度:中等</span>
+                      <span>版本号:V001</span>
+                      <span>试题编码:001</span>
+                    </div>
+                  </div>
+                  <pl-question-detail-select />
+                </template>
                 <template slot="tools">
-
                   <el-button size="medium">删除</el-button>
                   <el-button size="medium" type="info">选题</el-button>
                 </template>

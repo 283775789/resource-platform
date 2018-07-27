@@ -1,45 +1,55 @@
-﻿a:hover > .pl-ico.xadd {
-  background-position: -260px -216px;
-  width: 16px;
-  height: 16px;
+﻿a:hover >  .pl-ico.xgformula {
+  background-position: -179px -268px;
+  width: 12px;
+  height: 12px;
 }
-a:hover > .pl-ico.xdel {
-  background-position: -234px -216px;
-  width: 16px;
-  height: 16px;
-}
-a:hover > .pl-ico.xdownload {
+a:hover > .pl-ico.xadd {
   background-position: 0px -242px;
   width: 16px;
   height: 16px;
 }
-a:hover > .pl-ico.xmodify {
+a:hover > .pl-ico.xaimg {
   background-position: -214px -138px;
   width: 16px;
   height: 16px;
 }
+a:hover > .pl-ico.xdel {
+  background-position: -156px -216px;
+  width: 16px;
+  height: 16px;
+}
+a:hover > .pl-ico.xdownload {
+  background-position: -234px -216px;
+  width: 16px;
+  height: 16px;
+}
+a:hover > .pl-ico.xmodify {
+  background-position: -26px -242px;
+  width: 16px;
+  height: 16px;
+}
 a:hover > .pl-ico.xnext {
-  background-position: -174px -138px;
+  background-position: -78px -242px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xoff {
-  background-position: 0px -216px;
+  background-position: -156px -242px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xprev {
-  background-position: -130px -216px;
+  background-position: -208px -242px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xremove {
-  background-position: -208px -216px;
+  background-position: -260px -242px;
   width: 16px;
   height: 16px;
 }
 a:hover > .pl-ico.xresize {
-  background-position: -254px -155px;
+  background-position: -254px -126px;
   width: 15px;
   height: 19px;
 }
@@ -49,22 +59,27 @@ a:hover > .pl-ico.xsplit {
   height: 14px;
 }
 a:hover > .pl-ico.xupload {
-  background-position: -104px -242px;
+  background-position: -174px -138px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xac {
-  background-position: -260px -242px;
+  background-position: 0px -216px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xadd {
-  background-position: 0px -268px;
+  background-position: -26px -216px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xadd2 {
-  background-position: -254px -184px;
+  background-position: -52px -216px;
+  width: 16px;
+  height: 16px;
+}
+.pl-ico.xaimg {
+  background-position: -78px -216px;
   width: 16px;
   height: 16px;
 }
@@ -109,17 +124,17 @@ a:hover > .pl-ico.xupload {
   height: 48px;
 }
 .pl-ico.xdel {
-  background-position: -208px -242px;
+  background-position: -52px -268px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xdownload {
-  background-position: -234px -242px;
+  background-position: -254px -184px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xdownload2 {
-  background-position: -171px -268px;
+  background-position: -267px -268px;
   width: 11px;
   height: 11px;
 }
@@ -138,8 +153,13 @@ a:hover > .pl-ico.xupload {
   width: 30px;
   height: 36px;
 }
+.pl-ico.xgformula {
+  background-position: -201px -268px;
+  width: 12px;
+  height: 12px;
+}
 .pl-ico.ximg {
-  background-position: 0px -170px;
+  background-position: -40px -170px;
   width: 30px;
   height: 36px;
 }
@@ -149,22 +169,22 @@ a:hover > .pl-ico.xupload {
   height: 14px;
 }
 .pl-ico.xmformula {
-  background-position: -127px -268px;
+  background-position: -157px -268px;
   width: 12px;
   height: 12px;
 }
 .pl-ico.xmimg {
-  background-position: -79px -268px;
+  background-position: -131px -268px;
   width: 16px;
   height: 12px;
 }
 .pl-ico.xmodify {
-  background-position: -78px -216px;
+  background-position: -182px -216px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xnext {
-  background-position: -104px -216px;
+  background-position: -208px -216px;
   width: 16px;
   height: 16px;
 }
@@ -174,17 +194,17 @@ a:hover > .pl-ico.xupload {
   height: 15px;
 }
 .pl-ico.xnotice {
-  background-position: -156px -216px;
+  background-position: -260px -216px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xoff {
-  background-position: -182px -216px;
+  background-position: -26px -268px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xorg {
-  background-position: -149px -268px;
+  background-position: -245px -268px;
   width: 12px;
   height: 11px;
 }
@@ -194,7 +214,7 @@ a:hover > .pl-ico.xupload {
   height: 14px;
 }
 .pl-ico.xpdf {
-  background-position: -160px -170px;
+  background-position: -200px -170px;
   width: 30px;
   height: 36px;
 }
@@ -204,7 +224,7 @@ a:hover > .pl-ico.xupload {
   height: 16px;
 }
 .pl-ico.xperson {
-  background-position: -26px -268px;
+  background-position: -78px -268px;
   width: 15px;
   height: 16px;
 }
@@ -214,17 +234,17 @@ a:hover > .pl-ico.xupload {
   height: 12px;
 }
 .pl-ico.xpower {
-  background-position: -78px -242px;
+  background-position: -182px -242px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xppt {
-  background-position: -254px 0px;
+  background-position: -160px -170px;
   width: 30px;
   height: 36px;
 }
 .pl-ico.xprev {
-  background-position: -130px -242px;
+  background-position: -234px -242px;
   width: 16px;
   height: 16px;
 }
@@ -234,17 +254,17 @@ a:hover > .pl-ico.xupload {
   height: 12px;
 }
 .pl-ico.xremove {
-  background-position: -182px -242px;
+  background-position: 0px -268px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xresize {
-  background-position: -254px -126px;
+  background-position: -254px -155px;
   width: 15px;
   height: 19px;
 }
 .pl-ico.xs1 {
-  background-position: -108px -116px;
+  background-position: 0px -116px;
   width: 44px;
   height: 44px;
 }
@@ -254,7 +274,7 @@ a:hover > .pl-ico.xupload {
   height: 44px;
 }
 .pl-ico.xs3 {
-  background-position: 0px -116px;
+  background-position: -108px -116px;
   width: 44px;
   height: 44px;
 }
@@ -264,22 +284,22 @@ a:hover > .pl-ico.xupload {
   height: 13px;
 }
 .pl-ico.xsetting {
-  background-position: -156px -242px;
+  background-position: -130px -242px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xsort {
-  background-position: -248px -268px;
+  background-position: -82px -294px;
   width: 7px;
   height: 10px;
 }
 .pl-ico.xsort.xasc {
-  background-position: -231px -268px;
+  background-position: -65px -294px;
   width: 7px;
   height: 10px;
 }
 .pl-ico.xsort.xdesc {
-  background-position: -214px -268px;
+  background-position: -48px -294px;
   width: 7px;
   height: 10px;
 }
@@ -294,17 +314,17 @@ a:hover > .pl-ico.xupload {
   height: 13px;
 }
 .pl-ico.xteacher {
-  background-position: -105px -268px;
+  background-position: -223px -268px;
   width: 12px;
   height: 12px;
 }
 .pl-ico.xtemplate {
-  background-position: -52px -242px;
+  background-position: -104px -242px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xtest {
-  background-position: -26px -242px;
+  background-position: -52px -242px;
   width: 16px;
   height: 16px;
 }
@@ -329,22 +349,22 @@ a:hover > .pl-ico.xupload {
   height: 36px;
 }
 .pl-ico.xupload {
-  background-position: -52px -216px;
+  background-position: -130px -216px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xuser {
-  background-position: -26px -216px;
+  background-position: -104px -216px;
   width: 16px;
   height: 16px;
 }
 .pl-ico.xvideo {
-  background-position: -40px -170px;
+  background-position: 0px -170px;
   width: 30px;
   height: 36px;
 }
 .pl-ico.xview {
-  background-position: -192px -268px;
+  background-position: -26px -294px;
   width: 12px;
   height: 10px;
 }
@@ -354,7 +374,7 @@ a:hover > .pl-ico.xupload {
   height: 36px;
 }
 .pl-ico.xweb {
-  background-position: -200px -170px;
+  background-position: -254px 0px;
   width: 30px;
   height: 36px;
 }
@@ -369,7 +389,7 @@ a:hover > .pl-ico.xupload {
   height: 36px;
 }
 .pl-ico.xyes {
-  background-position: -51px -268px;
+  background-position: -103px -268px;
   width: 18px;
   height: 13px;
 }
